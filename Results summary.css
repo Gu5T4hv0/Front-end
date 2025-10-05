@@ -1,0 +1,200 @@
+.general {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+    font-family: "Hanken Grotesk", serif;
+}
+.all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 300px;
+}
+.blue-cntnt{
+    height: 515px;
+    width: 360px;
+    border-radius: 32px;
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.blue-cntnt > p{
+    color: hsl(241, 100%, 89%);
+    font-size: 1.4em;
+    font-weight: bold;
+}
+.ball{
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    height: 198px;
+    width: 198px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.ball > h1{
+    margin-bottom: -20px;
+    font-size: 4.2em;
+}
+.bottomtxt{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.bottomtxt #great{
+    color: white;
+    font-size: 2.1em;
+    font-weight: bold;
+    margin-bottom: -3px;
+}
+.bottomtxt #pzin{
+    color: hsl(241, 100%, 89%);
+    width: 230px;
+    margin-bottom: 19px;
+}
+.white{
+    background-color: rgb(255, 255, 255);
+    border-radius: 32px;
+    width: 434px;
+    height: 514px;
+    box-shadow: 0 40px 80px 0 hsl(224, 30%, 27%, 0.2), 0 6px 100px 0 hsl(224, 30%, 27%, 0.188);
+    position: absolute;
+    z-index: -1;
+    margin-left: 650px;
+}
+.white-cntnt{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-left: 110px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+.white-cntnt .h2{
+    color: hsl(224, 30%, 27%);
+}
+
+.score{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.red{
+    display: flex;
+    align-items: center;
+    background-color: hsla(0, 100%, 67%, 0.278);
+    margin-bottom: 5%;
+    width: 100%;
+    height: 56px;
+    border-radius: 13px;
+}
+.icon{
+    padding: 8px;
+    margin-top: 5px;
+    margin-left: 6px;
+}
+.red > p{
+    color: hsl(0, 100%, 67%);
+    font-weight: bold;
+    font-size: 1.18em;
+}
+.red .nmbrs{
+    display: flex;
+    align-items: center;
+    margin-left: 90px;
+    font-weight: bold;
+}
+.r{
+    color: hsl(224, 30%, 27%);
+}
+.barra{
+    color: hsla(224, 30%, 27%, 0.592);
+}
+
+.yellow{
+    display: flex;
+    align-items: center;
+    background-color: hsla(39, 100%, 56%, 0.26);
+    margin-bottom: 5%;
+    width: 100%;
+    height: 56px;
+    border-radius: 13px;
+}
+.yellow > p{
+    color: hsl(39, 100%, 56%);
+    font-weight: bold;
+    font-size: 1.18em;
+}
+.yellow .nmbrs{
+    display: flex;
+    align-items: center;
+    margin-left: 93px;
+    font-weight: bold;
+}
+
+.green{
+    display: flex;
+    align-items: center;
+    background-color: hsla(166, 100%, 37%, 0.244);
+    margin-bottom: 5%;
+    width: 100%;
+    height: 56px;
+    border-radius: 13px;
+}
+.green > p{
+    color: hsl(166, 100%, 37%);
+    font-weight: bold;
+    font-size: 1.18em;
+}
+.green .nmbrs{
+    display: flex;
+    align-items: center;
+    margin-left: 108px;
+    font-weight: bold;
+}
+
+.blue{
+    display: flex;
+    align-items: center;
+    background-color: hsla(234, 85%, 45%, 0.227);
+    margin-bottom: 5%;
+    width: 100%;
+    height: 56px;
+    border-radius: 13px;
+}
+.blue > p{
+    color: hsl(234, 85%, 45%);
+    font-weight: bold;
+    font-size: 1.18em;
+}
+.blue .nmbrs{
+    display: flex;
+    align-items: center;
+    margin-left: 109px;
+    font-weight: bold;
+}
+
+
+.continue{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    background-color: hsl(224, 30%, 27%);
+    color: white;
+    border-radius: 100px;
+    width: 100%;
+    height: 56px;
+}
+
+.continue:hover{
+    cursor: pointer;
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}

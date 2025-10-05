@@ -1,0 +1,51 @@
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+.outfit-yesbaby {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <700>;
+  font-style: normal;
+}
+body{
+    background-color: #D5E1EF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+body > .container{
+    background-color: white;
+    box-shadow: 0 4px 8px 0 #00000007, 0 6px 20px 0 #00000007;
+    height: 499px;
+    width: 320px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.QR{
+    width: 288px;
+    height: 288px;
+    border-radius: 10px;
+    background-color: #2C7DFA;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.orn1{
+    position: absolute;
+    z-index: -1;
+    width: 328px;
+    height: 328px;
+    border-radius: 50%;
+    background-color: #3685FF;
+}
+.Text{
+    font-family: "Outfit", sans-serif;
+    width: 240px;
+    color: #1F314F;
+    text-align: center;
+}
+

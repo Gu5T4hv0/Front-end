@@ -1,0 +1,96 @@
+@font-face{
+    src: url(fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-family: Fraunces;
+}
+@font-face{
+    src: url(fonts/Montserrat-VariableFont_wght.ttf);
+    font-family: Montserrat;
+}
+body{
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-block{
+    display: flex;
+    background-color: white;
+    width: 600px;
+    height: 450px;
+    border-radius: 8px;
+}
+.photo > img{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    width: 300px;
+    height: 450px;
+}
+.block1{
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 236px;
+    height: 386px;
+}
+.perfume{
+    margin-top: 0px;
+    font-family: Montserrat;
+    color: hsl(228, 12%, 48%);
+}
+.gabrielle{
+    margin-top: 10px;
+    font-family: Fraunces;
+    color: hsl(212, 21%, 14%);
+    font-weight: 700;
+    font-size: 2em;
+}
+.floral{
+    margin-top: 0px;
+    font-family: Montserrat;
+    font-size: 15px;
+    color: hsl(228, 12%, 48%);
+}
+.boxprices{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    height: 29px;
+    width: 194px;
+}
+.n1{
+    font-family: Fraunces;
+    color: hsl(158, 36%, 37%);
+    font-weight: 700;
+    font-size: 2em;
+    margin-top: -3px;
+}
+.n2{
+    font-family: Montserrat;
+    font-size: 0.8em;
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+    margin-top: 9px;
+}
+.cartbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(158, 36%, 37%);
+    border-radius: 6px;
+    margin-top: 25px;
+    height: 48px;
+    width: 236px;
+}
+.cartbutton > img{
+    height: 16px;
+    margin-right: 10px;
+}
+.cartbutton > p{
+    font-family: Montserrat;
+    font-size: 0.9em;
+    font-weight: 700;
+    color: white;
+}
+.cartbutton:hover{
+    background-color: hsl(158, 42%, 18%);
+    cursor: pointer;
+}
