@@ -1,0 +1,33 @@
+/*a:link{
+    color: hsl(120, 100%, 33%);
+}
+a:hover{
+    color: hsl(120, 100%, 25%);
+}
+a:active{
+    color: hsl(120, 100%, 20%);
+}
+a:visited{
+    color: hsl(120, 12%, 47%);
+}*/
+
+
+/*li:hover{
+    color: hsl(80, 61%, 50%);
+}
+li:not(:hover){
+    color:rgb(89, 97, 79)
+}
+li:nth-child(odd){
+    color: hsl(60, 64%, 54%);
+}*/
+
+
+#questions p{
+    background-color: hsl(27, 97%, 66%);
+    padding: 10px;
+    display: none;
+}
+#questions:hover p{
+    display: block;
+}

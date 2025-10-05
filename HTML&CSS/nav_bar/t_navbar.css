@@ -1,0 +1,37 @@
+body{
+    margin: 0px;
+}
+h1{
+    text-align: center;
+}
+main{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.navbar ul{
+    list-style-type: none;
+    background-color: hsl(271, 17%, 29%);
+    overflow: hidden;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    float: left;
+}
+.navbar a:hover{
+    background-color: hsl(271, 18%, 23%);
+}
+.navbar ul .dropdown li{
+    display: block;
+}
+.navbar ul .dropdown{
+    position: absolute;
+    display: none;
+}
+ul li:hover ul.dropdown{
+    display: block;
+}
+

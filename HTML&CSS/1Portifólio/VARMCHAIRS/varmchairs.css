@@ -1,0 +1,223 @@
+header{
+  background-image: url(images.doc/hero\ chair.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.m1{
+  background-image: url(images.doc/2page.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.m2{
+  background-image: url(images.doc/3page.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@font-face{
+  src: url(fonts.doc/KuroTrial-DemiBold-BF63c89e58ca1bc.otf);
+  font-family: Kuro;
+}
+.nunito-sans-unique {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 4;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+    font-family: "Nunito Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+  hr{
+    height: 1.5px;
+    color: #BD906F;
+    border: 2px solid #BD906F;
+    width: 40px;
+    margin-top: 0px;
+  }
+  .hr2{
+    height: 1.5px;
+    color: #BD906F;
+    border: 2px solid #BD906F;
+    width: 70px;
+    margin-top: 0px;
+  }
+  .hr3{
+    height: 1.5px;
+    color: #BD906F;
+    border: 2px solid #BD906F;
+    width: 60px;
+    margin-top: 0px;
+  }
+  .fa-solid.fa-magnifying-glass.fa-5x{
+    color: #465048;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.5em;
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* The dropdown container */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    color: #465048;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    color: #2d362f;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: #465048;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    color: #222f25;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+.bt1{
+  border-radius: 4px;
+  background-color: #BD906F;
+  color: #465048;
+  font-family: "Nunito Sans", sans-serif;
+  border: none;
+  height: 35px;
+  width: 90px;
+}
+.bt2{
+  border-radius: 4px;
+  background-color: #BD906F;
+  color: #465048;
+  font-family: "Nunito Sans", sans-serif;
+  border: none;
+  height: 35px;
+  width: 100px;
+}
+.mtext{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.t1{
+  font-family: Kuro;
+  align-content: center;
+  color: white;
+}
+.t2{
+  color: white;
+  font-family: "Nunito Sans", sans-serif;  
+}  
+.bt3{
+  border-radius: 4px;
+  background-color: #465048;
+  color: white;
+  font-family: "Nunito Sans", sans-serif;
+  border: none;
+  height: 35px;
+  width: 120px;
+}
+
+.t3{
+  font-family: Kuro;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #465048;
+}
+.t4{
+  font-family: "Nunito Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  color: #465048;
+  text-align: center;
+}
+.roll{
+  display: flex;
+  align-items: center;
+}
+.c1 .gallery{
+  background-color: #EEEEEE;
+  width: 308px;
+  height: 396px;
+  border-radius: 11px;
+  box-shadow: black ;
+  display: inline-block;
+  margin: 5px;
+}
+.c1 .gallery img{
+  width: 100%;
+  border-radius: 11px;
+}
+.c1 p{
+  font-family: "Nunito Sans", sans-serif;
+  font-size: large;
+  color: #465048;
+}
+.square{
+  height: 156px;
+  width: 369px;
+  background-color: white;
+  border-radius: 10px;
+}
+.name{
+  font-family: Kuro;
+  color: #465048;
+  font-size: large;
+}
+.metier{
+  font-family: "Nunito Sans", sans-serif;
+  color: #465048;
+  font-size: small;
+}
+.comment{
+  display: inline-block;
+  width: 300px;
+  font-family: "Nunito Sans", sans-serif;
+  color: #465048;
+  font-size: small;
+}

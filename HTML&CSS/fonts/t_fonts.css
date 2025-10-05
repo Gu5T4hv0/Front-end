@@ -1,0 +1,20 @@
+@font-face{
+    src: url(fonts.doc/Aleo-VariableFont_wght.ttf);
+    font-family: Aleo;
+}
+@font-face{
+    src: url(fonts.doc/Truculenta-VariableFont_opsz\,wdth\,wght.ttf);
+    font-family: Truculenta;
+}
+
+
+h1{
+    font-family: Aleo, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+p{
+    font-family: Truculenta, Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 1em;
+    font-style: italic;
+}

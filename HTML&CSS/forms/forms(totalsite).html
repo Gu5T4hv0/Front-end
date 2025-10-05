@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy one</title>
+</head>
+<body>
+    <form action="index.php" method="post" enctype="multipart/form-data">
+
+        <label for="product">product</label>
+
+        <label for="one">one</label>
+        <input type="radio" name="product" id="one">
+        <label for="deux">deux</label>
+        <input type="radio" name="product" id="deux">
+        <label for="treix">treix</label>
+        <input type="radio" name="product" id="treix"><br>
+
+        <label for="email">email:</label>
+        <input type="email" name="" id="email" placeholder="imuselesstoo@gmail.com"><br>
+
+        <label for="password">password:</label>
+        <input type="password" name="" id="password" minlength="5" maxlength="15" required><br>
+
+        <label for="payment">payment</label>
+        <select name="" id="payment">
+            <option value="pix">pix</option>
+            <option value="credit card">credit card</option>
+            <option value="cheke">cheke</option>
+        </select>
+    </form>
+</body>
+</html>

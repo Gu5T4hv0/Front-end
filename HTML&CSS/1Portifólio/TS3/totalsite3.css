@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    margin: 0px;
+}
+img{
+    width: 40px;
+    transform: translateX(-600px);
+}
+header{
+    background-color: hsl(0, 0%, 86%);
+    text-align: center;
+    padding: 25px;
+}
+
+.frame-26,
+.frame-26 * {
+    box-sizing: border-box;
+}
+
+.frame-26 {
+    display: flex;
+    
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: visible;
+}
+
+ul{
+    list-style: none;
+    
+}
+ul li{
+    display: inline-block;
+    position: relative;
+}
+ul li a{
+    display: block;
+    padding: 10px 25px;
+    color: black;
+    border: solid black;
+    border-style: none none solid none;
+    text-decoration: none;
+    text-align: center;
+}
+ul li ul.dropdown li{
+    display: block;
+}
+ul li ul.dropdown{
+    width: 100%;
+
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+ul li:hover ul.dropdown{
+    display: block;
+}
+
+
+aside{
+    width: 20%;
+    float: left;
+    padding: 10px;
+}
+section{
+    width: 40%;
+    float: left;
+    padding: 10px;
+}
+article{
+    width: 40%;
+    float: left;
+    padding: 10px;
+}
+
+.page{
+    text-align: center;
+}
+.page a{
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 15px;
+}
+.page a.active{
+    background-color: hsla(240, 100%, 50%, 0.605);
+    border-radius: 5px;
+    color: white;
+}
+.page a:hover:not(.active){
+    background-color: hsla(240, 100%, 50%, 0.605);
+    color: white;
+    border-radius: 5px;
+}
+
+footer{
+    display: block;
+    clear: both;
+    background-color: hsl(0, 0%, 86%);
+    text-align: center;
+    padding: 25px;
+}
+@media screen and (max-width:600px){
+    aside, section, article{
+        width: 100%;
+    }
+}
+
+/*2*/
+
+main .gallery{
+    display: inline-block;
+    border: 2px solid gray;
+    width: 200px;
+    margin: 5px;
+}
+main .gallery .description{
+    padding: 10px;
+    text-align: center;
+}
+main .gallery:hover{
+    border: 2px solid hsl(0, 0%, 20%);
+}
+main .gallery img{
+    width: 100%;
+}

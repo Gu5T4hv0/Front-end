@@ -1,0 +1,514 @@
+.desktop-20,
+.desktop-20 * {
+    box-sizing: border-box;
+}
+
+.desktop-20 {
+    background: #f2ecca;
+    height: 1024px;
+    position: relative;
+    overflow: hidden;
+}
+
+.shape-w-button-price {
+    padding: 42px 19px 42px 19px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: 445px;
+    height: 913px;
+    position: absolute;
+    left: 959px;
+    top: 4px;
+}
+
+.shape-burguer-back {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.rectangle-7 {
+    background: #7f3311;
+    border-radius: 0px 0px 0px 90px;
+    flex-shrink: 0;
+    width: 445px;
+    height: 913px;
+    position: relative;
+}
+
+.button-value {
+    padding: 8px 18px 8px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 116px;
+    height: 49px;
+    position: relative;
+}
+
+.shape-value {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 116px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.rectangle-55 {
+    background: #f2ecca;
+    border-radius: 100px;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 49px;
+    position: relative;
+}
+
+.bag-price {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.bag {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-15 {
+    flex-shrink: 0;
+    width: 21px;
+    height: 24.94px;
+    position: relative;
+    overflow: visible;
+}
+
+.info-buy {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 49px;
+    position: relative;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.r-30-00 {
+    color: #7f3311;
+    text-align: left;
+    font-family: 'FuturaLtBt-Light', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    position: relative;
+}
+
+.itens {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+._1-item {
+    color: #7f3311;
+    text-align: left;
+    font-family: 'FuturaLtBt-Light', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    position: relative;
+}
+
+.hero-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 1282.69px;
+    position: absolute;
+    left: 50px;
+    top: 46px;
+}
+
+.up-navbar-logo {
+    display: flex;
+    flex-direction: row;
+    gap: 284px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 799px;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 193px;
+    position: relative;
+}
+
+.asset-15 {
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 125px;
+    position: relative;
+    object-fit: cover;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    width: 322px;
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 66px;
+    position: relative;
+}
+
+.menu2 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.menu3 {
+    color: #7f3311;
+    text-align: center;
+    font-family: 'FuturaLtBt-Light', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    position: relative;
+}
+
+.line-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    overflow: visible;
+}
+
+.fale-conosco {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 139px;
+    position: relative;
+}
+
+.fale-conosco2 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.fale-conosco3 {
+    color: #7f3311;
+    text-align: center;
+    font-family: 'FuturaLtBt-Light', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    position: relative;
+}
+
+.line-fale-conosco {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    overflow: visible;
+}
+
+.principal-info {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.principal-info2 {
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.social-media-w-hero-info {
+    display: flex;
+    flex-direction: row;
+    gap: 78px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 25.69px;
+    position: relative;
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    overflow: visible;
+}
+
+.instagram {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    overflow: visible;
+}
+
+.whatsapp {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    overflow: visible;
+}
+
+.hero-info {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 473px;
+    position: relative;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.hero-text-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.aqui-cada-mordida-um-filme-de-sabores {
+    color: #7f3311;
+    text-align: left;
+    font-family: 'TtBluescreensTrial-Black', sans-serif;
+    font-size: 90px;
+    font-weight: 900;
+    position: relative;
+}
+
+.hero-text-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.venha-matar-sua-fome-de-uma-vez {
+    color: #7f3311;
+    text-align: left;
+    font-family: 'FuturaLtBt-Light', sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    position: relative;
+    width: 362px;
+}
+
+.cta {
+    padding: 18px 10px 18px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 181px;
+    height: 77px;
+    position: relative;
+}
+
+.cta-button {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 181px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.rectangle-12 {
+    background: #0f3fa8;
+    border-radius: 14px;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 77px;
+    position: relative;
+}
+
+.cta-text {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.compre-agora {
+    color: #ffa903;
+    text-align: left;
+    font-family: 'TtBluescreensTrial-Black', sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+    position: relative;
+}
+
+.hero-burguer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    height: 600px;
+    position: relative;
+}
+
+.b-urgao-1 {
+    flex-shrink: 0;
+    width: 706px;
+    height: 706px;
+    position: relative;
+    object-fit: cover;
+}

@@ -1,0 +1,18 @@
+body{
+    margin: 0px;
+}
+.box{
+    border: 5px solid;
+    text-shadow: 3px 3px 3px rgb(126, 123, 123);
+    box-shadow: 5px 5px 5px rgb(235, 145, 160);
+    font-size: 5em;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+#box1{
+    background-color: hsl(134, 36%, 51%);
+}
+#box2{
+    background-color: hsl(47, 36%, 51%);
+}

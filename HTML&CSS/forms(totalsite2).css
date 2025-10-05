@@ -1,0 +1,72 @@
+body{
+    background-image: url(images.doc/Tea\ shop.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: auto;
+}
+.font1{
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500px;
+    font-style: normal;
+    color: #2c442c;
+}
+.font2{
+    font-family: 'Pleuf Pro';
+    color: #2c442c;
+}
+.ID{
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 4px ridge  #54a664;
+    border-radius: 10px;
+    font-family: 'Pleuf Pro';
+}
+.label{
+    font-family: 'Pleuf Pro';
+    color: #2c442c;
+}
+
+.terms{
+    border: 15px ridge  #54a664;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    height: 200px;
+    width: 350px;
+    overflow: scroll;
+    font-family: 'Pleuf Pro';
+    color: #2c442c;
+    
+}
+header{
+    background-color: #a1b06b;
+    margin: 40px;
+    height: 100px;
+}
+main{
+    background-color: #d4ea9f;
+    margin: 50px;
+    text-align: center;
+}
+@font-face{
+    src: url(fonts.doc/OpenSans-VariableFont_wdth,wght.ttf);
+    font-family: OpenSans;
+}
+@font-face {
+    font-family: Pleuf Pro;
+    src: url(fonts.doc/PleufPro-Bold.ttf)
+  }
+.button{
+    background-color: #276717;
+    color: #a1b06b;
+    border-radius: 4px;
+    border-style: outset;
+    border-color: #2c442c;
+    font-family: 'Pleuf Pro';
+}
+footer{
+    background-color: #a1b06b;
+}

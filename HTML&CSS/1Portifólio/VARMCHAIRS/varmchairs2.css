@@ -1,0 +1,1639 @@
+@font-face{
+    src: url(fonts.doc/KuroTrial-DemiBold-BF63c89e58ca1bc.otf);
+    font-family: Kuro;
+  }
+.desktop-1,
+.desktop-1 * {
+  box-sizing: border-box;
+}
+.desktop-1 {
+  height: 1024px;
+  position: relative;
+  overflow: hidden;
+}
+.frame-35 {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 1024px;
+  /*position: absolute;*/
+  left: 437px;
+  top: 0px;
+}
+.frame-36 {
+  flex-shrink: 0;
+  width: 1003px;
+  height: 1024px;
+  position: relative;
+}
+.image-1 {
+  width: 1463px;
+  height: 1463px;
+  position: absolute;
+  left: 0px;
+  top: -340px;
+  object-fit: cover;
+}
+.frame-34 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 1440px;
+  height: 1024px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.rectangle-15 {
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(235, 222, 212, 1) 48.08264970779419%,
+    rgba(192, 178, 131, 1) 100%
+  );
+  flex-shrink: 0;
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+}
+.frame-33 {
+  display: flex;
+  flex-direction: column;
+  gap: 180px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  left: 75px;
+  top: 56px;
+}
+.frame-32 {
+  display: flex;
+  flex-direction: row;
+  gap: 102px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-30 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.layer-2 {
+  flex-shrink: 0;
+  width: 141px;
+  height: 84.3px;
+  position: relative;
+  overflow: visible;
+}
+.frame-31 {
+  display: flex;
+  flex-direction: row;
+  gap: 84px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-29 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-27 {
+  border-style: solid;
+  border-color: #bd906f;
+  border-width: 0px 0px 3px 0px;
+  flex-shrink: 0;
+  width: 93px;
+  height: 43px;
+  position: relative;
+  overflow: hidden;
+}
+.frame-28 {
+  width: 72px;
+  height: 27px;
+  position: absolute;
+  left: 10px;
+  top: 4px;
+}
+.in-cio {
+  color: #465048;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  position: absolute;
+  left: 13px;
+  top: 0px;
+}
+.produtos {
+  color: #465048;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  position: absolute;
+  left: -5px;
+  top: 0px;
+}
+.contato {
+  color: #465048;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 43px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.search {
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.frame-26 {
+  flex-shrink: 0;
+  width: 27.86px;
+  height: 27.06px;
+  position: relative;
+  overflow: visible;
+}
+.bag {
+  padding: 1px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.frame-25 {
+  flex-shrink: 0;
+  width: 28.71px;
+  height: 33.73px;
+  position: relative;
+  overflow: visible;
+}
+.fidelity {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-23 {
+  background: #bd906f;
+  border-radius: 7px;
+  padding: 9px 35px 9px 35px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.entrar {
+  color: #465048;
+  text-align: left;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 21px;
+  font-weight: 500;
+  position: relative;
+}
+.frame-232 {
+  background: #bd906f;
+  border-radius: 7px;
+  padding: 9px 14px 9px 14px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.cadastre-se {
+  color: #465048;
+  text-align: left;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 21px;
+  font-weight: 500;
+  position: relative;
+}
+.frame-22 {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-20 {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.esque-a-o-desconforto-de-cadeiras-comuns {
+  color: #ffffff;
+  text-align: left;
+  font-family: Kuro;
+  font-size: 75.19999694824219px;
+  font-weight: 400;
+  position: relative;
+}
+.encontre-aqui-o-conforto-perfeito-para-a-sua-casa {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 35.400001525878906px;
+  font-weight: 500;
+  position: relative;
+}
+.frame-21 {
+  background: #465048;
+  border-radius: 7.64px;
+  padding: 15px 32px 15px 32px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.compre-agora {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 31.018272399902344px;
+  font-weight: 500;
+  position: relative;
+}
+
+
+
+.desktop-2,
+.desktop-2 * {
+    box-sizing: border-box;
+}
+
+.desktop-2 {
+    background: #ffffff;
+    padding: 10px;
+    height: 1024px;
+    position: relative;
+}
+
+.frame-65 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: auto;
+    position: absolute;
+    left: -2px;
+    top: 0px;
+    overflow: visible;
+}
+
+.frame-66 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: auto;
+    position: absolute;
+    left: 954px;
+    top: 779px;
+    overflow: visible;
+}
+
+.frame-62 {
+    display: flex;
+    flex-direction: column;
+    gap: 47px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    left: 84px;
+    top: 248px;
+}
+
+.frame-42 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-41 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.rectangle-17 {
+    background: #eeeeee;
+    border-radius: 11px;
+    flex-shrink: 0;
+    width: 308px;
+    height: 396px;
+    position: relative;
+    box-shadow: -5px 8px 19px 0px rgba(0, 0, 0, 0.25);
+}
+
+.frame-40 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: absolute;
+    left: 0px;
+    top: 61px;
+}
+
+.alva-wingback-accent-chair-1 {
+    flex-shrink: 0;
+    width: 308px;
+    height: 308px;
+    position: relative;
+    object-fit: cover;
+}
+
+.frame-52 {
+    display: flex;
+    flex-direction: row;
+    gap: 132px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    width: 301px;
+    position: relative;
+}
+
+.frame-50 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.wingback-chair {
+    color: #465048;
+    text-align: left;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 27px;
+    font-weight: 500;
+    position: relative;
+}
+
+.frame-1 {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    overflow: visible;
+}
+
+.frame-51 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.r-619-9 {
+    color: #465048;
+    text-align: left;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    position: relative;
+}
+
+.frame-3 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    overflow: visible;
+}
+
+.frame-63 {
+    display: flex;
+    flex-direction: column;
+    gap: 47px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    left: 480px;
+    top: 248px;
+}
+
+.frame-43 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+._472-elysian-bergere-chair-1-1 {
+    border-radius: 11px;
+    flex-shrink: 0;
+    width: 308px;
+    height: 396px;
+    position: relative;
+    box-shadow: -5px 8px 19px 0px rgba(0, 0, 0, 0.25);
+    object-fit: cover;
+}
+
+.frame-55 {
+    display: flex;
+    flex-direction: row;
+    gap: 108px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    width: 308px;
+    position: relative;
+}
+
+.frame-53 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.bergere-chair {
+    color: #465048;
+    text-align: left;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 27px;
+    font-weight: 500;
+    position: relative;
+}
+
+.frame-6 {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    overflow: visible;
+}
+
+.frame-54 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.r-1769-88 {
+    color: #465048;
+    text-align: left;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    position: relative;
+}
+
+.frame-2 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    overflow: visible;
+}
+
+.frame-64 {
+    display: flex;
+    flex-direction: column;
+    gap: 47px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    left: 876px;
+    top: 248px;
+}
+
+.frame-46 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-45 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.rectangle-19 {
+    background: #eaeaea;
+    border-radius: 11px;
+    flex-shrink: 0;
+    width: 308px;
+    height: 396px;
+    position: relative;
+    box-shadow: -5px 8px 19px 0px rgba(0, 0, 0, 0.25);
+}
+
+.frame-44 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: absolute;
+    left: 1px;
+    top: 37px;
+}
+
+.image-2 {
+    flex-shrink: 0;
+    width: 307px;
+    height: 324px;
+    position: relative;
+    object-fit: cover;
+}
+
+.frame-58 {
+    display: flex;
+    flex-direction: row;
+    gap: 143px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    width: 327px;
+    position: relative;
+}
+
+.frame-56 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.barrel-chair {
+    color: #465048;
+    text-align: left;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 27px;
+    font-weight: 500;
+    position: relative;
+}
+
+.frame-7 {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    overflow: visible;
+}
+
+.frame-57 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.r-1646-9 {
+    color: #465048;
+    text-align: left;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    position: relative;
+}
+
+.frame-4 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    overflow: visible;
+}
+
+.frame-37 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 637px;
+    top: 37px;
+}
+
+.produtos {
+    color: #465048;
+    text-align: center;
+    font-family: 'Kuro-DemiBold', sans-serif;
+    font-size: 44.20000076293945px;
+    font-weight: 400;
+    position: relative;
+}
+
+.frame-38 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 453px;
+    top: 94px;
+}
+
+.siga-abaixo-uma-ampla-lista-de-poltronas-que-s-a-monroe-pode-te-oferecer {
+    color: #465048;
+    text-align: center;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 26.399999618530273px;
+    font-weight: 500;
+    position: relative;
+}
+
+.frame-67 {
+    display: flex;
+    flex-direction: row;
+    gap: 119px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 303px;
+    position: absolute;
+    left: 1277px;
+    top: 691px;
+}
+
+.frame-59 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.slipper-chair {
+    color: #465048;
+    text-align: left;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 27px;
+    font-weight: 500;
+    position: relative;
+}
+
+.frame-8 {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    overflow: visible;
+}
+
+.frame-60 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.r-1259-7 {
+    color: #465048;
+    text-align: left;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    position: relative;
+}
+
+.frame-47 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    overflow: visible;
+}
+
+
+
+.desktop-4,
+.desktop-4 * {
+    box-sizing: border-box;
+}
+
+.desktop-4 {
+    background: #ffffff;
+    height: 1024px;
+    position: relative;
+    overflow: hidden;
+}
+
+.frame-127 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    left: 2px;
+    top: 271.45px;
+}
+
+.frame-121 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    overflow: visible;
+}
+
+.frame-120 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: absolute;
+    left: 99.14px;
+    top: 111.67px;
+}
+
+.a-captivating-photo-of-a-group-of-people-sitting-i-rf-8-l-rint-sv-o-9-zr-c-bhdn-aw-f-8-zqtqttdw-wz-qp-7-tdg-cwg-1 {
+    flex-shrink: 0;
+    width: 344.39px;
+    height: 343.35px;
+    position: relative;
+    box-shadow: -26.09px 26.09px 32.66px 10.44px rgba(0, 0, 0, 0.25);
+    object-fit: cover;
+}
+
+.frame-119 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    left: 273.34px;
+    top: 175.44px;
+}
+
+.armchair-seller-1 {
+    flex-shrink: 0;
+    width: 410.14px;
+    height: 373.61px;
+    position: relative;
+    box-shadow: -20.87px 20.87px 32.46px 10px rgba(0, 0, 0, 0.48);
+    object-fit: cover;
+}
+
+.frame-126 {
+    display: flex;
+    flex-direction: column;
+    gap: 53px;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    left: 880px;
+    top: 175px;
+}
+
+.frame-125 {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-122 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.sobre-n-s {
+    color: #465048;
+    text-align: right;
+    font-family: 'Kuro-DemiBold', sans-serif;
+    font-size: 89.75px;
+    font-weight: 400;
+    position: relative;
+}
+
+.frame-123 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    overflow: visible;
+}
+
+.frame-124 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.conhe-a-a-conforto-estilo-oferecemos-poltronas-luxuosas-a-pre-os-justos-trans-formamos-lares-e-pro-movemos-o-conforto-para-todos-visite-nos-e-descu-bra-sua-poltrona-perfeita {
+    color: #465048;
+    text-align: right;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 38.32756805419922px;
+    font-weight: 500;
+    position: relative;
+}
+
+
+
+.desktop-5,
+.desktop-5 * {
+    box-sizing: border-box;
+}
+
+.desktop-5 {
+    background: #ffffff;
+    height: 1024px;
+    position: relative;
+    overflow: hidden;
+}
+
+.frame-164 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    left: 0px;
+    top: 575px;
+}
+
+.rectangle-46 {
+    background: linear-gradient(0deg, rgba(192, 178, 131, 1.00) 0%, rgba(192, 178, 131, 0.00) 100%);
+    flex-shrink: 0;
+    width: 1440px;
+    height: 449px;
+    position: relative;
+}
+
+.frame-166 {
+    display: flex;
+    flex-direction: column;
+    gap: 69px;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    left: 360px;
+    top: 132px;
+}
+
+.frame-165 {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-128 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.adquira-agora-sua-poltrona-de-conforto-sem-igual {
+    color: #465048;
+    text-align: center;
+    font-family: 'NunitoSans-SemiBold', sans-serif;
+    font-size: 26.399999618530273px;
+    font-weight: 600;
+    position: relative;
+}
+
+.frame-129 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.aproveite-enquanto-h-tempo {
+    color: #465048;
+    text-align: center;
+    font-family: 'Kuro-DemiBold', sans-serif;
+    font-size: 52.20000076293945px;
+    font-weight: 400;
+    position: relative;
+}
+
+.frame-132 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-131 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.rectangle-48 {
+    background: #465048;
+    border-radius: 9.88px;
+    flex-shrink: 0;
+    width: 341.41px;
+    height: 93px;
+    position: relative;
+}
+
+.frame-130 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: absolute;
+    left: 42px;
+    top: 18.36px;
+}
+
+.compre-agora {
+    color: #ffffff;
+    text-align: center;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 40.11319351196289px;
+    font-weight: 500;
+    position: relative;
+}
+
+.frame-162 {
+    display: flex;
+    flex-direction: row;
+    gap: 87px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    left: 741px;
+    top: 693px;
+}
+
+.frame-157 {
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-143 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.recursos {
+    color: #465048;
+    text-align: left;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    position: relative;
+}
+
+.frame-156 {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-146 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.sobre {
+    color: #465048;
+    text-align: left;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+}
+
+.frame-147 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.produto {
+    color: #465048;
+    text-align: left;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+}
+
+.frame-148 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.descobrir {
+    color: #465048;
+    text-align: left;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+}
+
+.frame-149 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.contato {
+    color: #465048;
+    text-align: left;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+}
+
+.frame-159 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-144 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.suporte {
+    color: #465048;
+    text-align: left;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    position: relative;
+}
+
+.frame-158 {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-150 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.carrinho {
+    color: #465048;
+    text-align: left;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+}
+
+.frame-151 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.login {
+    color: #465048;
+    text-align: left;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+}
+
+.frame-152 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.privacidade {
+    color: #465048;
+    text-align: left;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+}
+
+.frame-161 {
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-145 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.categorias {
+    color: #465048;
+    text-align: left;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    position: relative;
+}
+
+.frame-160 {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-153 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.todas-as-poltronas {
+    color: #465048;
+    text-align: left;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+}
+
+.frame-154 {
+    flex-shrink: 0;
+    width: 77px;
+    height: 27px;
+    position: relative;
+}
+
+.poltrona {
+    color: #465048;
+    text-align: left;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.frame-155 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.papel-de-parede {
+    color: #465048;
+    text-align: left;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+}
+
+.frame-142 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    position: absolute;
+    left: 0px;
+    top: 947px;
+}
+
+.frame-141 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    overflow: visible;
+}
+
+.frame-140 {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.layer-2 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    overflow: visible;
+}
+
+.frame-139 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+._2024-monroe-todos-direitos-reservados-arthur-gustavo {
+    color: #465048;
+    text-align: left;
+    font-family: 'NunitoSans-Medium', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+}
+
+.frame-163 {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    left: 30px;
+    top: 641px;
+}
+
+.frame-133 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.layer-22 {
+    flex-shrink: 0;
+    width: 172.28px;
+    height: 103px;
+    position: relative;
+    overflow: visible;
+}
+
+.frame-138 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-136 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.rectangle-49 {
+    background: #bd906f;
+    border-radius: 51px;
+    flex-shrink: 0;
+    width: 377px;
+    height: 76px;
+    position: relative;
+}
+
+.frame-137 {
+    display: flex;
+    flex-direction: row;
+    gap: 33px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: absolute;
+    left: 67px;
+    top: 17px;
+}
+
+.layer-23 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    overflow: visible;
+}
+
+.layer-24 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    overflow: visible;
+}
+
+.frame-134 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    overflow: visible;
+}
+
+.frame-135 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.layer-25 {
+    flex-shrink: 0;
+    width: 41.15px;
+    height: 41.15px;
+    position: relative;
+    overflow: visible;
+}

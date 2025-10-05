@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulary</title>
+</head>
+<body>
+    <form action="index.php" method="post" enctype="multipart/form-data">
+        <label for="username">ton nom:</label>
+        <input type="text" id="username" placeholder="Alberto"><br>
+
+        <label for="password">senha:</label>
+        <input type="password" id="password" minlength="5" maxlength="12" required><br>
+
+        <label for="email">email:</label>
+        <input type="email" id="email" placeholder="teupaiegay@gmail.com"><br>
+
+        <label for="phone">celulation:</label>
+        <input type="tel" id="phone" placeholder="312-976-3456" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+        
+        <label for="birthday">aniversário:</label>
+        <input type="datetime-local" id="birthday"><br>
+
+        <label for="quantity">quantité:</label>
+        <input type="number" id="quantity" min="1" max="99"><br>
+
+        <label for="title">title</label>
+
+        <label for="Father">Father</label>
+        <input type="radio" name="title" id="Father" value="Father">
+        <label for="Mother">Mother</label>
+        <input type="radio" name="title" id="Mother" value="Mother">
+        <label for="Son">Son</label>
+        <input type="radio" name="title" id="Son" value="Son"><br>
+        
+        <label for="what you want?">what you want?</label>
+        <input type="search" name="what you want?" id="what you want?">
+        
+        <ul>
+            <li>
+                <label for="milk">milk</label>
+                <input type="checkbox" name="" id="milk"><br>
+            </li>
+            <li>
+                <label for="cake">cake</label>
+                <input type="checkbox" name="" id="eggs">
+            </li>
+            <li>
+                <label for="eggs">eggs</label>
+                <input type="checkbox" name="" id="eggs">
+            </li>
+        </ul>
+
+        <label for="xinge me">xinge me</label>
+        <textarea name="" id="xinge me" cols="30" rows="2"></textarea><br>
+
+        <label for="Arquivios">Arquivios</label>
+        <input type="file" name="" id="Arquivios" accept="image.jpg, image.png"><br>
+
+        <label for="payday">payday:</label>
+        <select name="payday" id="payday">
+            <option value="cheque">cheque</option>
+            <option value="credit card">credit card</option>
+            <option value="pix">pix</option>
+        </select><br>
+
+        <a href="https://www.amazon.com/inkArts-Shark-Blanket-Wearable-Pajamas/dp/B0CLJ69TZC/ref=sr_1_1?dib=eyJ2IjoiMSJ9.kyqNzX1pkOFge4JioKA4quX0fw5jAIMMEZ9u5H5KpHX7rKtiMO8s9mlCDNGwQB-2zublol7eYqwq51UaWdRuwWKNgHtrfztCzcv4TkKDIixM0DtiUsF6AUMcSorRmpLYLy3T9CyfVLFHRvEHAuYraHHEbylZF0djFSATEqonzAVa4XKc6SDr-WVkMvYvaeYRSEdFuL_iNQC_Lc8UgAjCPFeWWuxBEnVVeiA-KA3hrf26qtzHKj_Bw8xyaN5dOiQOO88Uk_EEP-Gh94n4ZWeYYs6TV8Lynme4WMsR9i8K1a4.a6mLUrltZvSJbxDxZ3daZeZpOSbnIY2ez55Z3xsUBdU&dib_tag=se&keywords=useless+products&qid=1709659403&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"><button style="background-color: blanchedalmond; color: green; border-radius: 20%;">buy it</button></a>
+
+        <input type="reset"><br>
+        <input type="submit">
+    </form>
+</body>
+</html>

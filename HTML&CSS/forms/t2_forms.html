@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulation</title>
+</head>
+<body>
+    <form action="index.php" method="post" enctype="multipart/form-data">
+        
+        <label for="username">nome:</label>
+        <input type="text" name="" id="username" placeholder="Erica"><br>
+
+        <label for="password">password:</label>
+        <input type="password" name="pswd" id="password" minlength="3" maxlength="14"><br>
+
+        <label for="email">email:</label>
+        <input type="email" name="" id="email" placeholder="tuamaeelinda@gmail.com"><br>
+
+        <label for="phone">telefono:</label>
+        <input type="tel" name="" id="phone" placeholder="345-678-1234"><br>
+
+        <label for="bday">aniverseirio:</label>
+        <input type="datetime-local" name="" id="bday"><br>
+        
+        <label for="quantity">age:</label>
+        <input type="number" name="" id="quantity" min="5" max="70"><br>
+
+        <label for="pagando">paguei em:</label>
+        <select name="pagando" id="pagando">
+            <option value="pix">pix</option>
+            <option value="credit card">credit card</option>
+            <option value="services">services</option>
+        </select><br>
+
+        <label for="title">title:</label>
+        <label for="bro">bro:</label>
+        <input type="radio" name="title" id="bro" value="bro">
+        <label for="chegado">chegado:</label>
+        <input type="radio" name="title" id="chegado" value="chegado">
+        <label for="colega">colega:</label>
+        <input type="radio" name="title" id="colega" value="colega">
+
+        <ol>
+            <li>
+                <label for="wake up">wake up</label>
+                <input type="checkbox" name="" id="wake up">
+            </li>
+            <li>
+                <label for="shower">take shower</label>
+                <input type="checkbox" name="" id="shower">
+            </li>
+            <li>
+                <label for="breakfast">eat breakfast</label>
+                <input type="checkbox" name="" id="breakfast">
+            </li>
+        </ol>
+
+        <label for="desabafe">desabafe:</label>
+        <textarea name="" id="desabafe" cols="30" rows="6"></textarea>
+
+        <label for="file">file:</label>
+        <input type="file" name="" id="file" accept="image/png"><br>
+
+        <input style="background-color: azure; border-color: gray;" type="reset" value="restart">
+        <input style="background-color: blanchedalmond; border-color: grey;" type="submit" value="finish">
+
+    </form>
+</body>
+</html>

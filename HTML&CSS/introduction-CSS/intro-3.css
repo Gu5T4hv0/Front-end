@@ -1,0 +1,28 @@
+body{
+    background-color: black;
+}
+h4{
+    color: aqua;
+}
+h1{
+    color: whitesmoke;
+}
+/*#p1{
+    color: red;
+}
+#p2{
+    color: orange;
+}
+#p3{
+    color: yellow;
+}
+#p4{
+    color: green;
+}*/
+
+.sem{
+    color: red;
+}
+.com{
+    color: green;
+}

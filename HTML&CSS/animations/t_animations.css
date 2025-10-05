@@ -1,0 +1,51 @@
+body{
+    background-color: hsl(0, 0%, 21%);
+}
+#box{
+    width: 250px;
+    height: 250px;
+    font-size: 12em;
+    text-align: center;
+    background-color: hsl(0, 100%, 25%);
+    animation-name: slideRight, glow;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-play-state: running;
+    animation-timing-function: cubic-bezier(0, 3.87, 1,-2.48);
+}
+@keyframes slideLeft{
+    from{transform: translateX(400%);}
+}
+@keyframes slideRight{
+    to{transform: translateX(400%);}
+}
+@keyframes slideUp{
+    from{transform: translateY(400%);}
+}
+@keyframes slideDown{
+    to{transform: translateY(400%);}
+}
+@keyframes rotate{
+    40%{transform: rotateX(500deg);}
+}
+@keyframes grow{
+    50%{transform: scale(2, 2);}
+}
+@keyframes shrink{
+    50%{transform: scale(0.5, 0.5);}
+}
+@keyframes fadeIn{
+    100%{opacity: 1}
+}
+@keyframes colorChange{
+    0%{background-color: hsl(0, 100%, 25%);}
+    20%{background-color: hsl(56, 100%, 25%);}
+    40%{background-color: hsl(114, 100%, 25%);}
+    60%{background-color: hsl(182, 100%, 25%);}
+    80%{background-color: hsl(230, 100%, 25%);}
+    100%{background-color: hsl(297, 100%, 25%);}
+}
+@keyframes glow{
+    50%{box-shadow: 40px 0px 40px rgb(255, 0, 0);}
+}

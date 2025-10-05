@@ -1,0 +1,21 @@
+#box1{
+    width: 200px;
+    height: 200px;
+    background-color: hsl(188, 100%, 63%);
+    position: sticky;/*relative, fixed*/
+    /*left: 0px;
+    bottom: 0px;*/
+    /*top: -100px;
+    left: -100px;*/
+    /*top: 100px;
+    left: 100px;*/
+    top: 0px;
+}
+#box2{
+    width: 100px;
+    height: 100px;
+    background-color: hsl(0, 100%, 63%);
+    position: static;/*absolute*/
+    top: 50px;
+    left: 50px;
+}

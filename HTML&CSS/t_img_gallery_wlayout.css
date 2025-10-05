@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+}
+header{
+    background-color: hsl(45, 23%, 86%);
+    text-align: center;
+    padding: 25px;
+}
+.navbar{
+    height: 30px;
+    background-color: hsl(44, 35%, 36%);
+}
+aside{
+    width: 20%;
+    float: left;
+    padding: 10px;
+}
+section{
+    width: 40%;
+    float: left;
+    padding: 10px;
+}
+article{
+    width: 40%;
+    float: left;
+    padding: 10px;
+}
+footer{
+    clear: both;
+    background-color: hsl(45, 23%, 86%);
+    text-align: center;
+    padding: 25px;
+}
+.gallery{
+    display: inline-block;
+    border: 2px solid hsl(44, 64%, 65%);
+    width: 200px;
+    margin: 5px;
+}
+.gallery .description{
+    text-align: center;
+    padding: 5px;
+}
+.gallery:hover{
+    border: 3px solid hsl(44, 51%, 60%);
+    margin: 7px;
+}
+.gallery img{
+    width: 100%;
+}
+@media screen and (max-width: 600px){
+    aside, section, article {
+        width: 100%;
+    }
+}

@@ -1,0 +1,25 @@
+#div1{
+    border-top: 4px dashed hsl(240, 100%, 24%);
+    border-bottom: 4px dashed hsl(240, 100%, 24%);
+    border-left: 4px solid;
+    border-right: 4px solid;
+    height: 150px;
+    overflow: auto;
+}
+#box{
+    text-shadow: 1px 1px 2px #3f3f3f;
+    font-size: 2em;
+    width: 200px;
+    height: 45px;
+    background-color: hsl(271, 70%, 80%);
+    box-shadow: 3px 3px 3px rgb(94, 48, 139);
+}
+#img1{
+    float: left;
+    margin-right: 30px;
+}
+#img2{
+    float: right;
+    margin-left: 30px;
+}
+

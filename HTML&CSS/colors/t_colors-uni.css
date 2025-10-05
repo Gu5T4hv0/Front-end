@@ -1,0 +1,20 @@
+body{
+    background-color: azure;
+}
+@font-face{
+    src: url(fonts.doc/BigshotOne-Regular.ttf);
+    font-family: Bigshot One;
+}
+@font-face{
+    src: url(fonts.doc/AkayaTelivigala-Regular.ttf);
+    font-family: Akaya Telivigala;
+}
+
+h1{
+    font-family: 'Bigshot One', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: hsl(0, 87%, 57%);
+}
+p{
+    font-family: 'Akaya Telivigala', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: hsl(240, 90%, 58%);
+}

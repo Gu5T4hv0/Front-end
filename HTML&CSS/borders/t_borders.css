@@ -1,0 +1,14 @@
+h1{
+    border-style: double;
+    border-width: 20%;
+    border-color: hsl(120, 64%, 29%);
+    border-radius: 10px;
+}
+pre{
+    border-bottom: 4px outset rgb(174, 49, 49);
+    border-top: 4px dashed rgb(55, 182, 55);
+    border-right: 4px inset rgb(40, 40, 173);
+    border-left: 4px inset rgb(207, 207, 42);
+
+    border-radius: 5%;
+}

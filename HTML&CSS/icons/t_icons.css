@@ -1,0 +1,25 @@
+.icons{
+    text-align: center;
+}
+.icons a{
+    text-decoration: none;
+    margin-right: 25px;
+}
+.fa-solid.fa-magnifying-glass.fa-5x{
+    color: hsl(0, 0%, 40%);
+}
+.fa-solid.fa-magnifying-glass.fa-5x:hover{
+    color: hsl(0, 0%, 50%);
+}
+.fa-brands.fa-facebook.fa-5x{
+    color: rgb(1, 101, 225);
+}
+.fa-brands.fa-facebook.fa-5x:hover{
+    color: rgb(1, 101, 245);
+}
+.fa-brands.fa-instagram.fa-5x{
+    color: rgb(193, 53, 132);
+}
+.fa-brands.fa-instagram.fa-5x:hover{
+    color: rgb(193, 53, 152);
+}
