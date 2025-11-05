@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Página Protegida</title>
+
+    <script>
+        (function() {
+            // Pega o "token" (nossos dados de usuário) do localStorage
+            const userJSON = localStorage.getItem('loggedInUser');
+            
+            // Se NÃO houver um usuário logado...
+            if (!userJSON) {
+                // ...avisa o usuário e o redireciona para a página de login.
+                alert('Você precisa estar logado para acessar esta página.');
+                window.location.href = 'login.html';
+            }
+        })();
+    </script>
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+        img {
+            max-width: 90%; /* Garante que a imagem não saia da tela */
+            max-height: 90vh;
+            display: block;
+            background-color: white; /* Fundo branco para o QR code */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://qrcg-free-editor.qr-code-generator.com/latest/assets/images/websiteQRCode_noFrame.png" alt="QR Code Website">
+
+    </body>
+</html>

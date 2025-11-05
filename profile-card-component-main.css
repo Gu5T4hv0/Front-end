@@ -1,0 +1,7 @@
+body{
+    background-color: #19A1AD;
+}
+.balls{
+    display: flex;
+    flex-direction: row;
+}

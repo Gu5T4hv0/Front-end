@@ -1,0 +1,278 @@
+/*
+ * Tema: Terminal Hacker Moderno
+ * Inspirado em interfaces de código e consoles de desenvolvimento.
+ */
+
+/* 1. Variáveis e Reset Básico */
+:root {
+    --bg-color: #1e1e1e; /* Fundo Escuro */
+    --text-color: #cccccc; /* Texto Principal Cinza Claro */
+    --accent-color: #66ff66; /* Verde Neon para Títulos e Destaques */
+    --link-color: #33ccff; /* Azul Ciano para Links */
+    --terminal-border: #444444; /* Borda da Janela do Terminal */
+    --section-separator: #333333; /* Linha de separação discreta */
+    --shadow-color: rgba(102, 255, 102, 0.2); /* Sombra Neon (sutil) */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fira Code', monospace; /* Fonte Monospace elegante */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 30px;
+}
+
+/* 2. Layout Principal */
+.terminal-window {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #252526; /* Um pouco mais claro que o fundo do body */
+    border: 2px solid var(--terminal-border);
+    box-shadow: 0 0 20px var(--shadow-color);
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.content-section {
+    display: flex;
+    gap: 40px;
+    padding-top: 30px;
+}
+
+/* 3. Colunas */
+.left-column {
+    flex: 1; /* Ocupa 1/3 do espaço */
+    min-width: 250px;
+}
+
+.right-column {
+    flex: 2; /* Ocupa 2/3 do espaço */
+    border-left: 1px solid var(--section-separator);
+    padding-left: 40px;
+}
+
+/* 4. Estilo do Cabeçalho (Nome e Título) */
+.header-section {
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--accent-color);
+    margin-bottom: 40px;
+}
+
+.name {
+    font-size: 3.5em;
+    font-weight: 700;
+    color: #ffffff; /* Branco puro para o nome */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.title {
+    font-size: 1.5em;
+    color: var(--accent-color);
+    margin-top: -5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: blink-caret 0.75s step-end infinite; /* Efeito de piscar */
+}
+
+/* 5. Títulos de Seção e Efeitos de Terminal */
+.section-title {
+    font-size: 1.3em;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed var(--section-separator);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.icon-prompt {
+    margin-right: 10px;
+    color: var(--accent-color);
+    font-size: 0.8em;
+}
+
+/* 6. Estilo dos Cards/Seções */
+.about-card, .experience-card, .education-card, .contact-card, .skills-card, .languages-card {
+    margin-bottom: 30px;
+}
+
+/* Seção Sobre Mim */
+.about-card p {
+    text-align: justify;
+    padding-left: 25px; /* Alinhamento com a seção de código */
+}
+
+.about-card p strong {
+    color: var(--accent-color);
+}
+
+/* 7. Experiência e Formação (Timeline/Lista) */
+.job-item, .edu-item {
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.job-item:last-child, .edu-item:last-child {
+    margin-bottom: 0;
+}
+
+.job-header, .edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.job-title, .edu-title {
+    font-size: 1.1em;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.job-duration, .edu-duration {
+    color: var(--accent-color);
+    font-size: 0.9em;
+}
+
+.job-company, .edu-institution {
+    color: var(--text-color);
+    font-size: 0.95em;
+    margin-top: 2px;
+    font-style: italic;
+}
+
+/* Pseudo-elemento para o bullet point verde */
+.job-item::before, .edu-item::before {
+    content: '>>';
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+/* 8. Contato */
+.contact-card ul {
+    list-style: none;
+}
+
+.contact-card li {
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.contact-icon {
+    color: var(--accent-color);
+    margin-right: 10px;
+}
+
+.contact-card a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+/* 9. Habilidades (Visual de Código/Chips) */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-item {
+    background-color: var(--section-separator);
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    border-left: 3px solid var(--accent-color);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.skill-item:hover {
+    background-color: #444444;
+    transform: translateY(-2px);
+}
+
+.skill-icon {
+    color: var(--accent-color);
+    margin-right: 5px;
+}
+
+/* 10. Línguas */
+.languages-card ul {
+    list-style: none;
+}
+
+.languages-card li {
+    margin-bottom: 5px;
+}
+
+.lang-name {
+    color: var(--accent-color);
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+/* 11. Rodapé (Código de Fechamento) */
+footer {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.code-end {
+    font-size: 1.8em;
+    color: var(--link-color);
+    opacity: 0.8;
+}
+
+/* 12. Animação do Cursor Pisca-Pisca */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--accent-color); }
+}
+
+/* 13. Responsividade */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column; /* Colunas empilham em telas menores */
+    }
+
+    .right-column {
+        border-left: none; /* Remove a linha de separação vertical */
+        padding-left: 0;
+    }
+
+    .header-section {
+        margin-bottom: 20px;
+    }
+
+    .name {
+        font-size: 2.5em;
+    }
+
+    .title {
+        font-size: 1.2em;
+    }
+    
+    body {
+        padding: 15px;
+    }
+    
+    .terminal-window {
+        padding: 20px;
+    }
+}

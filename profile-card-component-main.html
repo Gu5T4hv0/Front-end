@@ -4,9 +4,176 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>profile-card-component-main</title>
-    <link rel="stylesheet" href="profile-card-component-main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigal
+    a&family=Allura&family=Anton&family=Bigshot+One&family=Kumbh+Sans:wgh
+    t@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,
+    300;1,400;1,700;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300.
+    .900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..
+    900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" 
+    rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        
+        /* .kumbh-sans {
+        font-family: "Kumbh Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-variation-settings:
+            "YOPQ" 300;
+        } */
+
+        body{
+        background-color: #19A1AD;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+        }
+        .balls img{
+            position: absolute;
+            max-width: 600px;
+            width: 50vw;
+            height: auto;
+        }
+        .ball1 img{
+            top: -200px;
+            left: -200px;
+        }
+        .ball2 img{
+            bottom: -200px;
+            right: -200px;
+        }
+
+        .block{
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .victor img{
+            border-radius: 50%;
+            border: 7px solid #ffffff;
+            margin-top: -50%;
+        }
+
+        .namageloc{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .namage{
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .info{
+            display: flex;
+            flex-direction: row;
+            gap: 3.5rem;
+            padding: 1.5rem;
+        }
+
+        .F80{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .L803{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .P14{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .up{
+            font-family: "Kumbh Sans";
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px){
+            .balls img{
+                max-width: 400px;
+                width: 70vw;
+            }
+            .ball1 img{
+                top: -150px;
+                left: -150px;
+            }
+            .ball2 img{
+                bottom: -150px;
+                right: -150px;
+            }
+        }
+        @media (max-width: 480px){
+            .balls img{
+                max-width: 300px;
+                width: 90vw;
+            }
+            .ball1 img{
+                top: -120px;
+                left: -120px;
+            }
+            .ball2 img{
+                bottom: -120px;
+                right: -120px;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="balls">
+        <div class="ball1"><img src="Elements/bg-pattern-top.svg" alt=""></div>
+        <div class="ball2"><img src="Elements/bg-pattern-bottom.svg" alt=""></div>
+    </div>
+    <div class="block">
+        <div class="pattern"><img src="Elements/bg-pattern-card.svg" alt=""></div>
+
+        <div class="victor">
+            <img src="Elements/image-victor.jpg" alt="">
+        </div>
+
+        <div class="namageloc">
+            <div class="namage"><p class="name">Victor Crest</p><p class="age">26</p></div>
+            <div><p>London</p></div>
+        </div>
+
+        <div class="info">
+            <div class="F80">
+                <p class="up">80K</p>
+                <p class="down">Followers</p>
+            </div>
+
+            <div class="L803">
+                <p class="up">803K</p>
+                <p class="down">Likes</p>
+            </div>
+
+            <div class="P14">
+                <p class="up">1.4K</p>
+                <p class="down">Photos</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

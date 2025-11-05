@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Units Interactive Demo</title>
+  <style>
+    html {
+      font-size: 16px; /* default base font size */
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .slider-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .slider-container label {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .example {
+      background-color: #3498db;
+      color: white;
+      margin: 20px 0;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .em-box {
+      font-size: 1em;
+      width: 20em;
+    }
+
+    .rem-box {
+      font-size: 1rem;
+      width: 20rem;
+    }
+
+    .percent-box {
+      width: 50%;
+      font-size: 1rem;
+    }
+
+    .vw-box {
+      width: 50vw;
+      font-size: 2vw;
+    }
+
+    .vh-box {
+      height: 30vh;
+      font-size: 2vh;
+    }
+  </style>
+</head>
+<body>
+  <h1>💡 Responsive Units Interactive Demo</h1>
+
+  <div class="slider-container">
+    <label for="fontSizeSlider">Base font size:</label>
+    <input type="range" id="fontSizeSlider" min="10" max="30" value="16">
+    <span id="fontValue">16px</span>
+  </div>
+
+  <div class="example em-box">em → width: 20em</div>
+  <div class="example rem-box">rem → width: 20rem</div>
+  <div class="example percent-box">% → width: 50%</div>
+  <div class="example vw-box">vw → width: 50vw, font-size: 2vw</div>
+  <div class="example vh-box">vh → height: 30vh, font-size: 2vh</div>
+
+  <p>Move the slider to change the <code>&lt;html&gt;</code> base font size and watch how <b>em</b> and <b>rem</b> react.</p>
+
+  <script>
+    const slider = document.getElementById('fontSizeSlider');
+    const fontValue = document.getElementById('fontValue');
+
+    slider.addEventListener('input', () => {
+      const size = slider.value + 'px';
+      document.documentElement.style.fontSize = size;
+      fontValue.textContent = size;
+    });
+  </script>
+</body>
+</html>
