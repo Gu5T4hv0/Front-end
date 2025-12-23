@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*é pra limitar ao width que a gente colocou para o container*/
+}
+
+:root{
+    --text-color: white;
+    --bg-url: url(./assetos/bg-mobile.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.1);
+    --surface-color-hover: rgba(255, 255, 255, 0.05);
+    --highlight-color: rgba(255, 255, 255, 0.2);
+    --switch-bg-url: url(./assetos/moon-stars.svg);
+}
+
+.lighty{
+    --text-color: black;
+    --bg-url: url(./assetos/bg-mobile-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.1);
+    --highlight-color: rgba(0, 0, 0, 0.1);
+    --switch-bg-url: url(./assetos/sun.svg)
+}
+
+body{
+    /*
+    background-image: url(./assetos/bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    */
+
+    /*background: color image repeat position/size*/
+    background: var(--bg-url) no-repeat top center/cover;
+}
+
+body *{
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+
+#container{
+    width: 360px;
+    height: 712px;
+    /*margin-right: auto;
+    margin-left: auto;*/
+    margin: auto;
+    padding-top: 56px;
+    margin: 56px auto 0px;
+    /*margin: top, right, bottom, left
+    or
+    margin: top, right-left, bottom*/
+    padding: 0 24px;
+}
+/*em elementos inline ex.:img não é possivel aplicar "margin: auto;"*/
+
+/*switcher*/
+#switcher {
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+#switcher button{
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    left: 0;
+
+    position: absolute;
+    z-index: 1;
+
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lighty #switcher button{
+    right: 0;
+    left: initial;
+}
+
+#switcher span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 1000px;
+}
+
+/*profile*/
+#profile{
+    text-align: center;
+    padding: 24px;
+}
+
+#profile img{
+    width: 112px;
+}
+
+#profile p{
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+/*Links*/
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+}
+ul li a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    font-weight: 500;
+    transition: background 0.3s;
+}
+ul li a:hover{
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
+}
+
+/*Social Links*/
+#social-links{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 24px 0;
+    font-size: 24px;
+}
+
+#social-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: background 0.2s;
+    border-radius: 50%;
+}
+
+#social-links a:hover{
+    background: var(--highlight-color);
+}
+
+footer {
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+}
