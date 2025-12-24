@@ -35,6 +35,7 @@ body{
 
     /*background: color image repeat position/size*/
     background: var(--bg-url) no-repeat top center/cover;
+    height: 100vh;
 }
 
 body *{
@@ -43,7 +44,8 @@ body *{
 }
 
 #container{
-    width: 360px;
+    width: 100%;
+    max-width: 588px;
     height: 712px;
     /*margin-right: auto;
     margin-left: auto;*/
@@ -76,11 +78,16 @@ body *{
 
     top: 50%;
     transform: translateY(-50%);
+
+    animation: slide-out 0.2s forwards;
 }
 
 .lighty #switcher button{
-    right: 0;
-    left: initial;
+    animation: slide-in 0.2s forwards;
+}
+
+#switcher button:hover {
+    outline: 8px solid var(--highlight-color);
 }
 
 #switcher span{
@@ -162,4 +169,34 @@ footer {
     padding: 24px 0;
     text-align: center;
     font-size: 14px;
+}
+
+/*media queries*/
+@media (min-width: 700px) {
+    :root {
+        --bg-url: url(./assetos/bg-desktop.jpg);
+    }
+
+    .lighty {
+        --bg-url: url(./assetos/bg-desktop-light.jpg);
+    }
+}
+
+/*animation*/
+@keyframes slide-in{
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slide-out{
+    from {
+        left: 50%;
+    }
+    to {
+        left: 0;
+    }
 }
