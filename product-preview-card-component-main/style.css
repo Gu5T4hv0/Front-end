@@ -1,9 +1,9 @@
 @font-face{
-src: url(Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+src: url(assets/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
 font-family: Fraunces;
 }
 @font-face{
-    src: url(Montserrat-VariableFont_wght.ttf);
+    src: url(assets/Montserrat-VariableFont_wght.ttf);
     font-family: Montserrat;
 }
 body{
