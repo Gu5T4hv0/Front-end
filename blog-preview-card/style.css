@@ -1,9 +1,9 @@
 @font-face{
-    src: url(Figtree-ExtraBold.ttf);
+    src: url(assets/Figtree-ExtraBold.ttf);
     font-family: Figtree-ExtraBold;
 }
 @font-face{
-    src: url(Figtree-Medium.ttf);
+    src: url(assets/Figtree-Medium.ttf);
     font-family: Figtree-Medium;
 }
 body{
