@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Rocketseat/DevLinks"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Oh.studio"
+	}
+}
