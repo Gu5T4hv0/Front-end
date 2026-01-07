@@ -2,10 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-body {
     font-family: 'Raleway', sans-serif;
 }
+
 /* bloco 1 */
 .laco-amarelow {
     background-image: url(./assets/laco-amarelo.svg);
@@ -81,18 +80,33 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 200px;
+    margin-top: 170px;
     gap: 16px;
 }
 .salvar {
     color: #FFE400;
-    width: 520px;
-    font-size: 42px;
+    width: 540px;
+    font-size: 45px;
     text-align: center;
 }
 .vita {
     color: #FFFF;
-    width: 746px;
-    font-size: 30px;
+    width: 776px;
+    font-size: 33px;
     text-align: center;
 }
+.access {
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+}
+.bloco2 button {
+    width: 400px;
+    height: 75px;
+    background-color: black;
+    border: 2.4px solid white;
+    color: white;
+    border-radius: 107px;
+    font-size: 25px;
+}
+.
