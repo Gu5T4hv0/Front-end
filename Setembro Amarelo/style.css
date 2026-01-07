@@ -144,3 +144,25 @@
     height: 323px;
     display: flex;
 }
+.txt h1{
+    font-size: 50px;
+    color: #313027;
+    margin-bottom: 42px;
+    margin-left: 14px;
+}
+.txt p{
+    font-size: 18px;
+    font-weight: 600;
+    color: #313027;
+    width: 320px;
+    margin-bottom: 42px;
+    margin-left: 22px;
+}
+.txt button{
+    padding: 23px 60px;
+    background-color: #313027;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 76px;
+}
