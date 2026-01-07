@@ -147,7 +147,7 @@
 .txt h1{
     font-size: 50px;
     color: #313027;
-    margin-bottom: 42px;
+    margin-bottom: 47px;
     margin-left: 14px;
 }
 .txt p{
@@ -155,7 +155,7 @@
     font-weight: 600;
     color: #313027;
     width: 320px;
-    margin-bottom: 42px;
+    margin-bottom: 47px;
     margin-left: 22px;
 }
 .txt button{
@@ -165,4 +165,7 @@
     border: none;
     font-size: 16px;
     border-radius: 76px;
+}
+.draw {
+    margin-left: 90px;
 }
