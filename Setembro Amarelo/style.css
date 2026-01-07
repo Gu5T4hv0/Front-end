@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+}
+/* bloco 1 */
+.laco-amarelow {
+    background-image: url(./assets/laco-amarelo.svg);
+    height: 787px;
+    background-repeat: no-repeat;
+    background-position: right top;
+    position: relative;
+    z-index: 1;
+}
+.logo {
+    position: absolute;
+    z-index: 5;
+    padding-top: 70px;
+    margin-left: 1135px;
+}
+.yellow-block {
+    position: absolute;
+    width: 850px;
+    height: 787px;
+    background-color: #FCFADE;
+    border-radius: 0 27px 27px 0;
+    z-index: 2;
+}
+.mote img{
+    margin-top: 55px;
+    margin-left: 420px;
+    width: 250px;
+}
+.text1 {
+    margin-top: 90px;
+    margin-left: 420px;
+    display: grid;
+    gap: 41px;
+    color: #313027;
+}
+.preciso {
+    font-size: 60px;
+    width: 280px;
+}
+.info {
+    font-size: 17px;
+    width: 282px;
+    margin-left: 10px;
+}
+.texture {
+    position: absolute;
+    border-radius: 0 27px 27px 0;
+    width: 850px;
+    height: 100%;
+    background-image: url(./assets/white-paper-texture.svg);
+    z-index: 3;
+    pointer-events: none;
+}
+.exclamation {
+    position: absolute;
+    width: 100%;
+    height: 98%;
+    background-image: url(./assets/exclamation.svg);
+    z-index: 4;
+    background-repeat: no-repeat;
+    background-position: left top;
+    pointer-events: none;
+}
+/* bloco 2 */
+.bloco2 {
+    position: absolute;
+    background-image: url(./assets/black_image.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+.text2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+    gap: 16px;
+}
+.salvar {
+    color: #FFE400;
+    width: 520px;
+    font-size: 42px;
+    text-align: center;
+}
+.vita {
+    color: #FFFF;
+    width: 746px;
+    font-size: 30px;
+    text-align: center;
+}
