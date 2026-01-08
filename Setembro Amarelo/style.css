@@ -231,3 +231,14 @@
     margin-top: 100px;
     position: absolute;
 }
+.contacts {
+    border: 1px solid #0C8CE9;
+    display: flex;
+}
+.rectangle {
+    background-color: #FEFDF3;
+    border: 6px solid white;
+    width: 280px;
+    height: 230px;
+    border-radius: 25px;
+}
