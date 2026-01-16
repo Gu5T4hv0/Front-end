@@ -86,6 +86,12 @@
     background-position: left top;
     pointer-events: none;
 }
+.exclamation3 {
+    display: none;
+}
+.preto {
+    display: none;
+}
 /* bloco 2 */
 .bloco2 {
     position: absolute;
@@ -287,6 +293,100 @@
     }
     .yellow-block {
         position: relative;
-        width: 392px;
+        width: 375px;
+        height: 527px;
+        border-radius: 0px;
+    }
+    .logo {
+        display: none;
+    }
+    .text1 {
+        position: absolute;
+        z-index: 2;
+        margin-top: 58px;
+        margin-left: 37px;
+        display: grid;
+        gap: 42px;
+    }
+    .preciso {
+        font-size: 45px;
+        width: 209px;
+    }
+    .info {
+        font-size: 17px;
+        width: 282px;
+        margin-left: 10px;
+    }
+    .mote img{
+        margin-top: 48px;
+        margin-left: 37px;
+        width: 118px;
+    }
+    .exclamation {
+        display: none;
+    }
+    .exclamation3 {
+        display: block;
+        position: absolute;
+        margin: 0;
+        width: 100%;
+        height: 98%;
+        background-image: url(./assets/exclamation3.svg);
+        z-index: 1;
+        background-repeat: no-repeat;
+        background-position: right top;
+    }
+    .preto {
+        display: block;
+        position: absolute;
+        z-index: 5;
+        width: 55px;
+        padding-top: 60px;
+        margin-left: 280px;
+    }
+    .texture {
+        display: none;
+    }
+    .texture3 {
+        position: absolute;
+        border-radius: 0px;
+        background-image: url(./assets/white-paper-texture.svg);
+        margin: 0;
+        width: 375px;
+        height: 100%;
+        z-index: 60;
+        pointer-events: none;
+        background-repeat: no-repeat;
+        background-position: right top;
+    }
+    .bloco2 {
+        position: absolute;
+        background-image: url(./assets/M-black_image.svg);
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+    }
+    .text2 {
+        margin-top: 90px;
+        gap: 22px;
+    }
+    .salvar {
+        width: 305px;
+        line-height: 35px;
+        font-size: 25px;
+    }
+    .vita {
+        width: 283px;
+        font-size: 12px;
+    }
+    .access {
+        margin-top: 40px;
+    }
+    .bloco2 button {
+        width: 240px;
+        height: 40px;
+        border: 1px solid white;
+        border-radius: 107px;
+        font-size: 12px;
     }
 }
