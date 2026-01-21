@@ -32,8 +32,22 @@ let isLocked = true;
 let isSuspended = true;
 let actionCompleted = true;
 
-if (!isLocked || !isSuspended || !actionCompleted) {
-    alert("Danger")
-} else {
-    alert("Keep calm")
+// if (!isLocked || !isSuspended || !actionCompleted) {
+//     alert("Danger")
+// } else {
+//     alert("Keep calm")
+// }
+
+let userAge = 22;
+let login = true;
+let premium = false;
+let banned = false;
+let adultsOnly = true;
+let isPremiumContent = true;
+
+if (login == true && !banned && (premium || !isPremiumContent) && (!adultsOnly || userAge >= 18)) {
+    alert("Access granted")
+}
+else {
+    alert("Access denied")
 }
