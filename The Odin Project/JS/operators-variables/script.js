@@ -1,7 +1,9 @@
-let first = "";
-let last = "";
-let nick = "Thuzin";
+let first = "Arthur";
+let middle = "Gustavo de Almeida e"
+let last = "Souza";
+let nick = "Thuzin du Grau";
 
+console.log(`${first} ${middle} ${last} - Nickname: ${nick}`)
 console.log(first || last || nick || "anonimo")
 
 let inputPassword = "1234";
@@ -20,8 +22,18 @@ let age = 21;
 let hasID = true;
 let isBanned = true;
 
-if (age >= 18 && hasID == true && isBanned == true) {
-    alert("Access Granted")
+// if (age >= 18 && hasID == true && isBanned == true) {
+//     alert("Access Granted")
+// } else {
+//     alert("Access Denied")
+// }
+
+let isLocked = true;
+let isSuspended = true;
+let actionCompleted = true;
+
+if (!isLocked || !isSuspended || !actionCompleted) {
+    alert("Danger")
 } else {
-    alert("Access Denied")
+    alert("Keep calm")
 }
