@@ -72,4 +72,7 @@ switch (command) {
         break;
 }
 
-this
+let isOnline = false;
+let lastActiveMinutes = 2;
+
+isOnline ? console.log("User is online") : console.log(`The user is offline since ${lastActiveMinutes} minutes ago`)
