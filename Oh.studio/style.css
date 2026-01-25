@@ -291,10 +291,45 @@ body {
 
 /* review */
 @media (max-width: 640px) {
+    .h1s {
+        max-width: 350px;
+        font-size: 3rem;
+        padding-top: 112px;
+    }
+    .navbar{
+        width: 259px;
+    }
+    .switch {
+        width: 78px;
+    }
+    .concepts {
+        gap: 14px;
+        padding-bottom: 117px;
+    }
+    .photos {
+        gap: 0px;
+        margin-bottom: 250px;
+    }
     .photos img {
-        height: 300px;
+        height: 15%;
+        width: 80%;
+    }
+    .cta {
+        margin: 00px auto 150px;
+        width: 270px;
+        text-align: center;
+        font-size: 2.5rem;
+        line-height: 1.3;
+    }
+    .author p{
+        font-size: 14px;
+        width: 100px;
+    }
+    .logo {
+        width: 27px;
+        height: 27px;
     }
     .social {
-        padding: 38px 25px;
+        padding: 38px 20px;
     }
 }
