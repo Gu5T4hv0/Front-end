@@ -134,3 +134,17 @@ setTheme(0);
 setTheme(null);
 setTheme();
 setTheme("");
+
+// The Travel Budgeter
+
+function convertToUSD(amount, exchangeRate) {
+    let calculation = amount * exchangeRate;
+    let fixed = calculation.toFixed(2);
+    return fixed;
+}
+
+function final(currency) {
+    return `The total cost is $${currency}`;
+}
+const answer = final(convertToUSD(14, 5.19));
+console.log(answer)
