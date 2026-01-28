@@ -1,3 +1,4 @@
+// Local and Outer Variables
 // Session Message Tracker
 
 let userName = "Bro";
@@ -41,6 +42,7 @@ function theGreatReset() {
     console.log(totalMessageCount)
 }
 
+// Parameters
 // Smart Notification System
 
 function createNotification(senderName, messageContent, priority) {
@@ -75,6 +77,7 @@ if (isValid) {
     scheduleNotification(notification, 3);
 }
 
+// Default values
 // User Action Logger (nasty chatgpt)
 
 function logAction(userName = "Luísa", action = "posts", timestamp = "3/3") {
@@ -86,7 +89,6 @@ function formatAction(userName) {
     return userName;
 }
 const format = formatAction(log[0]);
-
 
 // The Greeting Generator
 
@@ -110,6 +112,7 @@ function calculateTotal(price, tax = 0.07, shipping = 5) {
 }
 console.log(calculateTotal(3, undefined, 0));
 
+// Alternative default parameters
 // The Smart Search Filter
 
 function getSearchCategory(category) {
@@ -135,6 +138,7 @@ setTheme(null);
 setTheme();
 setTheme("");
 
+// Returning a value
 // The Travel Budgeter
 
 function convertToUSD(amount, exchangeRate) {
@@ -148,3 +152,52 @@ function final(currency) {
 }
 const answer = final(convertToUSD(14, 5.19));
 console.log(answer)
+
+// Naming a function
+// The Health Monitor
+
+function showStats() {
+
+}
+
+function calcBMI() {
+
+}
+
+function isHeartRateDangerous() {
+
+}
+
+function createHTML() {
+
+}
+
+// everything of functions
+// The Barista Bot
+
+function calcTotal(basePrice, extraShots = 0) {
+    return basePrice + extraShots * 1.5;
+}
+
+function checkIngredientStock(ingredient) {
+    if (ingredient === undefined) {
+        ingredient = "Water";
+    }
+    return true;
+}
+
+function prepareOrder(drinkName, shots) {
+    let isAvailable = checkIngredientStock(drinkName);
+    let price = calcTotal(3, shots);
+    if (isAvailable) {
+        return `Making ${drinkName}. That will be $${price}.`
+    } else {
+        return `Sorry, we're out of ${drinkName}`
+    }
+}
+console.log(prepareOrder("Cappucino", 2));
+
+function showReceipt(cost, drinkName) {
+    return `Your ${drinkName}, costed $${cost} dollars. Enjoy!`;
+}
+console.log(showReceipt(calcTotal(3, 2), "Cappucino")); 
