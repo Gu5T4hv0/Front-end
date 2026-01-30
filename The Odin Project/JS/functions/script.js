@@ -201,3 +201,14 @@ function showReceipt(cost, drinkName) {
     return `Your ${drinkName}, costed $${cost} dollars. Enjoy!`;
 }
 console.log(showReceipt(calcTotal(3, 2), "Cappucino")); 
+
+// Anonymous function
+
+let transformers = [1,2,3,4,5];
+
+const user = function () {
+    let userInput = " javascript is fun ";
+    let clean = userInput.trim();
+    return clean;
+};
+console.log(user())
