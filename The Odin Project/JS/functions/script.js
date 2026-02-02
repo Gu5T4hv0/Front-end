@@ -227,3 +227,30 @@ console.log(object(parsed));
 
 const isAdult = age => age >= 18;
 console.log(isAdult(parsed[2]));
+
+
+// Anonymous functions and arrow functions
+// The Data Transformer
+const products = [
+    {name: 'chair', price: 50, category: 'home'},
+    {name: 'table', price: 80, category: 'kitchen'},
+    {name: 'tv', price: 100, category: 'electronics'}
+];
+
+const currency = products.map(item => `$${item.price}`);
+const upper = products.map(item => item.name.toUpperCase());
+const merge = [upper, currency];
+console.log(merge);
+
+const func = products.filter(function(product){
+    return product.price > 50;
+});
+console.log(func);
+
+const finder = products.find(item => item.category === "electronics");
+console.log(finder);
+
+const sum = products.reduce(function(one, another){
+    return one + another.price;
+}, 0);
+console.log(sum);
