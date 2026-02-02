@@ -212,3 +212,18 @@ const user = function () {
     return clean;
 };
 console.log(user())
+
+// Arrow function
+// The Nano-Processor
+
+const cleaner = text => text.toLowerCase().trim();
+console.log(cleaner(" jOHN dOE "));
+
+const parser = text => text.split(",");
+const parsed = parser("john,doe,25");
+
+const object = ([firstName, lastName, age]) => {return {firstName, lastName, age: Number(age)}};
+console.log(object(parsed));
+
+const isAdult = age => age >= 18;
+console.log(isAdult(parsed[2]));
