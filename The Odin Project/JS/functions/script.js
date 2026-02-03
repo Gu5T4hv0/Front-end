@@ -254,3 +254,23 @@ const sum = products.reduce(function(one, another){
     return one + another.price;
 }, 0);
 console.log(sum);
+
+// Function scope
+// The Coffee Shop Calculator
+
+const shopName = "Good Coffee";
+const tax = 10;
+
+function calc(tax) {
+    const price = 20;
+    const math = price + (tax/10);
+    return math;
+}
+function formatter(math) {
+    console.log(`Welcome to ${shopName}! Your total is $${math.toFixed(2)}`);
+}
+formatter(calc(tax));
+
+// everything of functions 2
+// The "Fiscal Fitness" Calculator
+
