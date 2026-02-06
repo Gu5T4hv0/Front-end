@@ -272,5 +272,11 @@ function formatter(math) {
 formatter(calc(tax));
 
 // everything of functions 2
-// The "Fiscal Fitness" Calculator
+// The Universal Measurement Converter
 
+function toFahrenheit(Celsius) {
+    
+}
+function master() {
+    let user = ("");
+}
