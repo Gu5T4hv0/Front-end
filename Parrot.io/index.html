@@ -13,19 +13,42 @@
     <link rel="shortcut icon" href="assets/logo1.svg" type="image/x-icon">
 </head>
 <body>
-    <div class="top">
-        <div class="logo"><img src="assets/LOGO.svg" alt=""></div>
-        <div class="menu"><img src="assets/menu.svg" alt=""></div>
+    <div class="menu-page">
+        <div class="top-link-page">
+            <a href="https://parrot-io.vercel.app/" class="active"><img src="assets/LOGO.svg" alt=""></a>
+
+            <a href="javascript:void(0);" class="exit" onclick="closeMenu()">
+                <div><img src="assets/exit.svg" alt=""></div>
+            </a>
+        </div>
+
+        <div class="page-links">
+            <a href="#">How it works</a>
+            <a href="#">Pricing</a>
+            <a href="#">FAQ</a>
+        </div>
     </div>
 
-    <div class="container">
-        <div class="hero-txt">
-            <div class="title"><h1>The Last Language Method You’ll Ever Buy</h1></div>
-            <div class="subtitle"><p>Master any language using the power of the internet and proven linguistics.</p></div>
+    <div class="principal">
+        <div class="top">
+            <a href="https://parrot-io.vercel.app/" class="active"><img src="assets/LOGO.svg" alt=""></a>
+
+            <a href="javascript:void(0);" class="menu" onclick="openMenu()">
+                <div><img src="assets/menu.svg" alt=""></div>
+            </a>
         </div>
-        <button class="cta">Get Lifetime Access</button>
+
+        <div class="container">
+            <div class="hero-txt">
+                <div class="title"><h1>The Last Language Method You’ll Ever Buy</h1></div>
+                <div class="subtitle"><p>Master any language using the power of the internet and proven linguistics.</p></div>
+            </div>
+            <button class="cta">Get Lifetime Access</button>
+        </div>
+        
+        <div class="hero-img"></div>
     </div>
-    
-    <div class="hero-img"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
