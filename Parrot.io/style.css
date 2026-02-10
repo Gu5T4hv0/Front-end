@@ -42,16 +42,6 @@
 .page-links a{
     font-size: 20px;
     color: black;
-    animation: scale 300ms; 
-    animation-timing-function: cubic-bezier(0.55,-0.59, 0.43, 1.7);
-}
-@keyframes scale {
-    from {
-        font-size: 14px;
-    }
-    to {
-        font-size: 20px;
-    }
 }
 /* text */
 .container {
@@ -80,6 +70,27 @@
 .top-cta {
     display: none;
 }
+.menu-top-cta {
+    display: block;
+    border: none;
+    padding: 12px;
+    background-color: black;
+    color: white;
+    margin: 40px 100px 0px 100px;
+    text-align: center;
+    border-radius: 70px;
+    text-decoration: black;
+    animation: scale 300ms;
+    animation-timing-function: cubic-bezier(0.55,-0.59, 0.43, 1.7);
+}
+@keyframes scale {
+    from {
+        font-size: 14px;
+    }
+    to {
+        font-size: 20px;
+    }
+}
 .cta {
     border: none;
     width: 181px;
@@ -101,6 +112,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 40px;
+}
+.hero-img-d {
+    display: none;
 }
 
 @media (min-width: 600px) {
@@ -179,5 +193,21 @@
     }
     .hero-img {
         display: none;
+    }
+    .hero-back {
+        width: 100%;
+        height: 700px;
+        display: flex;
+        justify-content: center;
+    }
+    .hero-img-d {
+        display: block;
+        background-image: url(/assets/talking-d.svg);
+        width: 1276px;
+        height: 571px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 70px;
+        
     }
 }
