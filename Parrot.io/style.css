@@ -118,6 +118,18 @@
 .hero-img-d {
     display: none;
 }
+.acquire {
+    display: none;
+}
+.natural {
+    display: none;
+}
+.pain1 {
+    display: none;
+}
+.bad {
+    display: none;
+}
 
 @media (min-width: 600px) {
     .menu {
@@ -204,11 +216,37 @@
     }
     .hero-img-d {
         display: block;
-        background-image: url(/assets/talking-d.svg);
-        width: 1276px;
-        height: 571px;
+        background-image: url(/assets/hero_illustration_d.svg);
+        width: 1286px;
+        height: 600px;
         background-repeat: no-repeat;
         background-size: cover;
         margin-top: 70px;
+    }
+    .acquire {
+        display: block;
+        color: white;
+        width: 80px;
+        margin-left: 600px;
+        font-size: 13.46px;
+        margin-top: 53px;
+    }
+    .natural {
+        display: block;
+        color: white;
+        width: 100px;
+        margin-left: 615px;
+        font-size: 13.46px;
+        margin-top: 7px;
+        text-align: right;
+    }
+    .pain1 {
+        display: block;
+        background-image: url(/assets/crumbled_back.svg);
+        width: 1286px;
+        height: 600px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: auto;
     }
 }
