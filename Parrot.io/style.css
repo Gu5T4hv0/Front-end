@@ -141,17 +141,6 @@
         margin-left: 28px;
         position: relative;
     }
-    .pain2-m {
-        /* border: 1px solid rgb(0, 255, 13); */
-        display: block;
-        background-image: url(/assets/crumbled_front_m.svg);
-        width: 100%;
-        height: 100%;
-        background-repeat: no-repeat;
-        margin: auto;
-        position: absolute;
-        z-index: 7;
-    }
     /* .bad-m {
         display: block;
         margin: auto;
@@ -554,17 +543,19 @@
         display: none;
     }
     .hero-back {
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         width: 100%;
         /* height: 650px; */
         padding: 20px 0px 20px 0px;
         display: flex;
         justify-content: center;
+        position: absolute;
+        z-index: 2;
     }
     .hero-img-d {
         /* border: 1px solid blue; */
         display: block;
-        background-image: url(/assets/hero_illustration_d.svg);
+        background-image: url(/assets/hero_illustration_d.png);
         width: 1025px;
         height: 500px;
         background-repeat: no-repeat;
@@ -574,7 +565,7 @@
         display: block;
         color: white;
         width: 80px;
-        margin-left: 480px;
+        margin-left: 485px;
         font-size: 10.66px;
         margin-top: 44px;
     }
@@ -582,27 +573,38 @@
         display: block;
         color: white;
         width: 100px;
-        margin-left: 470px;
+        margin-left: 475px;
         font-size: 10.66px;
         margin-top: 5px;
         text-align: right;
     }
-    /* .flow {
+    .out-flow {
+        /* border: 1px solid rgb(234, 255, 0); */
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+    .flow {
+        /* border: 1px solid blue; */
         display: block;
         background-image: url(/assets/flow.svg);
-        width: 100%;
+        width: 1260px;
+        height: 1020px;
+        margin-top: 265px;
         background-repeat: no-repeat;
-        margin-top: 70px;
-        position: relative;
-    } */
+        position: absolute;
+        z-index: 1;
+    }
     .pain-back {
-        border: 1px solid blue;
+        /* border: 1px solid rgb(0, 255, 204); */
         width: 100%;
         /* height: 650px; */
+        margin-top: 540px;
         padding: 20px 0px 20px 0px;
         display: flex;
         justify-content: center;
-        /* position: absolute; */
+        position: absolute;
+        z-index: 3;
     }
     .pain-back-m {
         display: none;
@@ -752,11 +754,13 @@
         /* border: 1px solid blue; */
         width: 100%;
         /* height: 650px; */
+        margin-top: 1020px;
         padding: 20px 0px 20px 0px;
         display: block;
         display: flex;
         justify-content: center;
-        /* position: absolute; */
+        position: absolute;
+        z-index: 4;
     }
     .solution1 {
         display: block;
