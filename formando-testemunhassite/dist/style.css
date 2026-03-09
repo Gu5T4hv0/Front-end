@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BASE
+========================= */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #202124;
+}
+
+/* Evita que o header fixo cubra as seções */
+#home,
+#sobre,
+#galeria,
+#download {
+  scroll-margin-top: 90px;
+}
+
+/* =========================
+   CABEÇALHO (GOOGLE PLAY)
+========================= */
+.gp-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 14px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.gp-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Marca */
+.gp-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #202124;
+}
+
+.gp-brand img {
+  width: 32px;
+}
+
+/* Navegação */
+.gp-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.gp-nav a {
+  text-decoration: none;
+  color: #5f6368;
+  font-size: 15px;
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+.gp-nav a:hover,
+.gp-nav a.active {
+  color: #1a73e8;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Logo fake */
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #1a73e8;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* Título */
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  color: #1a73e8;
+}
+
+/* Texto */
+.hero p {
+  font-size: 18px;
+  color: #5f6368;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+/* Botão principal */
+.btn-primary {
+  background-color: #1a73e8;
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1558b0;
+  transform: translateY(-2px);
+}
+
+.hero small {
+  margin-top: 15px;
+  color: #5f6368;
+}
+
+/* =========================
+   SEÇÕES
+========================= */
+.section {
+  padding: 80px 20%;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 18px;
+  color: #444;
+  max-width: 800px;
+}
+
+/* =========================
+   GALERIA DE FOTOS
+========================= */
+.gallery {
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.gallery-grid figure {
+  overflow: hidden;
+  border-radius: 16px;
+  background: #f2f2f2;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid figure:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-grid figure:hover img {
+  transform: scale(1.08);
+}
+
+/* =========================
+   DOWNLOAD
+========================= */
+.store-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.btn-store {
+  padding: 16px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+/* Google Play */
+.btn-store.google {
+  background-color: #1a73e8;
+  color: #fff;
+}
+
+.btn-store.google:hover {
+  background-color: #1558b0;
+  transform: translateY(-2px);
+}
+
+/* App Store */
+.btn-store.apple {
+  border: 2px solid #000;
+  color: #000;
+}
+
+.btn-store.apple:hover {
+  background-color: #000;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  color: #5f6368;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .gp-header {
+    padding: 14px 20px;
+  }
+}
