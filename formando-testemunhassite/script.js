@@ -4,6 +4,20 @@
 const navLinks = document.querySelectorAll('.gp-nav a, .gp-nav-menu a');
 const sections = document.querySelectorAll('#home, #sobre, #galeria, #download');
 
+function closeMenu() {
+  let principal = document.getElementsByClassName("principal")[0];
+  let menuPage = document.getElementsByClassName("menu-page")[0];
+
+  // Salva a posição atual do scroll do menu-page
+  const scrollPos = menuPage.scrollTop || window.scrollY;
+
+  principal.style.display = "block";
+  menuPage.style.display = "none";
+
+  // Restaura a posição do scroll
+  window.scrollTo(0, scrollPos);
+}
+
 navLinks.forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
@@ -11,17 +25,17 @@ navLinks.forEach(link => {
     const targetId = link.getAttribute('href');
     const targetSection = document.querySelector(targetId);
 
-    if (targetSection) {
-      targetSection.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-
-    // Fecha o menu mobile ao clicar num link
     closeMenu();
 
-    // Atualiza estado ativo ao clicar
+    if (targetSection) {
+      setTimeout(() => {
+        targetSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }, 50);
+    }
+
     navLinks.forEach(l => l.classList.remove('active'));
     link.classList.add('active');
   });

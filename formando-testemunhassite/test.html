@@ -1,4 +1,12 @@
-* {
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Formando Testemunhas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Seu CSS -->
+  <style>
+    * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -73,7 +81,7 @@ body {
 
 /* Marca */
 .gp-brand {
-  /* border: 1px solid blue; */
+  border: 1px solid blue;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -316,7 +324,7 @@ footer {
       align-items: center;
   }
   .gp-brand-menu {
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -335,10 +343,10 @@ footer {
       color: #5f6368;
       text-decoration: none;
   }
-  /* .gp-nav-menu a:hover,
+  .gp-nav-menu a:hover,
   .gp-nav-menu a.active {
     color: #1a73e8;
-  } */
+  }
   ion-icon {
     font-size: 30px;
     color: #1a73e8;;
@@ -356,3 +364,149 @@ footer {
     width: 100px;
   }
 }
+  </style>
+</head>
+
+<body>
+  <div class="menu-page">
+      <header class="gp-header-menu">
+        <div class="top-menu-page">
+          <div class="gp-brand-menu">
+            <img src="assets/Logo.svg" alt="Logo Formando Testemunhas">
+          </div>
+
+          <a href="javascript:void(0);" class="exit" onclick="closeMenu()">
+            <ion-icon name="close-outline"></ion-icon>
+          </a>
+        </div>
+      </header>
+        
+      <div class="gp-nav-menu">
+          <a href="#home">Home</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#download">Download</a>
+      </div>
+  </div>
+
+  <div class="principal">
+      <!-- CABEÇALHO ESTILO GOOGLE PLAY -->
+    <header class="gp-header">
+      <div class="gp-container">
+        <!-- Logo + nome -->
+        <div class="gp-brand">
+          <img src="assets/Logo.svg" alt="Logo Formando Testemunhas">
+        </div>
+
+        <!-- Navegação -->
+        <nav class="gp-nav">
+          <a href="#home">Home</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#download">Download</a>
+        </nav>
+
+        <a href="javascript:void(0);" class="menu" onclick="openMenu()">
+                <ion-icon name="menu-outline"></ion-icon>
+            </a>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <main class="hero" id="home">
+      <div class="hero-img"></div>
+
+      <h1>
+        O aplicativo criado<br>
+        para <span>formar testemunhas</span>
+      </h1>
+
+      <p>
+        Informação, orientação e apoio em um só lugar.
+      </p>
+
+      <a href="#download" class="btn-primary">
+        Fazer download do aplicativo
+      </a>
+
+      <small>
+        Disponível para Android e iOS
+      </small>
+    </main>
+
+    <!-- SOBRE -->
+    <section class="section" id="sobre">
+      <h2>Sobre o projeto</h2>
+      <p>
+        O <strong>Formando Testemunhas</strong> é um projeto desenvolvido
+        para oferecer orientação clara e acessível aos usuários,
+        utilizando tecnologia como ferramenta de apoio e aprendizado.
+      </p>
+    </section>
+    <!-- GALERIA DE FOTOS -->
+    <section class="section gallery" id="galeria">
+      <h2>Galeria</h2>
+      <p>
+        Confira alguns momentos e registros do projeto
+        <strong>Formando Testemunhas</strong>.
+      </p>
+
+      <div class="gallery-grid">
+        <figure>
+          <img src="img/galeria1.jpg" alt="Atividade do projeto Formando Testemunhas">
+        </figure>
+
+        <figure>
+          <img src="img/galeria2.jpg" alt="Evento do Formando Testemunhas">
+        </figure>
+
+        <figure>
+          <img src="img/galeria3.jpg" alt="Momento de aprendizado no projeto">
+        </figure>
+
+        <figure>
+          <img src="img/galeria4.jpg" alt="Equipe do projeto Formando Testemunhas">
+        </figure>
+      </div>
+    </section>
+    <!-- DOWNLOAD -->
+    <section class="section download" id="download">
+      <h2>Download</h2>
+      <p>
+        Clique no botão abaixo para baixar o aplicativo
+        na sua loja de aplicativos preferida.
+      </p>
+
+      <div class="store-buttons">
+        <a 
+          href="https://play.google.com/store/apps/details?id=br.unasp.formandot&hl=en-US"
+          class="btn-store google"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Disponível no Google Play
+        </a>
+
+        <a 
+          href="https://apps.apple.com/br/app/formando-testemunhas/id6479907436"
+          class="btn-store apple"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Baixar na App Store
+        </a>
+      </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+      © 2026 — Formando Testemunhas
+    </footer>
+  </div>
+  
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  
+  <script src="script.js"></script>
+</body>
+</html>
