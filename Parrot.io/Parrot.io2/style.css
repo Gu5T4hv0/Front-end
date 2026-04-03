@@ -3,6 +3,9 @@
     margin: 0;
     font-family: Lexend, sans-serif;
 }
+body {
+    background-color: #F8F9FA;
+}
 /* principal */
 .principal {
     display: block;
@@ -171,7 +174,7 @@ ion-icon {
     }
     .pain1-m {
         /* border: 1px solid blue; */
-        background-image: url(/assets/crumbled_back_m.svg);
+        background-image: url(assets/crumbled_back_m.svg);
         width: 100%;
         height: 820px;
         background-repeat: no-repeat;
@@ -331,8 +334,8 @@ ion-icon {
         margin: auto;
         position: relative;
     }
-    .solution2-m {
-        /* border: 1px solid green; */
+    /* .solution2-m {
+        border: 1px solid green;
         display: block;
         background-image: url(/assets/texture_front_m.svg);
         width: 325px;
@@ -341,7 +344,7 @@ ion-icon {
         position: absolute;
         margin-left: 28px;
         margin-top: 24px;
-    }
+    } */
     .content2-m {
         /* border: 1px solid green; */
         width: 290.21px;
@@ -612,10 +615,10 @@ ion-icon {
         display: none;
     }
     .hero-back2 {
-        /* border: 1px solid blue; */
+        border: 1px solid blue;
         width: 100%;
         /* height: 650px; */
-        padding: 30px 0px 20px 0px;
+        padding: 30px 0px 0px 0px;
         display: flex;
         justify-content: center;
         position: absolute;
@@ -625,7 +628,7 @@ ion-icon {
         display: none;
     }
     .hero-img-d {
-        /* border: 1px solid blue; */
+        border: 1px solid blue;
         display: block;
         background-image: url(assets/hero-img-d.svg);
         width: 1270px;
@@ -633,50 +636,13 @@ ion-icon {
         background-repeat: no-repeat;
         margin-top: 0px;
     }
-    .acquire {
-        display: block;
-        color: white;
-        width: 80px;
-        margin-left: 485px;
-        font-size: 10.66px;
-        margin-top: 44px;
-    }
-    .natural {
-        display: block;
-        color: white;
-        width: 100px;
-        margin-left: 475px;
-        font-size: 10.66px;
-        margin-top: 5px;
-        text-align: right;
-    }
-    .out-flow {
-        /* border: 1px solid rgb(234, 255, 0); */
-        display: flex;
-        justify-content: center;
-        position: relative;
-    }
-    .flow {
-        /* border: 1px solid blue; */
-        display: block;
-        background-image: url(/assets/flow.svg);
-        width: 1260px;
-        height: 1020px;
-        margin-top: 265px;
-        background-repeat: no-repeat;
-        position: absolute;
-        z-index: 1;
-    }
     .pain-back {
-        /* border: 1px solid rgb(0, 255, 204); */
+        border: 1px solid rgb(0, 255, 204);
         width: 100%;
         /* height: 650px; */
-        margin-top: 540px;
-        padding: 20px 0px 20px 0px;
+        padding: 0px 0px 20px 0px;
         display: flex;
         justify-content: center;
-        position: absolute;
-        z-index: 3;
     }
     .pain-back-m {
         display: none;
@@ -684,7 +650,7 @@ ion-icon {
     .pain1 {
         /* border: 1px solid blue; */
         display: block;
-        background-image: url(/assets/crumbled_back.svg);
+        background-image: url(assets/crumbled_back.svg);
         width: 1060px;
         height: 500px;
         background-repeat: no-repeat;
@@ -694,7 +660,7 @@ ion-icon {
     .pain2 {
         /* border: 1px solid rgb(0, 255, 13); */
         display: block;
-        background-image: url(/assets/crumbled_front.svg);
+        background-image: url(assets/crumbled_front.svg);
         width: 1060px;
         height: 500px;
         background-repeat: no-repeat;
@@ -735,7 +701,7 @@ ion-icon {
         z-index: 2;
     }
     .rec1 {
-        background-color: rgba(196, 55, 55, 0.59);
+        background-color: rgba(230, 57, 70, 0.59);
         width: 491.54px;
         height: 13.01px;
         position: absolute;
@@ -767,7 +733,7 @@ ion-icon {
     .line1-p {
         width: 167.7px;
         height: 1.6px;
-        background-color: #C43737;
+        background-color: rgba(230, 57, 70, 0.59);
         margin-bottom: 3px;
         border-radius: 70px;
     }
@@ -787,7 +753,7 @@ ion-icon {
     .line2-p {
         width: 180.7px;
         height: 1.6px;
-        background-color: #C43737;
+        background-color: rgba(230, 57, 70, 0.59);
         margin-bottom: 2px;
         border-radius: 70px;
     }
@@ -810,7 +776,7 @@ ion-icon {
     .line3-p {
         width: 127.7px;
         height: 1.6px;
-        background-color: #C43737;
+        background-color: rgba(230, 57, 70, 0.59);
         margin-bottom: 2px;
         border-radius: 70px;
     }
@@ -823,22 +789,22 @@ ion-icon {
         display: none;
     }
     .solution-back {
-        /* border: 1px solid blue; */
+        border: 1px solid blue;
         width: 100%;
         /* height: 650px; */
-        margin-top: 1020px;
+        margin-top: 0px;
         padding: 20px 0px 20px 0px;
         display: block;
         display: flex;
         justify-content: center;
-        position: absolute;
         z-index: 4;
     }
     .solution1 {
+        border: 1px solid blue;
         display: block;
-        background-image: url(/assets/base.svg);
+        background-image: url(assets/base.svg);
         width: 1060px;
-        height: 500px;
+        height: 440px;
         background-repeat: no-repeat;
         margin: auto;
         position: relative;
@@ -850,7 +816,7 @@ ion-icon {
         margin: 58px 0px 0px 80px;
     }
     .top-txt2 {
-        /* border: 1px solid blue; */
+        border: 1px solid blue;
         width: 830px;
         text-align: center;
         z-index: 0;
@@ -867,7 +833,7 @@ ion-icon {
         z-index: 2;
     }
     .rec3 {
-        display: none; /*modify*/
+         /*modify*/
         position: absolute;
         left: 0;
         bottom: -1px;
@@ -886,6 +852,7 @@ ion-icon {
         justify-content: space-between;
     }
     .acquisition {
+        border: 1px solid blue;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -910,6 +877,7 @@ ion-icon {
         margin-bottom: -7px;
     }
     .communication {
+        border: 1px solid blue;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -930,10 +898,12 @@ ion-icon {
         margin-bottom: -8px;
     }
     .infinite {
+        border: 1px solid blue;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+
         margin-bottom: 15px;
     }
     .ue {
@@ -956,5 +926,88 @@ ion-icon {
         /* border: 1px solid purple; */
         text-align: center;
         width: 277px;
+    }
+    .how-it-works {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+    }
+    .hatch {
+        /* border: 1px solid green; */
+        display: flex;
+        flex-direction: row;
+        width: 1050px;
+    }
+    .nest {
+        /* border: 1px solid blue; */
+        display: block;
+        background-image: url(assets/nest.svg);
+        width: 1050px;
+        height: 270px;
+        background-repeat: no-repeat;
+        margin: auto;
+    }
+    .hatch-txt {
+        margin-top: 20px;
+    }
+    .HIW-title {
+        font-size: 40px;
+        color: #0F4C5C;
+        font-weight: 700;
+    }
+    .HIW-subtitle {
+        font-size: 20px;
+        color: #2E2E2E;
+    }
+    .HIW-body {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #6C757D;
+    }
+    .flight-txt {
+        margin-top: 150px;
+        width: 650px;
+        position: absolute;
+        z-index: 2;
+    }
+    .flight {
+        /* border: 1px solid green; */
+        display: flex;
+        flex-direction: row;
+        width: 1050px;
+        position: relative;
+    }
+    .flying {
+        /* border: 1px solid blue; */
+        display: block;
+        background-image: url(assets/flying.svg);
+        width: 600px;
+        height: 390px;
+        margin-left: 480px;
+        background-repeat: no-repeat;
+        position: absolute;
+        z-index: 1;
+    }
+    .social {
+        /* border: 1px solid green; */
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 450px;
+    }
+    .social-txt {
+        margin-top: 100px;
+        width: 1050px;
+        margin-right: 200px;
+        margin-left: 20px;
+    }
+    .parrotinhos {
+        /* border: 1px solid blue; */
+        display: block;
+        background-image: url(assets/parrotinhos.svg);
+        width: 950px;
+        height: 420px;
+        background-repeat: no-repeat;
     }
 }
