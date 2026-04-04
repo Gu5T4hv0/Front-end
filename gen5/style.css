@@ -84,15 +84,8 @@ ion-icon {
     margin-left: 1056px;
     /* 182 */
 }
-.right-noah {
-    background-color: wheat;
-    position: relative;
-    height: 20px;
-    width: 950px;
-    margin-left: 1056px;
-}
 .flood {
-    border-left: 2px solid red;
+    border-left: 1px solid red;
     height: 20px;
     display: block;
     margin-left: 600px;
@@ -103,13 +96,29 @@ ion-icon {
     height: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: absolute;
-    z-index: 3;
 }
 .line-noah p {
     font-size: 15px;
     color: white;
     position: absolute;
-    z-index: 4;
+    z-index: 2;
+    margin-left: 475px;
+}
+#sem {
+    background-color: rgb(191, 255, 0);
+    width: 598px;
+    margin-left: 1558px;
+    /* 502 */
+}
+#arfaxade {
+    background-color: rgb(238, 255, 0);
+    width: 438px;
+    margin-left: 1658px;
+    /* 102 */
+}
+#sala {
+    background-color: rgb(255, 234, 0);
+    width: 433px;
+    margin-left: 1693px;
+    /* 35 */
 }
