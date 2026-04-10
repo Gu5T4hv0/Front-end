@@ -85,7 +85,7 @@ ion-icon {
     /* 182 */
 }
 .flood {
-    border-left: 1px solid red;
+    border-left: 0.5px solid red;
     height: 20px;
     display: block;
     margin-left: 600px;
@@ -114,11 +114,53 @@ ion-icon {
     background-color: rgb(238, 255, 0);
     width: 438px;
     margin-left: 1658px;
-    /* 102 */
+    /* 100 */
 }
 #sala {
-    background-color: rgb(255, 234, 0);
+    background-color: rgb(255, 191, 0);
     width: 433px;
     margin-left: 1693px;
     /* 35 */
+}
+#heber {
+    background-color: rgb(255, 128, 0);
+    width: 464px;
+    margin-left: 1723px;
+    /* 30 */
+}
+#pelegue {
+    background-color: rgb(255, 94, 0);
+    width: 239px;
+    margin-left: 1757px;
+    /* 34 */
+}
+#reu {
+    background-color: rgb(255, 55, 0);
+    width: 239px;
+    margin-left: 1787px;
+    /* 30 */
+}
+#serugue {
+    background-color: rgb(255, 17, 0);
+    width: 230px;
+    margin-left: 1819px;
+    /* 32 */
+}
+#naor {
+    background-color: rgb(255, 0, 0);
+    width: 148px;
+    margin-left: 1848px;
+    /* 30 */
+}
+#tera {
+    background-color: rgb(255, 0, 43);
+    width: 205px;
+    margin-left: 1877px;
+    /* 29 */
+}
+#eu {
+    background-color: rgba(255, 0, 0, 0.443);
+    width: 90px;
+    margin-left: 1907px;
+    /* 30 */
 }
