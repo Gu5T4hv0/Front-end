@@ -491,6 +491,14 @@ ion-icon {
     align-items: center;
     margin-top: 0px;
 }
+.HIW-flex {
+    border: 1px solid #C43737;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .hatch-m {
     /* border: 1px solid green; */
     display: flex;
@@ -501,8 +509,8 @@ ion-icon {
     border: 1px solid blue;
     display: block;
     background-image: url(assets/nest-m.svg);
-    width: 100%;
-    height: 230px;
+    width: 280px;
+    height: 200px;
     background-repeat: no-repeat;
     margin: auto;
 }
@@ -528,28 +536,23 @@ ion-icon {
     text-align: center;
 }
 .flight-txt-m {
-    margin-top: 150px;
-    width: 650px;
-    position: absolute;
-    z-index: 2;
+    margin-top: 50px;
+    width: 320px;
 }
 .flight-m {
-    /* border: 1px solid green; */
+    border: 1px solid green;
     display: flex;
-    flex-direction: row;
-    width: 1050px;
-    position: relative;
+    flex-direction: column;
+    width: 320px;
 }
 .flying-m {
     /* border: 1px solid blue; */
     display: block;
-    background-image: url(assets/flying.svg);
+    background-image: url(assets/flying-m.svg);
     width: 600px;
-    height: 390px;
-    margin-left: 480px;
+    height: 220px;
+    margin: auto;
     background-repeat: no-repeat;
-    position: absolute;
-    z-index: 1;
 }
 .social-m {
     /* border: 1px solid green; */
@@ -896,32 +899,32 @@ ion-icon {
         border: 1px solid blue;
         display: block;
         background-image: url(assets/base.svg);
-        width: 1060px;
-        height: 440px;
+        width: 1280px;
+        height: 525px;
         background-repeat: no-repeat;
         margin: auto;
         position: relative;
     }
     .content2 {
-        /* border: 1px solid green; */
-        width: 870.47px;
-        height: 288.42px;
-        margin: 58px 0px 0px 80px;
+        border: 1px solid green;
+        width: 1047.47px;
+        height: 365.42px;
+        margin: 68px 0px 0px 85px;
     }
     .top-txt2 {
         border: 1px solid blue;
-        width: 830px;
+        width: 1000px;
         text-align: center;
         z-index: 0;
     }
     .top-txt2 p {
         font-weight: 500;
-        font-size: 21.4px;
+        font-size: 25.85px;
     }
     .highlight {
         position: relative;
         display: inline-block;
-        font-size: 21.69px;
+        font-size: 25.85px;
         font-weight: 600;
         z-index: 2;
     }
@@ -937,10 +940,11 @@ ion-icon {
     }
     
     .points2 {
-        /* border: 1px solid purple; */
-        margin-top: 20px;
+        border: 1px solid purple;
+        margin-top: 25px;
+        margin-left: 50px;
         height: 200px;
-        width: 849.12px;
+        width: 920.12px;
         display: flex;
         justify-content: space-between;
     }
@@ -957,10 +961,10 @@ ion-icon {
     }
     .good-title {
         font-weight: 600;
-        font-size: 17.35px;
+        font-size: 21.35px;
     }
     .line4-p {
-        width: 107.7px;
+        width: 130.7px;
         height: 1.6px;
         background-color: #38B2AC;
         margin-bottom: 3px;
@@ -981,7 +985,7 @@ ion-icon {
         margin-bottom: 18px;
     }
     .line5-p {
-        width: 150.7px;
+        width: 180.7px;
         height: 1.6px;
         background-color: #38B2AC;
         margin-bottom: 2px;
@@ -996,7 +1000,6 @@ ion-icon {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-
         margin-bottom: 15px;
     }
     .ue {
@@ -1009,7 +1012,7 @@ ion-icon {
         margin-bottom: -10px;
     }
     .line6-p {
-        width: 207.7px;
+        width: 250.7px;
         height: 1.6px;
         background-color: #38B2AC;
         margin-bottom: 2px;
@@ -1019,6 +1022,7 @@ ion-icon {
         /* border: 1px solid purple; */
         text-align: center;
         width: 277px;
+        font-size: 17.38px;
     }
     .how-it-works {
         display: flex;
@@ -1030,7 +1034,7 @@ ion-icon {
         border: 1px solid green;
         display: flex;
         flex-direction: row;
-        width: 1050px;
+        width: 1090px;
     }
     .nest {
         /* border: 1px solid blue; */
@@ -1056,8 +1060,9 @@ ion-icon {
         color: #2E2E2E;
     }
     .HIW-body {
+        /* border: 1px solid blue; */
         margin-top: 20px;
-        font-size: 18px;
+        font-size: 19px;
         color: #6C757D;
     }
     .flight-txt {
