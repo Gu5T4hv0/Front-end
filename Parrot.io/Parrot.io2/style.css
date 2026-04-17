@@ -544,6 +544,8 @@ ion-icon {
     display: flex;
     flex-direction: column;
     width: 320px;
+    justify-content: center;
+    align-items: center;
 }
 .flying-m {
     /* border: 1px solid blue; */
@@ -555,25 +557,29 @@ ion-icon {
     background-repeat: no-repeat;
 }
 .social-m {
-    /* border: 1px solid green; */
+    border: 1px solid green;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
-    margin-top: 450px;
+    margin-top: 0px;
 }
 .social-txt-m {
-    margin-top: 100px;
-    width: 1050px;
-    margin-right: 200px;
-    margin-left: 20px;
+    border: 1px solid green;
+    display: block;
+    margin-top: 60px;
+    width: 320px;
+    margin-left: 27px;
 }
 .parrotinhos-m {
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
     display: block;
-    background-image: url(assets/parrotinhos.svg);
+    background-image: url(assets/parrotinhos-m.svg);
     width: 950px;
-    height: 420px;
+    height: 280px;
     background-repeat: no-repeat;
+}
+.reviews {
+    display: none;
 }
 
 
@@ -1112,5 +1118,57 @@ ion-icon {
     }
     .how-it-works-m {
         display: none;
+    }
+    .reviews {
+        border: 1px solid blue;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+    .top-txt-review {
+        border: 1px solid blue;
+        width: 740px;
+        display: flex;
+        gap: 25px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .top-txt-review p{
+        text-align: center;
+    }
+    #proof {
+        font-size: 20px;
+        color: #1CA7A6;
+        font-weight: 600;
+    }
+    #freeze {
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 50px;
+    }
+    #from {
+        color: #0F4C5C;
+    }
+    #to {
+        color: #1CA7A6;
+    }
+    #seehow {
+        font-size: 20px;
+        color: #6C757D;
+    }
+    .testimonials {
+        border: 1px solid rgb(255, 0, 0);
+        display: flex;
+        flex-direction: row;
+        gap: 52px;
+    }
+    .test {
+        background-color: white;
+        width: 467px;
+        height: 417px;
+        border-radius: 15px;
+        box-shadow: offset 0px 7px 18.8px 4px rgba(0, 0, 0, 0.07);
     }
 }
