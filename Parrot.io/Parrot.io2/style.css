@@ -1135,6 +1135,7 @@ ion-icon {
         gap: 25px; 
         flex-direction: column;
         align-items: center;
+        margin-bottom: 74px;
     }
     .top-txt-review p{
         text-align: center;
@@ -1165,6 +1166,7 @@ ion-icon {
         flex-direction: row;
         gap: 52px;
         width: 100%;
+        margin-bottom: 100px;
     }
     .test {
         background-color: white;
@@ -1191,7 +1193,7 @@ ion-icon {
         border: 1px solid rgb(255, 0, 0);
         display: block;
         background-image: url(assets/etoiles.svg);
-        height: 17px;
+        height: 20px;
         background-repeat: no-repeat;
         margin-bottom: 20px;
     }
@@ -1200,6 +1202,44 @@ ion-icon {
         color: #6C757D;
     }
     .profile {
+        border: 1px solid green;
+        margin-top: 2px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .photo img{
+        width: 100%;
+    }
+    .profile-data {
+        margin-left: 17px;
+    }
+    .name {
+        font-size: 20px;
+    }
+    .languages {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+    }
+    .languages p{
+        color: #1CA7A6;
+        font-size: 11.11px;
+    }
+    .bota-hr {
+        border: 1px solid blue;
+        height: 2px;
         margin-top: 241px;
+    }
+    .hr {
+        background-color: #E0E0E0;
+        height: 1px;
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    .quote p{
+        font-size: 18px;
+        color: #6C757D;
     }
 }
