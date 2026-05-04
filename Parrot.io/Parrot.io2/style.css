@@ -3,6 +3,10 @@
     margin: 0;
     font-family: Lexend, sans-serif;
 }
+*::selection {
+  color: white; /* Text color */
+  background: #FF6B6B; /* Highlight background color */
+}
 body {
     background-color: #F8F9FA;
 }
@@ -1129,24 +1133,24 @@ ion-icon {
     }
     .top-txt-review {
         border: 1px solid blue;
-        width: 740px;
-        height: 232px;
+        width: 609.28px;
+        height: 203px;
         display: flex;
-        gap: 25px; 
+        gap: 18px; 
         flex-direction: column;
         align-items: center;
-        margin-bottom: 74px;
+        margin-bottom: 62px;
     }
     .top-txt-review p{
         text-align: center;
     }
     #proof {
-        font-size: 20px;
+        font-size: 16.47px;
         color: #1CA7A6;
         font-weight: 600;
     }
     #freeze {
-        font-size: 56px;
+        font-size: 46.11px;
         font-weight: 700;
         line-height: 50px;
     }
@@ -1157,7 +1161,7 @@ ion-icon {
         color: #1CA7A6;
     }
     #seehow {
-        font-size: 20px;
+        font-size: 16.47px;
         color: #6C757D;
     }
     .testimonials {
@@ -1165,9 +1169,9 @@ ion-icon {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 52px;
+        gap: 43px;
         width: 100%;
-        margin-bottom: 100px;
+        margin-bottom: 69px;
     }
     .test {
         background-color: white;
@@ -1175,16 +1179,16 @@ ion-icon {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 467px;
-        height: 417px;
+        width: 384.5px;
+        height: 343.34px;
         border-radius: 15px;
-        box-shadow: 0px 7px 18.8px 4px rgba(0, 0, 0, 0.07);
+        box-shadow: 0px 5.76px 15.48px 3.29px rgba(0, 0, 0, 0.07);
         transition: transform 0.5s ease, filter 0.6s ease;
     }
     .test:hover {
         background-color: #1CA7A6;
         transform: scale(1.02);
-        box-shadow: 0px 12px 24px 4.13px rgba(0, 0, 0, 0.21);
+        box-shadow: 0px 9.88px 19.84px 3.4px rgba(0, 0, 0, 0.21);
     }
     .test:hover .main-txt,
     .test:hover .main-txt p,
@@ -1204,15 +1208,14 @@ ion-icon {
         background-image: url(assets/etoiles-w.svg);
         height: 20px;
         background-repeat: no-repeat;
-        margin-bottom: 20px;
     }
     @keyframes expand {
         50%{transform: scale(1, 1);}
     }
     .content-test {
         border: 1px solid rgb(255, 0, 0);
-        width: 373px;
-        height: 340px;
+        width: 307.52px;
+        height: 279.74px;
         position: relative;
     }
     .up-test {
@@ -1225,10 +1228,10 @@ ion-icon {
         background-image: url(assets/etoiles.svg);
         height: 20px;
         background-repeat: no-repeat;
-        margin-bottom: 20px;
+        margin-bottom: 14px;
     }
     .main-txt {
-        font-size: 19.8px;
+        font-size: 16.3px;
         color: #6C757D;
     }
     .profile {
@@ -1246,7 +1249,7 @@ ion-icon {
         margin-left: 17px;
     }
     .name {
-        font-size: 20px;
+        font-size: 16.46px;
     }
     .languages {
         display: flex;
@@ -1256,21 +1259,21 @@ ion-icon {
     }
     .languages p{
         color: #1CA7A6;
-        font-size: 11.11px;
+        font-size: 9.14px;
     }
     .bota-hr {
         border: 1px solid blue;
         height: 2px;
-        margin-top: 241px;
+        margin-top: 195px;
     }
     .hr {
         background-color: #E0E0E0;
         height: 1px;
         width: 100%;
-        margin-bottom: 16px;
+        margin-bottom: 14px;
     }
     .quote p{
-        font-size: 18px;
+        font-size: 14.82px;
         color: #6C757D;
     }
 }
