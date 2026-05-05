@@ -1181,14 +1181,15 @@ ion-icon {
         justify-content: center;
         width: 384.5px;
         height: 343.34px;
-        border-radius: 15px;
+        border-radius: 12.35px;
         box-shadow: 0px 5.76px 15.48px 3.29px rgba(0, 0, 0, 0.07);
         transition: transform 0.5s ease, filter 0.6s ease;
     }
     .test:hover {
         background-color: #1CA7A6;
-        transform: scale(1.02);
+        transform: scale(1.015);
         box-shadow: 0px 9.88px 19.84px 3.4px rgba(0, 0, 0, 0.21);
+        transition: 0.3s ease;
     }
     .test:hover .main-txt,
     .test:hover .main-txt p,
@@ -1196,7 +1197,6 @@ ion-icon {
     .test:hover .name p,
     .test:hover .languages p {
         color: white;
-        transition: color 0.3s ease;
     }
     .test:hover .hr {
         background-color: white;
@@ -1275,5 +1275,68 @@ ion-icon {
     .quote p{
         font-size: 14.82px;
         color: #6C757D;
+    }
+    .pricing {
+        border: 1px solid blue;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+    .top-txt-pricing {
+        border: 1px solid blue;
+        width: 862px;
+        height: 117px;
+        display: flex;
+        gap: 18px; 
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 62px;
+    }
+    .top-txt-pricing p{
+        text-align: center;
+    }
+    .one-payment p{
+        font-size: 46.11px;
+        font-weight: 700;
+        color: #0F4C5C;
+    }
+    .choose {
+        width: 526px;
+    }
+    .choose p{
+        font-size: 16.47px;
+        color: #6C757D;
+    }
+    .options {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 43px;
+        width: 100%;
+        margin-bottom: 69px;
+    }
+    .afundado {
+        background-color: #ffffff;
+        width: 481.66px;
+        height: 502.72px;
+        border-radius: 6.59px;
+        box-shadow: inset 3.29px 3.29px 17.46px 0.82px rgba(0, 0, 0, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .the-method {
+        border: 1px solid blue;
+        width: 382.04px;
+        height: 431.79px;
+    }
+    ul {
+        list-style-image: url(assets/guaranteed.svg);
+    }
+    li {
+        font-size: 13.17px;
+        color: #0F4C5C;
     }
 }
