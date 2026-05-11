@@ -320,7 +320,7 @@ ion-icon {
         font-size: 12px;
     }
 .solution-back-m {
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         width: 100%;
         /* height: 650px; */
         padding: 20px 0px 0px 0px;
@@ -510,7 +510,7 @@ ion-icon {
     width: 290px;
 }
 .nest-m {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: block;
     background-image: url(assets/nest-m.svg);
     width: 280px;
@@ -544,7 +544,7 @@ ion-icon {
     width: 320px;
 }
 .flight-m {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
     width: 320px;
@@ -561,21 +561,21 @@ ion-icon {
     background-repeat: no-repeat;
 }
 .social-m {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
     width: 100%;
     margin-top: 0px;
 }
 .social-txt-m {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: block;
     margin-top: 60px;
     width: 320px;
     margin-left: 27px;
 }
 .parrotinhos-m {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: block;
     background-image: url(assets/parrotinhos-m.svg);
     width: 950px;
@@ -719,7 +719,7 @@ ion-icon {
         display: none;
     }
     .hero-back2 {
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         width: 100%;
         /* height: 650px; */
         padding: 30px 0px 0px 0px;
@@ -732,7 +732,7 @@ ion-icon {
         display: none;
     }
     .hero-img-d {
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         display: block;
         background-image: url(assets/hero-img-d.svg);
         width: 1270px;
@@ -741,7 +741,7 @@ ion-icon {
         margin-top: 0px;
     }
     .pain-back {
-        border: 1px solid rgb(0, 255, 204);
+        /* border: 1px solid rgb(0, 255, 204); */
         width: 100%;
         /* height: 650px; */
         padding: 0px 0px 20px 0px;
@@ -753,7 +753,7 @@ ion-icon {
         display: none;
     }
     .pain1 {
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         display: block;
         background-image: url(assets/crumbled_back.svg);
         width: 1240px;
@@ -778,13 +778,13 @@ ion-icon {
         margin: auto;
     }
     .content1 {
-        border: 1px solid green;
+        /* border: 1px solid green; */
         width: 1040.47px;
         height: 338.42px;
         margin: 169px 0px 0px 65px;
     }
     .top-txt1 {
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         width: 1011.05px;
         text-align: center;
         z-index: 2;
@@ -814,7 +814,7 @@ ion-icon {
         margin-top: 23px;
     }
     .points1 {
-        border: 1px solid purple;
+        /* border: 1px solid purple; */
         margin-top: 60px;
         margin-left: 75px;
         height: 200px;
@@ -895,7 +895,7 @@ ion-icon {
         display: none;
     }
     .solution-back {
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         width: 100%;
         /* height: 650px; */
         margin-top: 0px;
@@ -906,7 +906,7 @@ ion-icon {
         z-index: 4;
     }
     .solution1 {
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         display: block;
         background-image: url(assets/base.svg);
         width: 1280px;
@@ -916,13 +916,13 @@ ion-icon {
         position: relative;
     }
     .content2 {
-        border: 1px solid green;
+        /* border: 1px solid green; */
         width: 1047.47px;
         height: 365.42px;
         margin: 68px 0px 0px 85px;
     }
     .top-txt2 {
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         width: 1000px;
         text-align: center;
         z-index: 0;
@@ -950,7 +950,7 @@ ion-icon {
     }
     
     .points2 {
-        border: 1px solid purple;
+        /* border: 1px solid purple; */
         margin-top: 25px;
         margin-left: 50px;
         height: 200px;
@@ -959,7 +959,7 @@ ion-icon {
         justify-content: space-between;
     }
     .acquisition {
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -984,7 +984,7 @@ ion-icon {
         margin-bottom: -7px;
     }
     .communication {
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1005,7 +1005,7 @@ ion-icon {
         margin-bottom: -8px;
     }
     .infinite {
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1041,7 +1041,7 @@ ion-icon {
         margin-top: 40px;
     }
     .hatch {
-        border: 1px solid green;
+        /* border: 1px solid green; */
         display: flex;
         flex-direction: row;
         width: 1090px;
@@ -1056,7 +1056,7 @@ ion-icon {
         margin: auto;
     }
     .hatch-txt {
-        border: 1px solid green;
+        /* border: 1px solid green; */
         margin-top: 20px;
         margin-left: 30px;
     }
@@ -1124,7 +1124,7 @@ ion-icon {
         display: none;
     }
     .reviews {
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -1132,7 +1132,7 @@ ion-icon {
         margin-top: 50px;
     }
     .top-txt-review {
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         width: 609.28px;
         height: 203px;
         display: flex;
@@ -1165,7 +1165,7 @@ ion-icon {
         color: #6C757D;
     }
     .testimonials {
-        border: 1px solid rgb(255, 0, 0);
+        /* border: 1px solid rgb(255, 0, 0); */
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -1203,7 +1203,7 @@ ion-icon {
         transition: background-color 0.3s ease;
     }
     .test:hover .etoiles{
-        border: 1px solid rgb(255, 0, 0);
+        /* border: 1px solid rgb(255, 0, 0); */
         display: block;
         background-image: url(assets/etoiles-w.svg);
         height: 20px;
@@ -1213,7 +1213,7 @@ ion-icon {
         50%{transform: scale(1, 1);}
     }
     .content-test {
-        border: 1px solid rgb(255, 0, 0);
+        /* border: 1px solid rgb(255, 0, 0); */
         width: 307.52px;
         height: 279.74px;
         position: relative;
@@ -1223,7 +1223,7 @@ ion-icon {
         z-index: 1;
     }
     .etoiles {
-        border: 1px solid rgb(255, 0, 0);
+        /* border: 1px solid rgb(255, 0, 0); */
         display: block;
         background-image: url(assets/etoiles.svg);
         height: 20px;
@@ -1234,15 +1234,16 @@ ion-icon {
         font-size: 16.3px;
         color: #6C757D;
     }
+    
     .profile {
-        border: 1px solid green;
+        /* border: 1px solid green; */
         margin-top: 2px;
         display: flex;
         flex-direction: row;
         align-items: center;
     }
     .photo img{
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         width: 100%;
     }
     .profile-data {
@@ -1262,7 +1263,7 @@ ion-icon {
         font-size: 9.14px;
     }
     .bota-hr {
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         height: 2px;
         margin-top: 195px;
     }
@@ -1277,7 +1278,7 @@ ion-icon {
         color: #6C757D;
     }
     .pricing {
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -1285,7 +1286,6 @@ ion-icon {
         margin-top: 50px;
     }
     .top-txt-pricing {
-        border: 1px solid blue;
         width: 862px;
         height: 117px;
         display: flex;
@@ -1321,22 +1321,169 @@ ion-icon {
         background-color: #ffffff;
         width: 481.66px;
         height: 502.72px;
-        border-radius: 6.59px;
+        border-radius: 9px;
         box-shadow: inset 3.29px 3.29px 17.46px 0.82px rgba(0, 0, 0, 0.15);
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease, filter 0.4s ease;
     }
-    .the-method {
-        border: 1px solid blue;
+    .afundado:hover{
+        /* here is the problem to solve claude */
+        border: 2.47px solid #1CA7A6;
+        transform: scale(1.015);
+        box-shadow: 0px 9.88px 19.84px 3.4px rgba(0, 0, 0, 0.21);
+        transition: 0.3s ease;
+    }
+    .afundado:hover .afundado-ct,
+    .afundado:hover .opt-title,
+    .afundado:hover .price,
+    .afundado:hover .value,
+    .afundado:hover .current,
+    .afundado:hover .benefits,
+    .afundado:hover #arrow,
+    .afundado:hover .parrot_plus,
+    .afundado:hover .plus-ct,
+    .afundado:hover .plus-desc,
+    .afundado:hover .plus-desc,
+    .afundado:hover .decision-plus,
+    .afundado:hover .buy-button-plus,
+    .afundado:hover .decision,
+    .afundado:hover .buy-button {
+        transform: scale(1.015);
+        transition: 0.05s ease;
+    }
+    .afundado-ct {
         width: 382.04px;
         height: 431.79px;
     }
+    .opt-title {
+        font-size: 26.35px;
+        color: #0F4C5C;
+        font-weight: 600;
+        margin-bottom: 23px;
+    }
+    .price {
+        display: flex;
+        margin-bottom: 33px;
+    }
+    .value {
+        font-size: 70px;
+        font-weight: 700;
+        color: #0F4C5C;
+    }
+    .current {
+        margin-bottom: 12px;
+        font-size: 13.17px;
+        font-weight: 600;
+        color: #0F4C5C;
+    }
     ul {
         list-style-image: url(assets/guaranteed.svg);
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    #arrow {
+        list-style-image: url(assets/arrow.svg);
     }
     li {
         font-size: 13.17px;
         color: #0F4C5C;
+    }
+    .parrot_plus {
+        width: 100%;
+        height: 108.71px;
+        background-color: white;
+        border: 1.6px solid #1FABAA;
+        border-radius: 4.5px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 18px;
+    }
+    .plus-ct {
+        width: 340px;
+        height: 75px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .logo-plus img{
+        display: block;
+    }
+    .plus-desc {
+        width: 284px;
+        font-size: 13.78px;
+        color: #0F4C5C;
+    }
+    .decision {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 48px;
+        gap: 5px;
+    }
+    .decision p{
+        font-size: 13.17px;
+        color: #0F4C5C;
+    }
+    .decision-plus {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 19px;
+        gap: 5px;
+    }
+    .decision-plus p{
+        font-size: 13.17px;
+        color: #0F4C5C;
+    }
+    .buy-button {
+        width: 100%;
+        height: 68.34px;
+        border-radius: 11.24px;
+        border: none;
+        background-color: #1FABAA;
+        color: white;
+        font-size: 26.35px;
+        font-weight: 500;
+        box-shadow: 0px 3.29px 3.29px 0px rgba(0, 0, 0, 0.25);
+    }
+    .buy-button:hover{
+        background-color: #1da4a4;
+        transition: 0.2s ease;
+        cursor: pointer;
+    }
+    .buy-button:active{
+        background-color: rgb(28, 152, 152);
+        margin-top: 3px;
+        box-shadow: inset 1.5px 2px 12px 0.82px rgba(0, 0, 0, 0.25);
+        transition: 0.1s ease;
+    }
+    .buy-button-plus {
+        width: 100%;
+        height: 68.34px;
+        border-radius: 11.24px;
+        border: none;
+        background-color: #1FABAA;
+        color: white;
+        font-size: 26.35px;
+        font-weight: 500;
+        box-shadow: 0px 3.29px 3.29px 0px rgba(0, 0, 0, 0.25);
+    }
+    .buy-button-plus:hover{
+        background-color: #1da4a4;
+        transition: 0.2s ease;
+        cursor: pointer;
+    }
+    .buy-button-plus:active{
+        background-color: rgb(28, 152, 152);
+        margin-top: 3px;
+        box-shadow: inset 1.5px 2px 12px 0.82px rgba(0, 0, 0, 0.25);
+        transition: 0.1s ease;
     }
 }

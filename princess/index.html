@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de ROI — edunext</title>
+  <link rel="shortcut icon" href="assets/logo verde água.svg" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --edu-dark:   #2d006b;
+      --edu-teal:   #00feca;
+      --white:      #ffffff;
+      --radius:     12px;
+      --bg:         #f4f4f6;
+      --surface:    #ffffff;
+      --border:     #e2e2ea;
+      --text:       #1a1a2e;
+      --muted:      #6b6b80;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 2rem 1rem 3rem;
+    }
+
+    .container { max-width: 960px; margin: 0 auto; }
+
+    /* ── HERO / HEADER ── */
+    .hero {
+      background: var(--edu-dark);
+      border-radius: var(--radius);
+      padding: 2rem 2rem 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
+    .logo-svg { height: 44px; width: auto; display: block; }
+    .logo-text { color: var(--edu-teal); font-size: 44px; font-weight: 600; letter-spacing: -2px; line-height: 1; }
+    .hero h1 { color: #fff; font-size: 24px; font-weight: 500; line-height: 1.35; margin-bottom: 0.5rem; }
+    .hero p  { color: rgba(255,255,255,0.6); font-size: 14px; line-height: 1.65; }
+
+    /* ── LAYOUT ── */
+    .layout { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    @media (max-width: 640px) { .layout { grid-template-columns: 1fr; } }
+
+    /* ── LEFT PANEL (inputs) ── */
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+    .panel-title {
+      font-size: 11px; font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase; letter-spacing: 0.08em;
+      margin-bottom: 1.5rem;
+      display: flex; align-items: center; gap: 6px;
+    }
+
+    .slider-row { margin-bottom: 1.375rem; }
+    .slider-row:last-child { margin-bottom: 0; }
+    .slider-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+    .slider-label { font-size: 13px; color: var(--text); font-weight: 500; }
+    .slider-val   { font-size: 14px; font-weight: 700; color: var(--text); }
+
+    input[type=range] {
+      -webkit-appearance: none;
+      width: 100%; height: 4px;
+      background: #e0e0ea;
+      border-radius: 2px;
+      outline: none;
+      cursor: pointer;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 16px; height: 16px;
+      border-radius: 50%;
+      background: var(--edu-dark);
+      border: 2px solid #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+    input[type=range]::-moz-range-thumb {
+      width: 16px; height: 16px;
+      border-radius: 50%;
+      background: var(--edu-dark);
+      border: 2px solid #fff;
+      cursor: pointer;
+    }
+    .slider-sub { font-size: 11px; color: var(--muted); margin-top: 4px; }
+
+    /* ── RIGHT PANEL (results) ── */
+    .results {
+      background: var(--edu-dark);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+    .results-title {
+      font-size: 11px; font-weight: 600;
+      color: rgba(255,255,255,0.45);
+      text-transform: uppercase; letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+
+    /* KPI cards */
+    .kpi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.25rem; }
+    .kpi {
+      background: rgba(255,255,255,0.07);
+      border-radius: 10px;
+      padding: 0.875rem 1rem;
+    }
+    .kpi-label { font-size: 10px; color: rgba(255,255,255,0.45); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 5px; }
+    .kpi-value { font-size: 20px; font-weight: 700; color: #fff; line-height: 1; }
+    .kpi-value.teal { color: var(--edu-teal); }
+    .kpi-value.large { font-size: 26px; }
+    .kpi-sub { font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 4px; }
+
+    /* ROI banner */
+    .roi-banner {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 1.25rem;
+    }
+    .roi-label { font-size: 12px; color: rgba(255,255,255,0.5); }
+    .roi-label strong { display: block; font-size: 13px; color: rgba(255,255,255,0.85); margin-bottom: 2px; font-weight: 600; }
+    .roi-value { font-size: 34px; font-weight: 700; color: var(--edu-teal); }
+
+    /* Bar chart */
+    .chart-area { margin-bottom: 1.125rem; }
+    .chart-label { font-size: 11px; color: rgba(255,255,255,0.35); margin-bottom: 8px; letter-spacing: 0.04em; }
+    .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 9px; }
+    .bar-name { font-size: 12px; color: rgba(255,255,255,0.6); min-width: 80px; }
+    .bar-track { flex: 1; height: 7px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden; }
+    .bar-fill  { height: 100%; border-radius: 4px; transition: width 0.4s ease; }
+    .bar-amt   { font-size: 12px; color: rgba(255,255,255,0.75); min-width: 82px; text-align: right; font-weight: 600; }
+
+    /* Donut */
+    .donut-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; }
+    .donut-wrap { position: relative; width: 80px; height: 80px; flex-shrink: 0; }
+    .donut-center {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      font-size: 10px; color: rgba(255,255,255,0.5);
+      text-align: center; line-height: 1.3;
+    }
+    .legend-item { display: flex; align-items: center; gap: 8px; margin-bottom: 7px; font-size: 12px; color: rgba(255,255,255,0.65); }
+    .legend-item:last-child { margin-bottom: 0; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+    /* Email section */
+    .email-section {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      padding: 1rem 1rem 0.875rem;
+      margin-bottom: 1rem;
+    }
+    .email-section-label {
+      font-size: 12px; color: rgba(255,255,255,0.55);
+      margin-bottom: 9px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .email-section-label svg { color: var(--edu-teal); flex-shrink: 0; }
+    .email-row { display: flex; gap: 8px; }
+    .email-input {
+      flex: 1;
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 8px;
+      padding: 0.6rem 0.875rem;
+      font-size: 13px; color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .email-input::placeholder { color: rgba(255,255,255,0.28); }
+    .email-input:focus { border-color: var(--edu-teal); }
+    .btn-pdf {
+      background: #fff;
+      color: var(--edu-dark);
+      border: none; border-radius: 8px;
+      padding: 0.6rem 1rem;
+      font-size: 13px; font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      font-family: 'DM Sans', sans-serif;
+      display: flex; align-items: center; gap: 6px;
+      transition: opacity 0.2s;
+    }
+    .btn-pdf:hover { opacity: 0.88; }
+    .pdf-note { font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 6px; }
+    .toast {
+      display: none;
+      background: var(--edu-teal); color: var(--edu-dark);
+      font-size: 12px; font-weight: 700;
+      border-radius: 8px; padding: 0.55rem 1rem;
+      margin-top: 8px; text-align: center;
+    }
+
+    /* CTA */
+    .btn-primary {
+      display: flex; align-items: center; justify-content: center;
+      width: 100%;
+      background: var(--edu-teal); color: var(--edu-dark);
+      font-size: 14px; font-weight: 700;
+      border: none; border-radius: 8px;
+      padding: 0.8rem;
+      text-decoration: none;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      transition: opacity 0.2s;
+    }
+    .btn-primary:hover { opacity: 0.88; }
+
+    /* Seal */
+    .seal {
+      display: flex; align-items: center; justify-content: center; gap: 5px;
+      font-size: 11px; color: rgba(255,255,255,0.28);
+      margin-top: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="hero">
+    <div class="logo">
+      <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 281.54 281.54">
+        <path fill="#00feca" d="M105.6,2.02C39.35,5.62,11.09,45.13,2.14,96.23c-3.47,19.78-1.96,80.31-.74,88.3,8.63,56.53,44.14,92.57,108.65,95.8,99.45,7.11,162.78-15.47,170.13-109.8.7-9.01.89-3.55,1.26-30.7l.05-.53C283.52,18.02,215.56-8.23,105.6,2.02M248.87,157.17H66.02c7.51,34.38,38.12,60.13,74.75,60.13,23.53,0,44.55-10.63,58.59-27.33h39.07c-18,35.67-54.97,60.13-97.65,60.13-60.38,0-109.33-48.95-109.33-109.33,0-5.57.42-11.05,1.22-16.4h182.86c-7.51-34.38-38.12-60.13-74.75-60.13-23.53,0-44.55,10.63-58.59,27.33h-39.07c18.01-35.67,54.97-60.13,97.65-60.13,60.38,0,109.33,48.95,109.33,109.33,0,5.58-.42,11.05-1.22,16.4"/>
+      </svg>
+      <span class="logo-text">edunext</span>
+    </div>
+    <h1>Quanto sua instituição está deixando na mesa hoje?</h1>
+    <p>Simule em 30 segundos a economia com taxas bancárias e a recuperação de mensalidades atrasadas.</p>
+  </div>
+
+  <div class="layout">
+
+    <!-- LEFT: INPUTS -->
+    <div class="panel">
+      <div class="panel-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="10" y2="18"/></svg>
+        seus números
+      </div>
+
+      <div class="slider-row">
+        <div class="slider-header">
+          <span class="slider-label">Receita mensal de mensalidades</span>
+          <span class="slider-val" id="v-receita">R$&nbsp;200.000</span>
+        </div>
+        <input type="range" id="s-receita" min="50000" max="1000000" step="10000" value="200000">
+        <div class="slider-sub">Valor total faturado por mês</div>
+      </div>
+
+      <div class="slider-row">
+        <div class="slider-header">
+          <span class="slider-label">Taxa de inadimplência atual</span>
+          <span class="slider-val" id="v-inad">10%</span>
+        </div>
+        <input type="range" id="s-inad" min="2" max="30" step="1" value="10">
+        <div class="slider-sub">Média do mercado: 8% a 15%</div>
+      </div>
+
+      <div class="slider-row">
+        <div class="slider-header">
+          <span class="slider-label">Custo atual por boleto</span>
+          <span class="slider-val" id="v-boleto">R$&nbsp;3,50</span>
+        </div>
+        <input type="range" id="s-boleto" min="1" max="8" step="0.1" value="3.5">
+        <div class="slider-sub">Taxa cobrada pelo banco / emissor</div>
+      </div>
+
+      <div class="slider-row">
+        <div class="slider-header">
+          <span class="slider-label">Boletos emitidos por mês</span>
+          <span class="slider-val" id="v-qtd">500</span>
+        </div>
+        <input type="range" id="s-qtd" min="50" max="5000" step="50" value="500">
+        <div class="slider-sub">Alunos ativos aproximadamente</div>
+      </div>
+
+      <div class="slider-row">
+        <div class="slider-header">
+          <span class="slider-label">Horas mensais em cobrança manual</span>
+          <span class="slider-val" id="v-horas">20h</span>
+        </div>
+        <input type="range" id="s-horas" min="4" max="160" step="4" value="20">
+        <div class="slider-sub">Equipe administrativa + financeiro</div>
+      </div>
+    </div>
+
+    <!-- RIGHT: RESULTS -->
+    <div class="results">
+      <div class="results-title">resultado estimado</div>
+
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-label">Recuperação/mês</div>
+          <div class="kpi-value teal" id="r-rec">R$ 4.800</div>
+          <div class="kpi-sub">redução de inadimplência</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Economia em taxas</div>
+          <div class="kpi-value teal" id="r-taxa">R$ 875</div>
+          <div class="kpi-sub">boletos + gateway</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Ganho de produtiv.</div>
+          <div class="kpi-value" id="r-prod">R$ 1.400</div>
+          <div class="kpi-sub">horas liberadas</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Total mensal</div>
+          <div class="kpi-value large" id="r-total">R$ 7.075</div>
+          <div class="kpi-sub">benefício estimado</div>
+        </div>
+      </div>
+
+      <div class="roi-banner">
+        <div class="roi-label">
+          <strong>ROI anual estimado</strong>
+          retorno sobre o investimento
+        </div>
+        <div class="roi-value" id="r-roi">+340%</div>
+      </div>
+
+      <div class="chart-area">
+        <div class="chart-label">Comparativo de custos mensais</div>
+        <div class="bar-row">
+          <span class="bar-name">Situação atual</span>
+          <div class="bar-track"><div class="bar-fill" id="bar-atual" style="background:#e05252;width:100%;"></div></div>
+          <span class="bar-amt" id="bar-atual-val">R$ 20.875</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-name">Com edunext</span>
+          <div class="bar-track"><div class="bar-fill" id="bar-edu" style="background:#00feca;width:66%;"></div></div>
+          <span class="bar-amt" id="bar-edu-val">R$ 13.800</span>
+        </div>
+      </div>
+
+      <div class="donut-row">
+        <div class="donut-wrap">
+          <canvas id="donut" width="80" height="80"></canvas>
+          <div class="donut-center">onde<br>vem</div>
+        </div>
+        <div class="legend">
+          <div class="legend-item"><span class="dot" style="background:#00feca;"></span><span id="l-inad">Inadimplência — 68%</span></div>
+          <div class="legend-item"><span class="dot" style="background:rgba(255,255,255,0.55);"></span><span id="l-taxa">Taxas bancárias — 12%</span></div>
+          <div class="legend-item"><span class="dot" style="background:rgba(255,255,255,0.25);"></span><span id="l-prod">Produtividade — 20%</span></div>
+        </div>
+      </div>
+
+      <!-- EMAIL + PDF -->
+      <div class="email-section">
+        <div class="email-section-label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+          receba o relatório completo por e-mail
+        </div>
+        <div class="email-row">
+          <input type="email" class="email-input" id="email-input" placeholder="seu@email.com.br">
+          <button class="btn-pdf" onclick="gerarPDF()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            gerar PDF
+          </button>
+        </div>
+        <div class="pdf-note">O PDF é baixado no seu dispositivo para encaminhar por e-mail.</div>
+        <div class="toast" id="toast">✓ PDF gerado com sucesso! Verifique seus downloads.</div>
+      </div>
+
+      <!-- CTA -->
+      <a href="https://edunext.com.br/contrate/" class="btn-primary" target="_blank" rel="noopener">
+        Agendar consultoria gratuita →
+      </a>
+
+      <div class="seal">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Dados não armazenados — simulação local
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- jsPDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+  const CUSTO_HORA = 70;
+  const REDUCAO_INAD = 0.24;
+  const CUSTO_GATEWAY_EDU = 1.20;
+  const INVEST_MENSAL = 2500;
+  let state = {};
+
+  function fmt(n) { return 'R$ ' + Math.round(n).toLocaleString('pt-BR'); }
+  function fmtN(n) { return Math.round(n).toLocaleString('pt-BR'); }
+
+  function calc() {
+    const receita = +document.getElementById('s-receita').value;
+    const inad    = +document.getElementById('s-inad').value / 100;
+    const cBoleto = +document.getElementById('s-boleto').value;
+    const qtd     = +document.getElementById('s-qtd').value;
+    const horas   = +document.getElementById('s-horas').value;
+
+    document.getElementById('v-receita').textContent = fmt(receita);
+    document.getElementById('v-inad').textContent    = Math.round(inad * 100) + '%';
+    document.getElementById('v-boleto').textContent  = 'R$ ' + cBoleto.toFixed(2).replace('.', ',');
+    document.getElementById('v-qtd').textContent     = qtd;
+    document.getElementById('v-horas').textContent   = horas + 'h';
+
+    const valorInad  = receita * inad;
+    const recInad    = valorInad * REDUCAO_INAD;
+    const econTaxas  = (cBoleto - CUSTO_GATEWAY_EDU) * qtd;
+    const econProd   = horas * CUSTO_HORA;
+    const total      = recInad + econTaxas + econProd;
+    const roi        = ((total * 12 - INVEST_MENSAL * 12) / (INVEST_MENSAL * 12)) * 100;
+    const custoAtual = valorInad + cBoleto * qtd + horas * CUSTO_HORA;
+    const custoEdu   = valorInad * (1 - REDUCAO_INAD) + CUSTO_GATEWAY_EDU * qtd + horas * 0.3 * CUSTO_HORA;
+
+    document.getElementById('r-rec').textContent   = fmt(recInad);
+    document.getElementById('r-taxa').textContent  = fmt(econTaxas);
+    document.getElementById('r-prod').textContent  = fmt(econProd);
+    document.getElementById('r-total').textContent = fmt(total);
+    document.getElementById('r-roi').textContent   = '+' + Math.round(roi) + '%';
+    document.getElementById('bar-atual-val').textContent = fmt(custoAtual);
+    document.getElementById('bar-edu-val').textContent   = fmt(custoEdu);
+    document.getElementById('bar-edu').style.width = Math.round((custoEdu / custoAtual) * 100) + '%';
+
+    const pI = total > 0 ? Math.round((recInad / total) * 100) : 0;
+    const pT = total > 0 ? Math.round((econTaxas / total) * 100) : 0;
+    const pP = 100 - pI - pT;
+    document.getElementById('l-inad').textContent = 'Inadimplência — ' + pI + '%';
+    document.getElementById('l-taxa').textContent = 'Taxas bancárias — ' + pT + '%';
+    document.getElementById('l-prod').textContent = 'Produtividade — ' + pP + '%';
+    drawDonut(pI, pT, pP);
+
+    state = { receita, inad, cBoleto, qtd, horas, valorInad, recInad, econTaxas, econProd, total, roi, custoAtual, custoEdu, pI, pT, pP };
+  }
+
+  function drawDonut(a, b, c) {
+    const cv = document.getElementById('donut');
+    if (!cv) return;
+    const ctx = cv.getContext('2d');
+    ctx.clearRect(0, 0, 80, 80);
+    const slices = [
+      { val: a, color: '#00feca' },
+      { val: b, color: 'rgba(255,255,255,0.55)' },
+      { val: c, color: 'rgba(255,255,255,0.2)' }
+    ];
+    let start = -Math.PI / 2;
+    slices.forEach(s => {
+      const angle = (s.val / 100) * 2 * Math.PI;
+      ctx.beginPath();
+      ctx.arc(40, 40, 30, start, start + angle);
+      ctx.strokeStyle = s.color;
+      ctx.lineWidth = 10;
+      ctx.stroke();
+      start += angle;
+    });
+  }
+
+  function gerarPDF() {
+    const email = document.getElementById('email-input').value.trim();
+    const { jsPDF } = window.jspdf;
+    if (!jsPDF) { alert('Biblioteca PDF ainda carregando, tente novamente.'); return; }
+
+    const doc = new jsPDF({ unit: 'mm', format: 'a4' });
+    const W = 210, PX = 16;
+    const s = state;
+    const hoje = new Date().toLocaleDateString('pt-BR');
+    const dark = [45,0,107], teal = [0,254,202], white = [255,255,255];
+    const gray = [80,80,80], lgray = [230,230,230], black = [30,30,30];
+
+    // Header
+    doc.setFillColor(...dark); doc.rect(0, 0, W, 42, 'F');
+    doc.setFillColor(...teal); doc.circle(PX + 6, 14, 6, 'F');
+    doc.setFont('helvetica','bold'); doc.setFontSize(11); doc.setTextColor(...dark);
+    doc.text('e', PX + 6, 17.5, { align: 'center' });
+    doc.setFontSize(14); doc.setTextColor(...teal);
+    doc.text('edunext', PX + 16, 16);
+    doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(200,200,220);
+    doc.text('Relatório de Simulação de ROI', PX + 16, 22);
+    doc.setFontSize(8); doc.setTextColor(160,160,200);
+    doc.text('Gerado em: ' + hoje + (email ? ' | Para: ' + email : ''), PX, 32);
+    doc.text('edunext.com.br', W - PX, 32, { align: 'right' });
+    doc.setFont('helvetica','bold'); doc.setFontSize(18); doc.setTextColor(...white);
+    doc.text('Simulação de Economia e ROI', PX, 38);
+
+    let y = 52;
+
+    // Params
+    doc.setFont('helvetica','bold'); doc.setFontSize(10); doc.setTextColor(...dark);
+    doc.text('PARÂMETROS DA SIMULAÇÃO', PX, y); y += 5;
+    doc.setFillColor(...lgray); doc.rect(PX, y, W - PX * 2, 0.3, 'F'); y += 6;
+    const params = [
+      ['Receita mensal de mensalidades', fmt(s.receita)],
+      ['Taxa de inadimplência atual', Math.round(s.inad * 100) + '%'],
+      ['Custo atual por boleto', 'R$ ' + s.cBoleto.toFixed(2).replace('.',',')],
+      ['Volume de boletos por mês', fmtN(s.qtd) + ' boletos'],
+      ['Horas mensais em cobrança manual', s.horas + ' horas'],
+    ];
+    params.forEach(([label, val], i) => {
+      if (i % 2 === 0) { doc.setFillColor(248,248,252); doc.rect(PX, y - 3.5, W - PX * 2, 7, 'F'); }
+      doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(...gray);
+      doc.text(label, PX + 3, y + 0.5);
+      doc.setFont('helvetica','bold'); doc.setTextColor(...black);
+      doc.text(val, W - PX - 3, y + 0.5, { align: 'right' });
+      y += 8;
+    });
+    y += 6;
+
+    // KPIs
+    doc.setFont('helvetica','bold'); doc.setFontSize(10); doc.setTextColor(...dark);
+    doc.text('RESULTADOS DA SIMULAÇÃO', PX, y); y += 5;
+    doc.setFillColor(...lgray); doc.rect(PX, y, W - PX * 2, 0.3, 'F'); y += 6;
+    const kpiW = (W - PX * 2 - 6) / 2;
+    const kpis = [
+      ['Recuperação de inadimplência/mês', fmt(s.recInad), true],
+      ['Economia em taxas bancárias/mês', fmt(s.econTaxas), true],
+      ['Ganho de produtividade/mês', fmt(s.econProd), false],
+      ['Benefício total mensal', fmt(s.total), false],
+    ];
+    for (let i = 0; i < kpis.length; i += 2) {
+      const x1 = PX, x2 = PX + kpiW + 6, h = 18;
+      doc.setFillColor(...dark); doc.roundedRect(x1, y, kpiW, h, 3, 3, 'F');
+      doc.setFillColor(...dark); doc.roundedRect(x2, y, kpiW, h, 3, 3, 'F');
+      [x1, x2].forEach((x, j) => {
+        const [label, val, isTeal] = kpis[i + j];
+        doc.setFont('helvetica','normal'); doc.setFontSize(7); doc.setTextColor(160,160,200);
+        doc.text(label.toUpperCase(), x + 5, y + 5);
+        doc.setFont('helvetica','bold'); doc.setFontSize(13);
+        doc.setTextColor(isTeal ? 0 : 255, isTeal ? 254 : 255, isTeal ? 202 : 255);
+        doc.text(val, x + 5, y + 13);
+      });
+      y += h + 4;
+    }
+    y += 4;
+
+    // ROI
+    doc.setFillColor(...dark); doc.roundedRect(PX, y, W - PX * 2, 18, 3, 3, 'F');
+    doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(200,200,255);
+    doc.text('ROI ANUAL ESTIMADO', PX + 6, y + 7);
+    doc.setFontSize(9); doc.text('Retorno sobre o investimento na plataforma', PX + 6, y + 13);
+    doc.setFont('helvetica','bold'); doc.setFontSize(20); doc.setTextColor(...teal);
+    doc.text('+' + Math.round(s.roi) + '%', W - PX - 6, y + 13, { align: 'right' });
+    y += 26;
+
+    // Bar chart
+    doc.setFont('helvetica','bold'); doc.setFontSize(10); doc.setTextColor(...dark);
+    doc.text('COMPARATIVO DE CUSTOS MENSAIS', PX, y); y += 5;
+    doc.setFillColor(...lgray); doc.rect(PX, y, W - PX * 2, 0.3, 'F'); y += 8;
+    const bw = W - PX * 2 - 50;
+    doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(...gray);
+    doc.text('Situação atual', PX, y);
+    doc.setFillColor(220, 80, 80); doc.roundedRect(PX + 36, y - 4, bw, 6, 2, 2, 'F');
+    doc.setFont('helvetica','bold'); doc.setTextColor(...black); doc.text(fmt(s.custoAtual), W - PX, y, { align: 'right' });
+    y += 10;
+    doc.setFont('helvetica','normal'); doc.setTextColor(...gray);
+    doc.text('Com edunext', PX, y);
+    const pct = s.custoAtual > 0 ? s.custoEdu / s.custoAtual : 0.5;
+    doc.setFillColor(...teal); doc.roundedRect(PX + 36, y - 4, bw * pct, 6, 2, 2, 'F');
+    doc.setFont('helvetica','bold'); doc.setTextColor(...black); doc.text(fmt(s.custoEdu), W - PX, y, { align: 'right' });
+    y += 14;
+
+    // Distribuição
+    doc.setFont('helvetica','bold'); doc.setFontSize(10); doc.setTextColor(...dark);
+    doc.text('DISTRIBUIÇÃO DA ECONOMIA', PX, y); y += 5;
+    doc.setFillColor(...lgray); doc.rect(PX, y, W - PX * 2, 0.3, 'F'); y += 8;
+    const dist = [
+      ['Recuperação de inadimplência', s.pI + '%', teal],
+      ['Economia em taxas bancárias',  s.pT + '%', [180,180,220]],
+      ['Ganho de produtividade',        s.pP + '%', [150,150,200]],
+    ];
+    dist.forEach(([label, v, color]) => {
+      doc.setFillColor(...color); doc.circle(PX + 3, y - 1, 2.5, 'F');
+      doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(...gray);
+      doc.text(label, PX + 9, y + 0.5);
+      doc.setFont('helvetica','bold'); doc.setTextColor(...black);
+      doc.text(v, W - PX, y + 0.5, { align: 'right' });
+      y += 8;
+    });
+    y += 4;
+
+    // CTA block
+    doc.setFillColor(...dark); doc.roundedRect(PX, y, W - PX * 2, 22, 3, 3, 'F');
+    doc.setFont('helvetica','bold'); doc.setFontSize(11); doc.setTextColor(...teal);
+    doc.text('Pronto para transformar a gestao financeira da sua instituicao?', PX + 6, y + 8);
+    doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(200,200,220);
+    doc.text('Acesse edunext.com.br/contrate e agende uma consultoria gratuita.', PX + 6, y + 16);
+    y += 30;
+
+    // Disclaimer
+    doc.setFont('helvetica','normal'); doc.setFontSize(7.5); doc.setTextColor(160,160,160);
+    const disc = 'Este relatório apresenta uma simulacao estimada com base nos dados informados e em reducoes conservadoras de inadimplencia (24%) e taxas. Os resultados reais podem variar conforme as caracteristicas da instituicao. Nao constitui proposta comercial.';
+    doc.text(doc.splitTextToSize(disc, W - PX * 2), PX, y);
+
+    // Footer
+    doc.setFillColor(...dark); doc.rect(0, 285, W, 12, 'F');
+    doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(...teal);
+    doc.text('edunext — fintech educacional', PX, 292);
+    doc.setTextColor(160,160,200);
+    doc.text('edunext.com.br | contrate@edunext.com.br', W - PX, 292, { align: 'right' });
+
+    doc.save('relatorio-roi-edunext.pdf');
+    const toast = document.getElementById('toast');
+    toast.style.display = 'block';
+    setTimeout(() => toast.style.display = 'none', 4000);
+  }
+
+  ['s-receita','s-inad','s-boleto','s-qtd','s-horas'].forEach(id => {
+    document.getElementById(id).addEventListener('input', calc);
+  });
+  calc();
+</script>
+</body>
+</html>
