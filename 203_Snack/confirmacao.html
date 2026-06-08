@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Confirmar Pedido – 203 Snack</title>
+  <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      min-height: 100vh;
+      max-width: 430px;
+      margin: 0 auto;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #f5820a 0%, #e8660a 100%);
+      padding: 8px 0px 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 12px rgba(232,102,10,0.35);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header img.logo {
+      height: 65px;
+      object-fit: contain;
+    }
+
+    .header-back {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #fff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      transition: background 0.15s;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .header-back:active {
+      background: rgba(255,255,255,0.2);
+    }
+
+    .header-back svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    /* ── CONTENT ── */
+    .page {
+      padding: 24px 20px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .product-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: #222;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .product-img-wrap {
+      width: 180px;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .product-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .product-price {
+      font-size: 26px;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 28px;
+    }
+
+    /* ── FORM ── */
+    .form-group {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 6px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1.5px solid #ddd;
+      border-radius: 10px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      color: #222;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    input:focus {
+      border-color: #f5820a;
+    }
+
+    input::placeholder {
+      color: #bbb;
+    }
+
+    /* ── BUTTONS ── */
+    .btn-primary {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, #f5820a 0%, #e8660a 100%);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+      padding: 17px 16px;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(232,102,10,0.38);
+      transition: transform 0.15s, box-shadow 0.15s;
+      -webkit-tap-highlight-color: transparent;
+      margin-top: 10px;
+    }
+
+    .btn-primary:active {
+      transform: scale(0.97);
+      box-shadow: 0 2px 8px rgba(232,102,10,0.28);
+    }
+
+    .btn-secondary {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #f5820a;
+      text-decoration: underline;
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-top: 16px;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* ── TOAST ── */
+    .toast {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #222;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 12px 24px;
+      border-radius: 999px;
+      z-index: 999;
+      white-space: nowrap;
+    }
+
+    .toast.show {
+      display: block;
+      animation: fadeInOut 2.5s ease forwards;
+    }
+
+    @keyframes fadeInOut {
+      0%   { opacity: 0; transform: translateX(-50%) translateY(10px); }
+      15%  { opacity: 1; transform: translateX(-50%) translateY(0); }
+      75%  { opacity: 1; }
+      100% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#" onclick="history.back(); return false;" class="header-back" aria-label="Voltar">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+    </a>
+    <img
+      class="logo"
+      src="assets/logo.svg"
+      alt="203 Snack"
+      onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='block';"
+    />
+    <span class="logo-fallback" style="display:none; color:#fff; font-weight:800; font-size:22px; letter-spacing:1px;">203 Snack</span>
+  </header>
+
+  <main class="page">
+    <h1 class="product-name">Doritos</h1>
+
+    <div class="product-img-wrap">
+      <img src="assets/doritos.svg" alt="Doritos" />
+    </div>
+
+    <p class="product-price">R$ 5,99</p>
+
+    <div class="form-group">
+      <label for="quarto">Digite o número do seu quarto:</label>
+      <input type="number" id="quarto" placeholder="Ex.: 203" />
+    </div>
+
+    <div class="form-group">
+      <label for="nome">Digite seu nome:</label>
+      <input type="text" id="nome" placeholder="Ex.: João" />
+    </div>
+
+    <button class="btn-primary" onclick="enviarPedido('Pagar e Finalizar')">
+      Pagar e Finalizar
+    </button>
+
+    <button class="btn-secondary" onclick="enviarPedido('Prefiro pagar ao receber')">
+      Prefiro pagar ao receber o produto
+    </button>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // Dados do produto (no futuro pode vir via URL ou localStorage)
+    const produto = {
+      nome: 'Doritos 20g',
+      preco: 'R$ 5,99'
+    };
+
+    function mostrarToast(mensagem) {
+      const toast = document.getElementById('toast');
+      toast.textContent = mensagem;
+      toast.classList.remove('show');
+      void toast.offsetWidth; // reinicia animação
+      toast.classList.add('show');
+    }
+
+    async function enviarPedido(tipoPagamento) {
+      const quarto = document.getElementById('quarto').value.trim();
+      const nome = document.getElementById('nome').value.trim();
+
+      if (!quarto || !nome) {
+        mostrarToast('Preencha todos os campos!');
+        return;
+      }
+
+      const pedido = {
+        produto: produto.nome,
+        preco: produto.preco,
+        quarto: quarto,
+        nome: nome,
+        pagamento: tipoPagamento
+      };
+
+      try {
+        const resposta = await fetch('/salvar-pedido', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(pedido)
+        });
+
+        const resultado = await resposta.json();
+
+        if (resultado.sucesso) {
+          mostrarToast('Pedido enviado com sucesso!');
+          setTimeout(() => {
+            window.location.href = 'index.html';
+          }, 2000);
+        }
+      } catch (erro) {
+        mostrarToast('Erro ao enviar pedido. Tente novamente.');
+        console.error(erro);
+      }
+    }
+  </script>
+
+</body>
+</html>

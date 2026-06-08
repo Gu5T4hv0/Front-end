@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Entrega – 203 Snack</title>
+  <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      min-height: 100vh;
+      max-width: 430px;
+      margin: 0 auto;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #f5820a 0%, #e8660a 100%);
+      padding: 8px 0px 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 12px rgba(232,102,10,0.35);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header img.logo {
+      height: 65px;
+      object-fit: contain;
+    }
+
+    .header-back {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #fff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      transition: background 0.15s;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .header-back:active {
+      background: rgba(255,255,255,0.2);
+    }
+
+    .header-back svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    /* ── CONTENT ── */
+    .options-page {
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 14px;
+      min-height: calc(100vh - 80px);
+    }
+
+    .btn-option {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, #f5820a 0%, #e8660a 100%);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      padding: 18px 16px;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(232,102,10,0.38);
+      transition: transform 0.15s, box-shadow 0.15s;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .btn-option:active {
+      transform: scale(0.97);
+      box-shadow: 0 2px 8px rgba(232,102,10,0.28);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#" onclick="history.back(); return false;" class="header-back" aria-label="Voltar">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+    </a>
+    <img
+      class="logo"
+      src="assets/logo.svg"
+      alt="203 Snack"
+      onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='block';"
+    />
+    <span class="logo-fallback" style="display:none; color:#fff; font-weight:800; font-size:22px; letter-spacing:1px;">203 Snack</span>
+  </header>
+
+  <main class="options-page">
+    <a href="confirmacao.html" class="btn-option">Receber em meu quarto</a>
+    <a href="confirmacao.html" class="btn-option">Pegar na Loja (quarto 203)</a>
+  </main>
+
+</body>
+</html>

@@ -1,4 +1,16 @@
-* {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parrot.io</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+    <style>
+        * {
     box-sizing: border-box;
     margin: 0;
     font-family: Lexend, sans-serif;
@@ -7,11 +19,11 @@
   color: white; /* Text color */
   background: #FF6B6B; /* Highlight background color */
 }
-html {
-    overflow-x: hidden;
-}
 body {
     background-color: #F8F9FA;
+    overflow-x: hidden;
+}
+html {
     overflow-x: hidden;
 }
 /* principal */
@@ -503,7 +515,7 @@ ion-icon {
     margin-top: 0px;
 }
 .HIW-flex {
-    /* border: 1px solid #C43737; */
+    border: 1px solid #C43737;
     margin-top: 20px;
     width: 100%;
     display: flex;
@@ -570,8 +582,6 @@ ion-icon {
 .social-m {
     /* border: 1px solid green; */
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
     width: 100%;
     margin-top: 0px;
@@ -580,17 +590,16 @@ ion-icon {
     /* border: 1px solid green; */
     display: block;
     margin-top: 60px;
-    width: 100%;
-    max-width: 320px;
+    width: 320px;
+    margin-left: 27px;
 }
 .parrotinhos-m {
     /* border: 1px solid blue; */
     display: block;
     background-image: url(assets/parrotinhos-m.svg);
-    width: 100%;
+    width: 950px;
     height: 280px;
     background-repeat: no-repeat;
-    background-size: cover;
 }
 .reviews {
     display: none;
@@ -735,15 +744,6 @@ ion-icon {
     width: 300px;
     margin-bottom: 10px;
 }
-.pricing {
-    display: none;
-}
-.bottom-cta {
-    display: none;
-}
-.moi {
-    display: none;
-}
 /* ── PRICING MOBILE ── */
 .pricing {
     width: 100%;
@@ -791,12 +791,17 @@ ion-icon {
     width: 315.11px;
     height: 330.19px;
     border-radius: 5.89px;
+    box-shadow: inset 2.15px 2.15px 11.42px 0.54px rgba(0, 0, 0, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1.62px solid #1CA7A6;
-    box-shadow: 0px 6.46px 12.98px 2.22px rgba(0, 0, 0, 0.21);
     transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+}
+.afundado:active {
+    border: 1.62px solid #1CA7A6;
+    transform: scale(1.015);
+    box-shadow: 0px 6.46px 12.98px 2.22px rgba(0, 0, 0, 0.21);
+    transition: 0.3s ease;
 }
 .afundado-ct {
     width: 249.93px;
@@ -928,51 +933,52 @@ li {
 }
 
 /* ── BOTTOM CTA MOBILE ── */
-.bottom-cta-m {
+.bottom-cta {
     height: 480.16px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.transform-parrot-m {
+.transform-parrot {
     transition: transform 0.5s ease, filter 0.4s ease;
+    /* placeholder block for the kind_parrot image */
     width: 315.11px;
     height: 205px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.kind-parrot1-m img {
+.kind-parrot1 img {
     display: block;
     max-width: 100%;
 }
-.kind-parrot2-m img {
+.kind-parrot2 img {
     display: none;
     max-width: 100%;
 }
-.invitation-m {
+.invitation {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 300px;
+    width: 357px;
 }
-.invitation-txt-m {
+.invitation-txt {
     text-align: center;
     line-height: 1.05;
     margin-top: 19.62px;
 }
-.invitation-txt-m p {
+.invitation-txt p {
     font-size: 30.62px;
     font-weight: 700;
     color: #0F4C5C;
 }
-.invitation-txt-m span {
+.invitation-txt span {
     color: #1CA7A6;
 }
-.house_of_cta-bottom-m {
+.house_of_cta-bottom {
     margin-top: 26.16px;
 }
-.cta-bottom-m {
+.cta-bottom {
     width: 206.51px;
     height: 39.76px;
     border-radius: 19.62px;
@@ -984,14 +990,11 @@ li {
     box-shadow: 0px 2.15px 2.15px 0px rgba(0, 0, 0, 0.25);
     font-family: Lexend, sans-serif;
 }
-.cta-bottom-m:active {
+.cta-bottom:active {
     background-color: rgb(28, 152, 152);
     transform: translateY(2px);
     box-shadow: inset 1px 1.5px 8px 0.54px rgba(0, 0, 0, 0.25);
     transition: 0.1s ease;
-}
-.bottom-cta {
-    display: none;
 }
 
 /* ── FOOTER MOBILE ── */
@@ -1686,7 +1689,7 @@ footer .moi {
         50%{transform: scale(1, 1);}
     }
     .content-test {
-        /* border: 1px solid rgb(255, 0, 0); */
+        border: 1px solid rgb(255, 0, 0);
         width: 307.52px;
         height: 279.74px;
         position: relative;
@@ -2043,9 +2046,6 @@ footer .moi {
         box-shadow: inset 1.5px 2px 12px 0.82px rgba(0, 0, 0, 0.25);
         transition: 0.1s ease;
     }
-    .bottom-cta-m {
-        display: none;
-    }
     footer .moi{
         background-color: #0F4C5C;
         height: 31.21px;
@@ -2074,3 +2074,526 @@ footer .moi {
         margin: 0px 8px 0px 8px;
     }
 }
+    </style>
+</head>
+<body>
+    <div class="menu-page">
+        <div class="top-link-page">
+            <a href="https://parrot-io.vercel.app/" class="logo"><img src="assets/LOGO-m.svg" alt=""></a>
+
+            <a href="javascript:void(0);" class="exit" onclick="closeMenu()">
+                <!-- <div><img src="assets/exit.svg" alt=""></div> -->
+                <ion-icon name="close-outline"></ion-icon>
+            </a>
+        </div>
+
+        <div class="page-links">
+            <a href="#">How it works</a>
+            <a href="#">Pricing</a>
+            <a href="#">Reviews</a>
+        </div>
+        <div class="menu-top-cta-back">
+            <a href="#" class="menu-top-cta">Get Parrot.io</a>
+        </div>
+    </div>
+
+    <div class="principal">
+        <div class="top">
+            <a href="https://parrot-io.vercel.app/" class="logo"><img src="assets/LOGO-m.svg" alt=""></a>
+            <a href="https://parrot-io.vercel.app/" class="logo-d"><img src="assets/LOGO-d.svg" alt=""></a>
+
+            <a href="javascript:void(0);" class="menu" onclick="openMenu()">
+                <!-- <div><img src="assets/menu.svg" alt=""></div> -->
+                <ion-icon name="menu-outline"></ion-icon>
+            </a>
+            <div class="links">
+                <a href="#">How it works</a>
+                <a href="#">Pricing</a>
+                <a href="#">Reviews</a>
+            </div>
+            <a href="#" class="top-cta">Get Parrot.io</a>
+        </div>
+
+        <div class="hero-ct">
+            <div class="hero-back2">
+                <div class="hero-img-d">
+                    
+                </div>
+            </div>
+            
+            <div class="container">
+                <p class="really">For people who really want acquire a language</p>
+                <div class="hero-txt">
+                    <div class="title"><h1>The Last Language Method You’ll Ever Buy</h1></div>
+                    <div class="subtitle"><p>Master any language using the power &nbsp;&nbsp;&nbsp;of the internet and proven linguistics.</p></div>
+                </div>
+                <button class="cta">Get Lifetime Access</button>
+            </div>
+        </div>
+        
+
+            <div class="hero-back1">
+                <div class="hero-img-m"></div>
+            </div>
+
+            <div class="pain-back-m">
+                <div class="pain1-m">
+                    <div class="pain2-m"></div>
+                    <div class="content1-m">
+                        <div class="top-txt1-m">
+                            <p class="most-m">Most people think they are "bad at languages" because they’ve spent years studying grammar and still can’t order a coffee without a panic attack.</p>
+                            <div class="format-m">
+                                <p class="truth1-m">The truth? You aren't</p> 
+                                <div class="rec1-m"></div>
+                                <p class="truth2-m">failing—the method is.</p>
+                                <div class="rec2-m"></div>
+                            </div>
+                        </div>
+                        <div class="points1-m">
+                            <div class="grammar-m">
+                                <img src="assets/rato-m.svg" alt="">
+                                <p class="bad-title-m">The Grammar Trap</p>
+                                <div class="line1-p-m"></div>
+                                <p class="bad-description-m" id="desc-grammar-m">Spending years memorizing 20 verb tenses won’t help you understand a native speaker at full speed.</p>
+                            </div>
+                            <div class="silent-m">
+                                <img src="assets/muted-m.svg" alt="">
+                                <p class="bad-title-m">The "Silent" Student</p>
+                                <div class="line2-p-m"></div>
+                                <p class="bad-description-m">You can read a textbook, but you freeze in real conversations because you’ve never moved past "classroom" language.</p>
+                            </div>
+                            <div class="gap-m">
+                                <img class="au-m" src="assets/battery-m.svg" alt="">
+                                <div class="txt-under-img-m">
+                                    <p class="bad-title-m">The Hope Gap</p>
+                                    <div class="line3-p-m"></div>
+                                    <p class="bad-description-m">After some years of slow progress and monthly subscription bills, most people simply give up, thinking fluency is a gift they weren't born with.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pain-back">
+                <div class="pain1">
+                    <div class="content1">
+                        <div class="top-txt1">
+                            <p class="most">Most people think they are "bad at languages" because they’ve spent years studying grammar and still can’t order a coffee without a panic attack.</p>
+                            <div class="format">
+                                <p class="truth">The truth? You aren't failing—the method is.</p>
+                                <div class="rec1"></div>
+                            </div>
+                        </div>
+                        <div class="points1">
+                            <div class="grammar">
+                                <img src="assets/rato.svg" alt="">
+                                <p class="bad-title">The Grammar Trap</p>
+                                <div class="line1-p"></div>
+                                <p class="bad-description" id="desc-grammar">Spending years memorizing 20 verb tenses won’t help you understand a native speaker at full speed.</p>
+                            </div>
+                            <div class="silent">
+                                <img src="assets/muted.svg" alt="">
+                                <p class="bad-title">The "Silent" Student</p>
+                                <div class="line2-p"></div>
+                                <p class="bad-description">You can read a textbook, but you freeze in real conversations because you’ve never moved past "classroom" language.</p>
+                            </div>
+                            <div class="gap">
+                                <img class="au" src="assets/battery.svg" alt="">
+                                <div class="txt-under-img">
+                                    <p class="bad-title">The Hope Gap</p>
+                                    <div class="line3-p"></div>
+                                    <p class="bad-description">After some years of slow progress and monthly subscription bills, most people simply give up, thinking fluency is a gift they weren't born with.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="solution-back-m">
+                <div class="solution1-m">
+                    <div class="solution2-m"></div>
+                    <div class="content2-m">
+                        <div class="top-txt2-m">
+                            <p>
+                                We’ve replaced dry textbooks with the powerful tool ever created for humans: The Internet. 
+                                By combining the Natural Approach (learning like a native) with Communicative Competence 
+                                (learning to actually connect), we turn the web into your personal 
+                                <span class="highlight-m">
+                                    immersion chamber.
+                                    <span class="rec3-m"></span>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="points2-m">
+                            <div class="acquisition-m">
+                                <img src="assets/ear-m.svg" alt="">
+                                <p class="good-title-m">Acquisition</p>
+                                <div class="line4-p-m"></div>
+                                <p class="good-description-m" id="desc-acqui-m">Instead of studying rules. Absorb language through content you actually love—just like you did as a kid.</p>
+                            </div>
+                            <div class="communication-m">
+                                <img src="assets/bubbles-m.svg" alt="">
+                                <p class="good-title-m">Communication</p>
+                                <div class="line5-p-m"></div>
+                                <p class="good-description-m" id="desc-commun-m">Move past “correct” grammar. Master the social nuances needed to be truly functional in the real world.</p>
+                            </div>
+                            <div class="infinite-m">
+                                <img class="ue-m" src="assets/infinite-m.svg" alt="">
+                                <div class="txt-under-img2-m">
+                                    <p class="good-title-m">The Infinite Classroom</p>
+                                    <div class="line6-p-m"></div>
+                                    <p class="good-description-m">We give you the "keys to the kingdom." We teach you how to use YouTube, social media as a free, infinite source of growth.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="solution-back">
+                <div class="solution1">
+                    <div class="content2">
+                        <div class="top-txt2">
+                            <p>
+                                We’ve replaced dry textbooks with the powerful tool ever created by humans: The Internet. By combining the Natural Approach (learning like a native) with Communicative Competence (learning to actually connect), we turn the web into your personal
+                                <span class="highlight">
+                                    immersion chamber
+                                    <span class="rec3"></span>
+                                </span>.
+                            </p>
+                        </div>
+                        <div class="points2">
+                            <div class="acquisition">
+                                <img src="assets/ear.svg" alt="">
+                                <p class="good-title">Acquisition</p>
+                                <div class="line4-p"></div>
+                                <p class="good-description" id="desc-acqui">Instead of studying rules. Absorb language through content you actually love—just like you did as a kid.</p>
+                            </div>
+                            <div class="communication">
+                                <img src="assets/bubbles.svg" alt="">
+                                <p class="good-title">Communication</p>
+                                <div class="line5-p"></div>
+                                <p class="good-description" id="desc-commun">Move past “correct” grammar. Master the social nuances needed to be truly functional in the real world.</p>
+                            </div>
+                            <div class="infinite">
+                                <img class="ue" src="assets/infinite.svg" alt="">
+                                <div class="txt-under-img2">
+                                    <p class="good-title">The Infinite Classroom</p>
+                                    <div class="line6-p"></div>
+                                    <p class="good-description">We give you the "keys to the kingdom." We teach you how to use YouTube, social media as a free, infinite source of growth.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="how-it-works">
+            <div class="hatch">
+                <div class="nest"></div>
+                <div class="hatch-txt">
+                    <p class="HIW-title">The Hatchling Phase</p>
+                    <p class="HIW-subtitle">Safe-Guarded Input</p>
+                    <p class="HIW-body">The internet is a sea of noise. We show you how to curate a “digital nest” of content perfectly tuned to your level, and we teach you an easy way to stay motivated on your acquisition journey.</p>
+                </div>
+            </div>
+            <div class="flight">
+                <div class="flight-txt">
+                    <p class="HIW-title">Taking Flight</p>
+                    <p class="HIW-subtitle">Digital Immersion</p>
+                    <p class="HIW-body">We turn your “passive” screen time into an active “acquisition chamber.” This isn’t studying—it’s living your life in your target language. At this point, you can fly through internet content, acquiring vocabulary through context and interest, ensuring the words stick in your long-term memory.</p>
+                </div>
+                <div class="flying"></div>
+            </div>
+            <div class="social">
+                <div class="parrotinhos"></div>
+                <div class="social-txt">
+                    <p class="HIW-title">The Social Mimic</p>
+                    <p class="HIW-subtitle">Communicative Mastery</p>
+                    <p class="HIW-body">Knowledge is useless if you can’t use it. We move you from the screen to the real world. As parrots, if you acquire the language people really use naturally, you’ll be able to talk like them—and with them. Becoming a parrot, you can join our flock (Discord Community).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="how-it-works-m">
+            <div class="hatch-m">
+                <div class="hatch-txt-m">
+                    <p class="HIW-title-m">The Hatchling Phase</p>
+                    <p class="HIW-subtitle-m">Safe-Guarded Input</p>
+                    <p class="HIW-body-m">The internet is a sea of noise. We show you how to curate a “digital nest” of content perfectly tuned to your level, and we teach you an easy way to stay motivated on your acquisition journey.</p>
+                </div>
+            </div>
+            <div class="HIW-flex">
+                <div class="nest-m"></div>
+            </div>
+            <div class="flight-m">
+                <div class="flight-txt-m">
+                    <p class="HIW-title-m">Taking Flight</p>
+                    <p class="HIW-subtitle-m">Digital Immersion</p>
+                    <p class="HIW-body-m">We turn your “passive” screen time into an active “acquisition chamber.” This isn’t studying—it’s living your life in your target language. At this point, you can fly through internet content, acquiring vocabulary through context and interest, ensuring the words stick in your long-term memory.</p>
+                </div>
+                <div class="HIW-flex">
+                    <div class="flying-m"></div>
+                </div>
+            </div>
+            <div class="social-m">
+                <div class="social-txt-m">
+                    <p class="HIW-title-m">The Social Mimic</p>
+                    <p class="HIW-subtitle-m">Communicative Mastery</p>
+                    <p class="HIW-body-m">Knowledge is useless if you can’t use it. We move you from the screen to the real world. As parrots, if you acquire the language people really use naturally, you’ll be able to talk like them—and with them. Becoming a parrot, you can join our flock (Discord Community).</p>
+                </div>
+                <div class="HIW-flex">
+                    <div class="parrotinhos-m"></div>
+                </div>
+            </div>
+        </div>
+        <div class="reviews">
+            <div class="top-txt-review">
+                <p id="proof">PROOF OF CONCEPT</p>
+                <div id="freeze">
+                    <p id="from">From "Textbook Freeze"</p>
+                    <p id="to">to Real-World Fluency.</p>
+                </div>
+                <p id="seehow">See how switching to the acquiring method allowed them to stop "studying" and start living in their target language.</p>
+            </div>
+                
+                <div class="testimonials">
+                    <div class="test" id="1">
+                        <div class="content-test">
+                            <div class="up-test">
+                                <div class="etoiles"></div> <!-- code js -->
+                                <div class="main-txt"><p>I couldn’t understand Spanish at all. It was confusing, with many words mixed up to the point that I almost gave up on the language. Then this method gave me so much clarity that within a year I was able to speak with native speakers without any problems.</p></div>
+                            </div>
+                            <div class="bota-hr">
+                                <div class="hr"></div>
+                                <div class="profile">
+                                    <div class="photo"><img src="assets/rafinha.svg" alt=""></div>
+                                    <div class="profile-data">
+                                        <div class="name"><p>Rafael Vieira</p></div>
+                                        <div class="languages">
+                                            <p>Spanish</p>
+                                            <div class="flag" id="sp"><img src="assets/spain-flag.svg" alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test" id="2">
+                        <div class="content-test">
+                            <div class="up-test">
+                                <div class="etoiles"></div> <!-- code js -->
+                                <div class="main-txt"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed leo at dolor blandit pellentesque. Vivamus egestas varius mauris, ac dictum massa.</p></div>
+                            </div>
+                            <div class="bota-hr">
+                                <div class="hr"></div>
+                                <div class="profile">
+                                    <div class="photo"><img src="assets/thuzin.svg" alt=""></div>
+                                    <div class="profile-data">
+                                        <div class="name"><p>Arthur Souza</p></div>
+                                        <div class="languages">
+                                            <p>English</p>
+                                            <div class="flag" id="en"><img src="assets/usa-flag.svg" alt=""></div>
+                                            <p>French</p>
+                                            <div class="flag" id="fr"><img src="assets/france-flag.svg" alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test" id="3">
+                        <div class="content-test">
+                            <div class="up-test">
+                                <div class="etoiles"></div>
+                                <div class="main-txt" id="too-long-bruv">
+                                    <p>Before I discovered the comprehensible input method, I couldn’t understand what people were saying to me in English. Movies and TV shows always had to be subtitled. I used to focus on the conventional method, without immersion, just repeating what people said without really understanding what it actually meant. After discovering comprehensible input, I experienced a big change through the immersion I had with content, culture, and similar things. After about three months, I was already able to understand what people were saying much more easily, and I started understanding content without needing subtitles anymore.</p>
+                                </div>
+                            </div>
+                            <div class="bota-hr">
+                                <div class="hr"></div>
+                                <div class="profile">
+                                    <div class="photo"><img src="assets/juan.svg" alt=""></div>
+                                    <div class="profile-data">
+                                        <div class="name">Juan Pablo</div>
+                                        <div class="languages">
+                                            <p>English</p>
+                                            <div class="flag" id="en"><img src="assets/usa-flag.svg" alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quote"><p>"The plateau isn't your fault—your tools were just too small for the real world."</p></div>
+            </div>
+
+                <div class="reviews-m">
+            <div class="top-txt-review-m">
+                <p id="proof-m">PROOF OF CONCEPT</p>
+                <div id="freeze-m">
+                    <p id="from-m">From "Textbook Freeze"</p>
+                    <p id="to-m">to Real-World Fluency.</p>
+                </div>
+                <p id="seehow-m">See how switching to the acquiring method allowed them to stop "studying" and start living in their target language.</p>
+            </div>
+                
+                <div class="testimonials-m">
+                    <div class="test-m" id="1-m">
+                        <div class="content-test-m">
+                            <div class="up-test-m">
+                                <div class="etoiles-m"></div> <!-- code js -->
+                                <div class="main-txt-m"><p>I couldn't understand Spanish at all. It was confusing, with many words mixed up to the point that I almost gave up on the language. Then this method gave me so much clarity that within a year I was able to speak with native speakers without any problems.</p></div>
+                            </div>
+                            <div class="bota-hr-m">
+                                <div class="hr-m"></div>
+                                <div class="profile-m">
+                                    <div class="photo-m"><img src="assets/rafinha-m.svg" alt=""></div>
+                                    <div class="profile-data-m">
+                                        <div class="name-m"><p>Rafael Vieira</p></div>
+                                        <div class="languages-m">
+                                            <p>Spanish</p>
+                                            <div class="flag-m" id="sp-m"><img src="assets/spain-flag.svg" alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-m" id="2-m">
+                        <div class="content-test-m">
+                            <div class="up-test-m">
+                                <div class="etoiles-m"></div> <!-- code js -->
+                                <div class="main-txt-m"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed leo at dolor blandit pellentesque. Vivamus egestas varius mauris, ac dictum massa.</p></div>
+                            </div>
+                            <div class="bota-hr-m">
+                                <div class="hr-m"></div>
+                                <div class="profile-m">
+                                    <div class="photo-m"><img src="assets/thuzin-m.svg" alt=""></div>
+                                    <div class="profile-data-m">
+                                        <div class="name-m"><p>Arthur Souza</p></div>
+                                        <div class="languages-m">
+                                            <p>English</p>
+                                            <div class="flag-m" id="en-m"><img src="assets/usa-flag.svg" alt=""></div>
+                                            <p>French</p>
+                                            <div class="flag-m" id="fr-m"><img src="assets/france-flag.svg" alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-m" id="3-m">
+                        <div class="content-test-m">
+                            <div class="up-test-m">
+                                <div class="etoiles-m"></div>
+                                <div class="main-txt-m" id="too-long-bruv-m">
+                                    <p>Before I discovered the comprehensible input method, I couldn't understand what people were saying to me in English. Movies and TV shows always had to be subtitled. I used to focus on the conventional method, without immersion, just repeating what people said without really understanding what it actually meant. After discovering comprehensible input, I experienced a big change through the immersion I had with content, culture, and similar things. After about three months, I was already able to understand what people were saying much more easily, and I started understanding content without needing subtitles anymore.</p>
+                                </div>
+                            </div>
+                            <div class="bota-hr-m">
+                                <div class="hr-m"></div>
+                                <div class="profile-m">
+                                    <div class="photo-m"><img src="assets/juan-m.svg" alt=""></div>
+                                    <div class="profile-data-m">
+                                        <div class="name-m">Juan Pablo</div>
+                                        <div class="languages-m">
+                                            <p>English</p>
+                                            <div class="flag-m" id="en-m"><img src="assets/usa-flag.svg" alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quote-m"><p>"The plateau isn't your fault—your tools were just too small for the real world."</p></div>
+            </div>
+            
+            <div class="pricing">
+                <div class="top-txt-pricing">
+                    <div class="one-payment"><p>One Payment. Your Fluency, Forever.</p></div>
+                    <div class="choose"><p>Choose the path that fits your goals. No monthly bills, no "streak" pressure—just the last language system you’ll ever need.</p></div>
+                </div>
+                <div class="options">
+                    <div class="afundado">
+                        <div class="afundado-ct">
+                            <div class="opt-title"><p>The Method</p></div>
+                            <div class="price">
+                                <div class="value"><p>$197</p></div>
+                                <div class="current" style="align-self: flex-end;"><p>USD</p></div>
+                            </div>
+                            <div class="benefits">
+                                <ul>
+                                    <li>Access to the reading course</li>
+                                    <li>Instructor support</li>
+                                    <li>Exclusive Discord community</li>
+                                    <li>All future updates included</li>
+                                </ul>
+                            </div>
+                            <div class="decision">
+                                <button class="buy-button">Enroll now</button>
+                                <p>Pay once, access forever</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="afundado">
+                        <div class="afundado-ct">
+                            <div class="opt-title"><p>Parrot.io +</p></div>
+                            <div class="price">
+                                <div class="value"><p>$297</p></div>
+                                <div class="current" style="align-self: flex-end;"><p>USD</p></div>
+                            </div>
+                            <div class="benefits">
+                                <ul id="arrow">
+                                    <li>Everything in "The Method" and...</li>
+                                </ul>
+                            </div>
+                            <div class="parrot_plus">
+                                <div class="plus-ct">
+                                    <div class="logo-plus"><img src="assets/logo-plus.svg" alt=""></div>
+                                    <div class="plus-desc"><p>Instead of curating internet content by yourself, let us curate it for you.</p></div>
+                                </div>
+                            </div>
+                            <div class="decision-plus">
+                                <button class="buy-button-plus">Get method + platform</button>
+                                <p>Pay once, access forever</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-cta">
+                <div class="invitation">
+                    <div class="transform-parrot">
+                        <div class="kind-parrot1"><img src="assets/kind-parrot.svg" alt=""></div>
+                        <div class="kind-parrot2"><img src="assets/kind-parrot-sup.svg" alt=""></div>
+                    </div>
+                    
+                    <div class="invitation-txt">
+                        <p>Come and enjoy this <span>Fluency Party</span> with us!</p>
+                    </div>
+                    <div class="house_of_cta-bottom">
+                        <button class="cta-bottom">Accept invitation</button>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <div class="moi"><p>Copyright &copy; 2026 - All rights reserved</p> <div class="divisor_line"></div><p> Made by <a href="https://portifolio-theta-one-71.vercel.app/">Arthur</a></p></div>
+            </footer>
+        </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

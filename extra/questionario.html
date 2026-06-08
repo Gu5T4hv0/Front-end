@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação: Sistemas Operacionais</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #00B4D8 0%, #0096c7 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .header p {
+            font-size: 14px;
+            opacity: 0.95;
+            margin: 5px 0;
+        }
+        .info-bar {
+            background: white;
+            padding: 15px 20px;
+            border-left: 4px solid #00B4D8;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            font-size: 14px;
+        }
+        .info-item strong {
+            color: #00B4D8;
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .questao {
+            background: white;
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+            border-left: 4px solid #e0e0e0;
+        }
+        .questao:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+            border-left-color: #00B4D8;
+        }
+        .num-questao {
+            background: #00B4D8;
+            color: white;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+        .texto-questao {
+            font-size: 16px;
+            margin: 15px 0;
+            font-weight: 500;
+            color: #222;
+        }
+        .opcoes {
+            margin-top: 15px;
+        }
+        .opcao {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            padding: 12px;
+            border-radius: 4px;
+            background: #fafafa;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .opcao:hover {
+            background: #f0f0f0;
+        }
+        .opcao input[type="radio"] {
+            margin-top: 4px;
+            margin-right: 12px;
+            cursor: pointer;
+            accent-color: #00B4D8;
+        }
+        .opcao label {
+            cursor: pointer;
+            flex: 1;
+            font-size: 15px;
+            color: #555;
+        }
+        .letra {
+            font-weight: 600;
+            color: #00B4D8;
+            min-width: 25px;
+        }
+        .separador {
+            border-top: 2px solid #e0e0e0;
+            margin: 30px 0;
+        }
+        .rodape {
+            background: white;
+            padding: 20px;
+            border-radius: 6px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-top: 30px;
+            border-top: 3px solid #00B4D8;
+        }
+        .botoes {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 12px 28px;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn-imprimir {
+            background: #00B4D8;
+            color: white;
+        }
+        .btn-imprimir:hover {
+            background: #0096c7;
+        }
+        .btn-limpar {
+            background: #e0e0e0;
+            color: #333;
+        }
+        .btn-limpar:hover {
+            background: #d0d0d0;
+        }
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+            .header {
+                page-break-after: avoid;
+            }
+            .questao {
+                page-break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            .info-bar {
+                display: none;
+            }
+            .botoes {
+                display: none;
+            }
+            .rodape {
+                border: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💻 Avaliação de Conhecimentos</h1>
+            <p><strong>Sistemas Operacionais</strong></p>
+            <p>Disciplina G4615.6 | Prof. Sady Gama da Silva | UNASP-EC</p>
+        </div>
+
+        <div class="info-bar">
+            <div class="info-item">
+                <strong>⏱️ Tempo</strong>
+                90 minutos
+            </div>
+            <div class="info-item">
+                <strong>📊 Pontuação</strong>
+                0,25 ponto por questão = 10 pontos
+            </div>
+            <div class="info-item">
+                <strong>✅ Total</strong>
+                40 questões
+            </div>
+        </div>
+
+        <div class="botoes">
+            <button class="btn btn-imprimir" onclick="window.print()">🖨️ Imprimir</button>
+            <button class="btn btn-limpar" onclick="limparRespostas()">🔄 Limpar Respostas</button>
+        </div>
+
+        <form id="formAvaliacao">
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 1</span>
+    <div class="texto-questao">Um "Sistema Operacional" é definido principalmente como:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q1" value="A" id="q1a">
+            <label for="q1a"><span class="letra">A)</span> Uma rede de computadores</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q1" value="B" id="q1b">
+            <label for="q1b"><span class="letra">B)</span> Um tipo de processador</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q1" value="C" id="q1c">
+            <label for="q1c"><span class="letra">C)</span> Um software que gerencia recursos de hardware e oferece serviços a aplicações</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q1" value="D" id="q1d">
+            <label for="q1d"><span class="letra">D)</span> Um dispositivo de armazenamento de dados</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q1" value="E" id="q1e">
+            <label for="q1e"><span class="letra">E)</span> Um programa que executa apenas aplicações de escritório</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 2</span>
+    <div class="texto-questao">A evolução histórica dos Sistemas Operacionais passou por diferentes gerações. Qual foi a principal característica da primeira geração (1950s)?</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q2" value="A" id="q2a">
+            <label for="q2a"><span class="letra">A)</span> Virtualização completa de recursos</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q2" value="B" id="q2b">
+            <label for="q2b"><span class="letra">B)</span> Sistemas com suporte a múltiplos usuários</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q2" value="C" id="q2c">
+            <label for="q2c"><span class="letra">C)</span> Computadores sem SO, operados manualmente</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q2" value="D" id="q2d">
+            <label for="q2d"><span class="letra">D)</span> Sistemas distribuídos em rede</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q2" value="E" id="q2e">
+            <label for="q2e"><span class="letra">E)</span> Sistemas multitarefa com interface gráfica</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 3</span>
+    <div class="texto-questao">Os principais tipos de Sistemas Operacionais incluem:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q3" value="A" id="q3a">
+            <label for="q3a"><span class="letra">A)</span> SO batch, multiprogramação, time-sharing, distribuídos, embarcados e de tempo real</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q3" value="B" id="q3b">
+            <label for="q3b"><span class="letra">B)</span> Apenas SO proprietários</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q3" value="C" id="q3c">
+            <label for="q3c"><span class="letra">C)</span> Unicamente SO monoprocessados</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q3" value="D" id="q3d">
+            <label for="q3d"><span class="letra">D)</span> Somente SO para servidores</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q3" value="E" id="q3e">
+            <label for="q3e"><span class="letra">E)</span> Apenas SO para desktop</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 4</span>
+    <div class="texto-questao">Um "Sistema Operacional multiprogramado" é aquele que:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q4" value="A" id="q4a">
+            <label for="q4a"><span class="letra">A)</span> Executa programas em paralelo sem sincronização</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q4" value="B" id="q4b">
+            <label for="q4b"><span class="letra">B)</span> Funciona apenas com processadores de núcleo único</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q4" value="C" id="q4c">
+            <label for="q4c"><span class="letra">C)</span> Mantém múltiplos programas na memória e alterna entre eles para melhor utilização de recursos</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q4" value="D" id="q4d">
+            <label for="q4d"><span class="letra">D)</span> Não permite programação</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q4" value="E" id="q4e">
+            <label for="q4e"><span class="letra">E)</span> Executa um único programa por vez</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 5</span>
+    <div class="texto-questao">A "arquitetura de um Sistema Operacional" define:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q5" value="A" id="q5a">
+            <label for="q5a"><span class="letra">A)</span> A quantidade de memória RAM obrigatória</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q5" value="B" id="q5b">
+            <label for="q5b"><span class="letra">B)</span> O tipo de processador necessário</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q5" value="C" id="q5c">
+            <label for="q5c"><span class="letra">C)</span> Os programas que o SO pode executar</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q5" value="D" id="q5d">
+            <label for="q5d"><span class="letra">D)</span> A organização interna, componentes principais e suas inter-relações</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q5" value="E" id="q5e">
+            <label for="q5e"><span class="letra">E)</span> Apenas o design visual da interface</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 6</span>
+    <div class="texto-questao">As "chamadas de sistema" (system calls) servem principalmente para:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q6" value="A" id="q6a">
+            <label for="q6a"><span class="letra">A)</span> Atualizar softwares instalados</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q6" value="B" id="q6b">
+            <label for="q6b"><span class="letra">B)</span> Permitir que aplicações solicitem serviços do SO ao mudar de modo usuário para modo kernel</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q6" value="C" id="q6c">
+            <label for="q6c"><span class="letra">C)</span> Gerenciar apenas disco rígido</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q6" value="D" id="q6d">
+            <label for="q6d"><span class="letra">D)</span> Controlar a temperatura do processador</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q6" value="E" id="q6e">
+            <label for="q6e"><span class="letra">E)</span> Comunicação entre computadores em rede</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 7</span>
+    <div class="texto-questao">O modo "kernel" (modo supervisor) em um SO é caracterizado por:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q7" value="A" id="q7a">
+            <label for="q7a"><span class="letra">A)</span> Ser igual ao modo usuário</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q7" value="B" id="q7b">
+            <label for="q7b"><span class="letra">B)</span> Permitir acesso completo a todos os recursos de hardware e instruções privilegiadas</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q7" value="C" id="q7c">
+            <label for="q7c"><span class="letra">C)</span> Não ter relação com segurança</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q7" value="D" id="q7d">
+            <label for="q7d"><span class="letra">D)</span> Ser apenas para gerenciamento de rede</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q7" value="E" id="q7e">
+            <label for="q7e"><span class="letra">E)</span> Ser acessível a qualquer aplicação sem restrição</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 8</span>
+    <div class="texto-questao">"Máquinas virtuais" em um SO são:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q8" value="A" id="q8a">
+            <label for="q8a"><span class="letra">A)</span> Apenas para gaming</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q8" value="B" id="q8b">
+            <label for="q8b"><span class="letra">B)</span> Periféricos conectados ao SO</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q8" value="C" id="q8c">
+            <label for="q8c"><span class="letra">C)</span> Aplicativos de escritório</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q8" value="D" id="q8d">
+            <label for="q8d"><span class="letra">D)</span> Abstrações de um computador completo que simulam hardware em software</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q8" value="E" id="q8e">
+            <label for="q8e"><span class="letra">E)</span> Computadores físicos isolados</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 9</span>
+    <div class="texto-questao">Um "processo" em um Sistema Operacional é:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q9" value="A" id="q9a">
+            <label for="q9a"><span class="letra">A)</span> Um tipo de memória</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q9" value="B" id="q9b">
+            <label for="q9b"><span class="letra">B)</span> Uma conexão de rede</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q9" value="C" id="q9c">
+            <label for="q9c"><span class="letra">C)</span> Uma instância de um programa em execução com seu próprio espaço de memória e contexto</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q9" value="D" id="q9d">
+            <label for="q9d"><span class="letra">D)</span> Um arquivo de configuração</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q9" value="E" id="q9e">
+            <label for="q9e"><span class="letra">E)</span> Um programa armazenado em disco</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 10</span>
+    <div class="texto-questao">Os "estados de um processo" normalmente incluem:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q10" value="A" id="q10a">
+            <label for="q10a"><span class="letra">A)</span> Novo, pronto, executando, bloqueado e terminado</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q10" value="B" id="q10b">
+            <label for="q10b"><span class="letra">B)</span> Apenas executando e terminado</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q10" value="C" id="q10c">
+            <label for="q10c"><span class="letra">C)</span> Bloqueado permanentemente</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q10" value="D" id="q10d">
+            <label for="q10d"><span class="letra">D)</span> Apenas pronto e terminado</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q10" value="E" id="q10e">
+            <label for="q10e"><span class="letra">E)</span> Apenas executando</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 11</span>
+    <div class="texto-questao">Uma "thread" (linha de execução) diferencia-se de um processo porque:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q11" value="A" id="q11a">
+            <label for="q11a"><span class="letra">A)</span> Threads compartilham o mesmo espaço de memória do processo, mas possuem seu próprio contador de programa e pilha</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q11" value="B" id="q11b">
+            <label for="q11b"><span class="letra">B)</span> Threads não precisam de sincronização</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q11" value="C" id="q11c">
+            <label for="q11c"><span class="letra">C)</span> Processos e threads são idênticos</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q11" value="D" id="q11d">
+            <label for="q11d"><span class="letra">D)</span> Threads nunca podem ser executadas em paralelo</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q11" value="E" id="q11e">
+            <label for="q11e"><span class="letra">E)</span> Threads são maiores que processos</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 12</span>
+    <div class="texto-questao">Uma "condição de corrida" (race condition) ocorre quando:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q12" value="A" id="q12a">
+            <label for="q12a"><span class="letra">A)</span> Múltiplos processos acessam dados compartilhados simultaneamente, resultando em comportamento impredizível</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q12" value="B" id="q12b">
+            <label for="q12b"><span class="letra">B)</span> Threads rodam sequencialmente</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q12" value="C" id="q12c">
+            <label for="q12c"><span class="letra">C)</span> Não há competição por recursos</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q12" value="D" id="q12d">
+            <label for="q12d"><span class="letra">D)</span> Um processo é mais rápido que outro</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q12" value="E" id="q12e">
+            <label for="q12e"><span class="letra">E)</span> Dois processos não conseguem comunicar</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 13</span>
+    <div class="texto-questao">"Exclusão mútua" em sincronização significa:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q13" value="A" id="q13a">
+            <label for="q13a"><span class="letra">A)</span> Apenas um processo pode acessar um recurso crítico por vez</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q13" value="B" id="q13b">
+            <label for="q13b"><span class="letra">B)</span> Sincronização é desnecessária</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q13" value="C" id="q13c">
+            <label for="q13c"><span class="letra">C)</span> Não há seção crítica</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q13" value="D" id="q13d">
+            <label for="q13d"><span class="letra">D)</span> Todos os processos acessam simultaneamente</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q13" value="E" id="q13e">
+            <label for="q13e"><span class="letra">E)</span> Processos não devem cooperar</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 14</span>
+    <div class="texto-questao">Um "semáforo" é uma primitiva de sincronização que:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q14" value="A" id="q14a">
+            <label for="q14a"><span class="letra">A)</span> É uma variável inteira que controla acesso a recursos compartilhados através de operações wait() e signal()</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q14" value="B" id="q14b">
+            <label for="q14b"><span class="letra">B)</span> Apenas registra eventos</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q14" value="C" id="q14c">
+            <label for="q14c"><span class="letra">C)</span> Não tem relação com sincronização</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q14" value="D" id="q14d">
+            <label for="q14d"><span class="letra">D)</span> Comunica entre computadores</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q14" value="E" id="q14e">
+            <label for="q14e"><span class="letra">E)</span> Controla tráfego de rua</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 15</span>
+    <div class="texto-questao">O "escalonamento de processador" (CPU scheduling) tem como objetivo:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q15" value="A" id="q15a">
+            <label for="q15a"><span class="letra">A)</span> Apenas executar um processo</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q15" value="B" id="q15b">
+            <label for="q15b"><span class="letra">B)</span> Decidir qual processo usar o CPU em cada momento para otimizar utilização e cumprimento de prazos</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q15" value="C" id="q15c">
+            <label for="q15c"><span class="letra">C)</span> Não é importante em SO</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q15" value="D" id="q15d">
+            <label for="q15d"><span class="letra">D)</span> Eliminar processos desnecessários</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q15" value="E" id="q15e">
+            <label for="q15e"><span class="letra">E)</span> Desligar o computador automaticamente</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 16</span>
+    <div class="texto-questao">A "política FIFO" (First In First Out) de escalonamento:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q16" value="A" id="q16a">
+            <label for="q16a"><span class="letra">A)</span> Executa processos na ordem em que chegaram, sem preempção</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q16" value="B" id="q16b">
+            <label for="q16b"><span class="letra">B)</span> É a melhor para todos os casos</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q16" value="C" id="q16c">
+            <label for="q16c"><span class="letra">C)</span> Não permite espera</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q16" value="D" id="q16d">
+            <label for="q16d"><span class="letra">D)</span> Sempre escolhe o processo mais rápido</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q16" value="E" id="q16e">
+            <label for="q16e"><span class="letra">E)</span> Executa processos em ordem aleatória</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 17</span>
+    <div class="texto-questao">O "escalonamento Round-Robin" utiliza:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q17" value="A" id="q17a">
+            <label for="q17a"><span class="letra">A)</span> Um quantum de tempo fixo; cada processo recebe uma fatia de CPU e, se não terminar, vai para o final da fila</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q17" value="B" id="q17b">
+            <label for="q17b"><span class="letra">B)</span> Sem mudança de contexto</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q17" value="C" id="q17c">
+            <label for="q17c"><span class="letra">C)</span> Prioridade imutável</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q17" value="D" id="q17d">
+            <label for="q17d"><span class="letra">D)</span> Apenas um processo por tempo de execução</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q17" value="E" id="q17e">
+            <label for="q17e"><span class="letra">E)</span> Ordem aleatória</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 18</span>
+    <div class="texto-questao">O "escalonamento com prioridades" é útil quando:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q18" value="A" id="q18a">
+            <label for="q18a"><span class="letra">A)</span> Diferentes processos têm importância variável, permitindo que processos críticos recebam mais CPU</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q18" value="B" id="q18b">
+            <label for="q18b"><span class="letra">B)</span> Prioridades não importam</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q18" value="C" id="q18c">
+            <label for="q18c"><span class="letra">C)</span> Apenas um processo é importante</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q18" value="D" id="q18d">
+            <label for="q18d"><span class="letra">D)</span> Não há diferença de importância</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q18" value="E" id="q18e">
+            <label for="q18e"><span class="letra">E)</span> Todos os processos têm igual importância</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 19</span>
+    <div class="texto-questao">"Escalonamento em tempo real" é diferente dos demais porque:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q19" value="A" id="q19a">
+            <label for="q19a"><span class="letra">A)</span> Deve garantir que tarefas críticas sejam completadas dentro de prazos determinísticos</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q19" value="B" id="q19b">
+            <label for="q19b"><span class="letra">B)</span> Não existe sincronização</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q19" value="C" id="q19c">
+            <label for="q19c"><span class="letra">C)</span> Não usa CPU</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q19" value="D" id="q19d">
+            <label for="q19d"><span class="letra">D)</span> É mais lento</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q19" value="E" id="q19e">
+            <label for="q19e"><span class="letra">E)</span> Não existe em SO reais</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 20</span>
+    <div class="texto-questao">O "gerenciamento básico de memória" em um SO inclui:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q20" value="A" id="q20a">
+            <label for="q20a"><span class="letra">A)</span> Apenas backup</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q20" value="B" id="q20b">
+            <label for="q20b"><span class="letra">B)</span> Alocação de espaço de memória a processos, proteção e compartilhamento seguro</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q20" value="C" id="q20c">
+            <label for="q20c"><span class="letra">C)</span> Somente compressão de arquivos</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q20" value="D" id="q20d">
+            <label for="q20d"><span class="letra">D)</span> Não é importante</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q20" value="E" id="q20e">
+            <label for="q20e"><span class="letra">E)</span> Apenas leitura de dados</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 21</span>
+    <div class="texto-questao">"Swapping" em gerenciamento de memória é:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q21" value="A" id="q21a">
+            <label for="q21a"><span class="letra">A)</span> Uma operação instantânea</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q21" value="B" id="q21b">
+            <label for="q21b"><span class="letra">B)</span> Mover processos inteiros entre memória RAM e disco quando RAM está cheia</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q21" value="C" id="q21c">
+            <label for="q21c"><span class="letra">C)</span> Apenas para dados</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q21" value="D" id="q21d">
+            <label for="q21d"><span class="letra">D)</span> Não é mais usado</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q21" value="E" id="q21e">
+            <label for="q21e"><span class="letra">E)</span> Troca de dados entre computadores</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 22</span>
+    <div class="texto-questao">A "memória virtual" permite que:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q22" value="A" id="q22a">
+            <label for="q22a"><span class="letra">A)</span> Proteção não seja necessária</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q22" value="B" id="q22b">
+            <label for="q22b"><span class="letra">B)</span> Processos não compitam por memória</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q22" value="C" id="q22c">
+            <label for="q22c"><span class="letra">C)</span> Aplicações tenham espaço de endereçamento maior que a RAM física disponível</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q22" value="D" id="q22d">
+            <label for="q22d"><span class="letra">D)</span> Disco seja mais rápido que RAM</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q22" value="E" id="q22e">
+            <label for="q22e"><span class="letra">E)</span> Não haja limite de memória</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 23</span>
+    <div class="texto-questao">A "paginação" é uma técnica de gerenciamento de memória que:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q23" value="A" id="q23a">
+            <label for="q23a"><span class="letra">A)</span> Divide memória física em "frames" e espaço lógico em "páginas" de tamanho fixo</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q23" value="B" id="q23b">
+            <label for="q23b"><span class="letra">B)</span> Elimina a necessidade de sincronização</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q23" value="C" id="q23c">
+            <label for="q23c"><span class="letra">C)</span> Aumenta fragmentação externa</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q23" value="D" id="q23d">
+            <label for="q23d"><span class="letra">D)</span> Não é usada em SO modernos</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q23" value="E" id="q23e">
+            <label for="q23e"><span class="letra">E)</span> Divide memória em blocos de tamanho variável</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 24</span>
+    <div class="texto-questao">"Thrashing" em gerenciamento de memória ocorre quando:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q24" value="A" id="q24a">
+            <label for="q24a"><span class="letra">A)</span> Sistema passa mais tempo paginando do que executando, degradando drasticamente o desempenho</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q24" value="B" id="q24b">
+            <label for="q24b"><span class="letra">B)</span> Não existe em SO modernos</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q24" value="C" id="q24c">
+            <label for="q24c"><span class="letra">C)</span> CPU fica sem fazer nada</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q24" value="D" id="q24d">
+            <label for="q24d"><span class="letra">D)</span> Memória é liberada imediatamente</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q24" value="E" id="q24e">
+            <label for="q24e"><span class="letra">E)</span> Sistema funciona normalmente</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 25</span>
+    <div class="texto-questao">Um "sistema de arquivos" em um SO serve para:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q25" value="A" id="q25a">
+            <label for="q25a"><span class="letra">A)</span> Organizar, armazenar e recuperar dados em disco com estrutura de diretórios</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q25" value="B" id="q25b">
+            <label for="q25b"><span class="letra">B)</span> Apenas para backup</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q25" value="C" id="q25c">
+            <label for="q25c"><span class="letra">C)</span> Não é essencial</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q25" value="D" id="q25d">
+            <label for="q25d"><span class="letra">D)</span> Compactar arquivos</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q25" value="E" id="q25e">
+            <label for="q25e"><span class="letra">E)</span> Apenas visualizar dados</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 26</span>
+    <div class="texto-questao">O "software de E/S" em um SO gerencia:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q26" value="A" id="q26a">
+            <label for="q26a"><span class="letra">A)</span> Interação entre SO e dispositivos periféricos (disco, rede, impressora, etc.)</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q26" value="B" id="q26b">
+            <label for="q26b"><span class="letra">B)</span> Apenas conexões de rede</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q26" value="C" id="q26c">
+            <label for="q26c"><span class="letra">C)</span> Somente monitores</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q26" value="D" id="q26d">
+            <label for="q26d"><span class="letra">D)</span> Não é importante</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q26" value="E" id="q26e">
+            <label for="q26e"><span class="letra">E)</span> Apenas teclado</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 27</span>
+    <div class="texto-questao">Os "drivers de dispositivos" são:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q27" value="A" id="q27a">
+            <label for="q27a"><span class="letra">A)</span> Software que permite SO controlar dispositivos específicos</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q27" value="B" id="q27b">
+            <label for="q27b"><span class="letra">B)</span> Apenas para impressoras</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q27" value="C" id="q27c">
+            <label for="q27c"><span class="letra">C)</span> Não afetam performance</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q27" value="D" id="q27d">
+            <label for="q27d"><span class="letra">D)</span> Sempre codificados em hardware</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q27" value="E" id="q27e">
+            <label for="q27e"><span class="letra">E)</span> Programas para usuários finais</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 28</span>
+    <div class="texto-questao">As "interrupções" em um computador servem para:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q28" value="A" id="q28a">
+            <label for="q28a"><span class="letra">A)</span> Notificar o CPU que um evento urgente ocorreu, desviando para tratamento apropriado</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q28" value="B" id="q28b">
+            <label for="q28b"><span class="letra">B)</span> Desativar o SO</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q28" value="C" id="q28c">
+            <label for="q28c"><span class="letra">C)</span> Apenas em redes</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q28" value="D" id="q28d">
+            <label for="q28d"><span class="letra">D)</span> Aumentar latência</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q28" value="E" id="q28e">
+            <label for="q28e"><span class="letra">E)</span> Não têm função</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 29</span>
+    <div class="texto-questao">Um "deadlock" (impasse) ocorre quando:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q29" value="A" id="q29a">
+            <label for="q29a"><span class="letra">A)</span> Dois ou mais processos estão esperando indefinidamente por recursos que estão sendo mantidos um pelo outro</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q29" value="B" id="q29b">
+            <label for="q29b"><span class="letra">B)</span> Nunca acontece em SO reais</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q29" value="C" id="q29c">
+            <label for="q29c"><span class="letra">C)</span> Sincronização é perfeita</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q29" value="D" id="q29d">
+            <label for="q29d"><span class="letra">D)</span> Recursos são abundantes</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q29" value="E" id="q29e">
+            <label for="q29e"><span class="letra">E)</span> Processos terminam normalmente</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 30</span>
+    <div class="texto-questao">As "quatro condições necessárias para deadlock" incluem:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q30" value="A" id="q30a">
+            <label for="q30a"><span class="letra">A)</span> Exclusão mútua, posse e espera, não-preempção e espera circular</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q30" value="B" id="q30b">
+            <label for="q30b"><span class="letra">B)</span> Apenas bloqueio</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q30" value="C" id="q30c">
+            <label for="q30c"><span class="letra">C)</span> Sem sincronização</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q30" value="D" id="q30d">
+            <label for="q30d"><span class="letra">D)</span> Apenas compartilhamento</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q30" value="E" id="q30e">
+            <label for="q30e"><span class="letra">E)</span> Apenas espera</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 31</span>
+    <div class="texto-questao">Uma estratégia para "prevenção de deadlock" é:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q31" value="A" id="q31a">
+            <label for="q31a"><span class="letra">A)</span> Eliminar pelo menos uma das quatro condições necessárias</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q31" value="B" id="q31b">
+            <label for="q31b"><span class="letra">B)</span> Reiniciar o sistema</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q31" value="C" id="q31c">
+            <label for="q31c"><span class="letra">C)</span> Ignorar o problema</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q31" value="D" id="q31d">
+            <label for="q31d"><span class="letra">D)</span> Não fazer nada</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q31" value="E" id="q31e">
+            <label for="q31e"><span class="letra">E)</span> Permitir todas as quatro condições</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 32</span>
+    <div class="texto-questao">"Autenticação" em um SO refere-se a:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q32" value="A" id="q32a">
+            <label for="q32a"><span class="letra">A)</span> Processo de verificar a identidade do usuário através de credenciais (senhas, biometria, etc.)</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q32" value="B" id="q32b">
+            <label for="q32b"><span class="letra">B)</span> Não existe em SO pessoais</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q32" value="C" id="q32c">
+            <label for="q32c"><span class="letra">C)</span> Apenas para servidores</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q32" value="D" id="q32d">
+            <label for="q32d"><span class="letra">D)</span> Não é importante</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q32" value="E" id="q32e">
+            <label for="q32e"><span class="letra">E)</span> Qualquer pessoa pode acessar</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 33</span>
+    <div class="texto-questao">O "controle de acesso" em SO modernos implementa:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q33" value="A" id="q33a">
+            <label for="q33a"><span class="letra">A)</span> Mecanismos que definem quem pode ler, escrever e executar cada recurso</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q33" value="B" id="q33b">
+            <label for="q33b"><span class="letra">B)</span> Sem verificação</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q33" value="C" id="q33c">
+            <label for="q33c"><span class="letra">C)</span> Apenas para arquivos</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q33" value="D" id="q33d">
+            <label for="q33d"><span class="letra">D)</span> Nenhuma restrição</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q33" value="E" id="q33e">
+            <label for="q33e"><span class="letra">E)</span> Acesso total a todos os arquivos</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 34</span>
+    <div class="texto-questao">Um "diretório" em sistema de arquivos é:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q34" value="A" id="q34a">
+            <label for="q34a"><span class="letra">A)</span> Uma estrutura que contém referências a outros arquivos e diretórios, formando uma árvore</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q34" value="B" id="q34b">
+            <label for="q34b"><span class="letra">B)</span> Apenas para armazenamento</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q34" value="C" id="q34c">
+            <label for="q34c"><span class="letra">C)</span> Não tem função</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q34" value="D" id="q34d">
+            <label for="q34d"><span class="letra">D)</span> Um arquivo de grande tamanho</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q34" value="E" id="q34e">
+            <label for="q34e"><span class="letra">E)</span> Um arquivo normal</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 35</span>
+    <div class="texto-questao">A "implementação de sistemas de arquivos" envolve:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q35" value="A" id="q35a">
+            <label for="q35a"><span class="letra">A)</span> Estruturas como i-nodes, blocos de disco, tabelas de alocação para organizar dados</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q35" value="B" id="q35b">
+            <label for="q35b"><span class="letra">B)</span> Sem relação com performance</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q35" value="C" id="q35c">
+            <label for="q35c"><span class="letra">C)</span> Apenas para leitura</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q35" value="D" id="q35d">
+            <label for="q35d"><span class="letra">D)</span> Não é importante</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q35" value="E" id="q35e">
+            <label for="q35e"><span class="letra">E)</span> Apenas compressão</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 36</span>
+    <div class="texto-questao">O "gerenciamento do espaço livre" em disco é realizado através de:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q36" value="A" id="q36a">
+            <label for="q36a"><span class="letra">A)</span> Estruturas como bitmap ou listas ligadas que rastreiam quais blocos estão livres</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q36" value="B" id="q36b">
+            <label for="q36b"><span class="letra">B)</span> Automaticamente pelo hardware</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q36" value="C" id="q36c">
+            <label for="q36c"><span class="letra">C)</span> Não é necessário</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q36" value="D" id="q36d">
+            <label for="q36d"><span class="letra">D)</span> Apenas deleção de arquivos</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q36" value="E" id="q36e">
+            <label for="q36e"><span class="letra">E)</span> Nada, espaço é infinito</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 37</span>
+    <div class="texto-questao">A "segmentação" em gerenciamento de memória:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q37" value="A" id="q37a">
+            <label for="q37a"><span class="letra">A)</span> Divide memória em blocos de tamanho variável correspondentes a segmentos lógicos (código, dados, pilha)</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q37" value="B" id="q37b">
+            <label for="q37b"><span class="letra">B)</span> Causa "thrashing" sempre</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q37" value="C" id="q37c">
+            <label for="q37c"><span class="letra">C)</span> Não permite compartilhamento</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q37" value="D" id="q37d">
+            <label for="q37d"><span class="letra">D)</span> É mais eficiente que paginação em todos os casos</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q37" value="E" id="q37e">
+            <label for="q37e"><span class="letra">E)</span> Divide memória em blocos de tamanho fixo</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 38</span>
+    <div class="texto-questao">Um "Sistema Operacional de tempo real" é caracterizado principalmente por:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q38" value="A" id="q38a">
+            <label for="q38a"><span class="letra">A)</span> Capacidade de garantir que tarefas críticas sejam completadas dentro de prazos determinísticos</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q38" value="B" id="q38b">
+            <label for="q38b"><span class="letra">B)</span> Sem relação com segurança</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q38" value="C" id="q38c">
+            <label for="q38c"><span class="letra">C)</span> Apenas para computadores de mesa</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q38" value="D" id="q38d">
+            <label for="q38d"><span class="letra">D)</span> Execução contínua sem interrupções</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q38" value="E" id="q38e">
+            <label for="q38e"><span class="letra">E)</span> Máxima velocidade de processamento</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 39</span>
+    <div class="texto-questao">"Virtualização" em computação refere-se a:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q39" value="A" id="q39a">
+            <label for="q39a"><span class="letra">A)</span> Técnica de abstrair recursos físicos em múltiplos recursos virtuais independentes</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q39" value="B" id="q39b">
+            <label for="q39b"><span class="letra">B)</span> Sem relação com SO</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q39" value="C" id="q39c">
+            <label for="q39c"><span class="letra">C)</span> Tecnologia antiga e obsoleta</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q39" value="D" id="q39d">
+            <label for="q39d"><span class="letra">D)</span> Apenas para dados</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q39" value="E" id="q39e">
+            <label for="q39e"><span class="letra">E)</span> Conexão de computadores em rede</label>
+        </div>
+    </div>
+</div>
+
+<div class="questao">
+    <span class="num-questao">QUESTÃO 40</span>
+    <div class="texto-questao">Um "container" em computação moderna é:</div>
+    <div class="opcoes">
+        <div class="opcao">
+            <input type="radio" name="q40" value="A" id="q40a">
+            <label for="q40a"><span class="letra">A)</span> Unidade de software que encapsula aplicação e dependências, oferecendo isolamento leve e portabilidade</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q40" value="B" id="q40b">
+            <label for="q40b"><span class="letra">B)</span> Tecnologia antiga</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q40" value="C" id="q40c">
+            <label for="q40c"><span class="letra">C)</span> Apenas para dados</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q40" value="D" id="q40d">
+            <label for="q40d"><span class="letra">D)</span> O mesmo que máquina virtual</label>
+        </div>
+        <div class="opcao">
+            <input type="radio" name="q40" value="E" id="q40e">
+            <label for="q40e"><span class="letra">E)</span> Um recipiente de armazenamento físico</label>
+        </div>
+    </div>
+</div>
+
+        </form>
+
+        <div class="rodape">
+            <p><strong>🎯 Instruções Finais</strong></p>
+            <p>Leia atentamente cada questão e selecione a melhor resposta. As respostas foram completamente embaralhadas para cada questão - não há padrão.</p>
+            <p style="margin-top: 15px; font-size: 13px;">Boa sorte! 💻</p>
+        </div>
+    </div>
+
+    <script>
+        function limparRespostas() {
+            if (confirm('Tem certeza que deseja limpar todas as respostas?')) {
+                const form = document.getElementById('formAvaliacao');
+                form.reset();
+            }
+        }
+    </script>
+</body>
+</html>
