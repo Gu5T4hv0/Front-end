@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simulador de ROI — edunext</title>
+  <link rel="shortcut icon" href="assets/logo verde água.svg" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -164,6 +165,40 @@
     .legend-item:last-child { margin-bottom: 0; }
     .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 
+    /* User info card */
+    .user-info-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      padding: 0.875rem 1rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .user-info-avatar {
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      background: var(--edu-teal);
+      color: var(--edu-dark);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 700;
+      flex-shrink: 0;
+    }
+    .user-info-text { min-width: 0; flex: 1; }
+    .user-info-name { font-size: 13px; font-weight: 600; color: #fff; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .user-info-meta { font-size: 11px; color: rgba(255,255,255,0.45); line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .user-info-edit {
+      flex-shrink: 0;
+      font-size: 11px; font-weight: 600; color: var(--edu-teal);
+      background: none; border: none; cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      padding: 4px 6px;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+    .user-info-edit:hover { background: rgba(255,255,255,0.08); }
+
     /* Email section */
     .email-section {
       background: rgba(255,255,255,0.06);
@@ -178,9 +213,10 @@
       display: flex; align-items: center; gap: 6px;
     }
     .email-section-label svg { color: var(--edu-teal); flex-shrink: 0; }
-    .email-row { display: flex; gap: 8px; }
+    .email-row { display: flex; gap: 8px; align-items: stretch; }
     .email-input {
       flex: 1;
+      min-width: 0;
       background: rgba(255,255,255,0.09);
       border: 1px solid rgba(255,255,255,0.18);
       border-radius: 8px;
@@ -200,8 +236,9 @@
       font-size: 13px; font-weight: 700;
       cursor: pointer;
       white-space: nowrap;
+      flex-shrink: 0;
       font-family: 'DM Sans', sans-serif;
-      display: flex; align-items: center; gap: 6px;
+      display: flex; align-items: center; justify-content: center; gap: 6px;
       transition: opacity 0.2s;
     }
     .btn-pdf:hover { opacity: 0.88; }
@@ -368,6 +405,16 @@
         </div>
       </div>
 
+      <!-- USER INFO -->
+      <div class="user-info-card" id="user-info-card">
+        <div class="user-info-avatar" id="ui-avatar">—</div>
+        <div class="user-info-text">
+          <div class="user-info-name" id="ui-nome">—</div>
+          <div class="user-info-meta" id="ui-meta">—</div>
+        </div>
+        <button class="user-info-edit" id="ui-edit" title="Editar seus dados">editar</button>
+      </div>
+
       <!-- EMAIL + PDF -->
       <div class="email-section">
         <div class="email-section-label">
@@ -522,10 +569,15 @@
     doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(200,200,220);
     doc.text('Relatório de Simulação de ROI', PX, 22);
 
-    // Meta line (date / email)
+    // Meta line (date / email / user info)
     doc.setFontSize(8); doc.setTextColor(160,160,200);
     doc.text('Gerado em: ' + hoje + (email ? ' | Para: ' + email : ''), PX, 29);
     doc.text('edunext.com.br', W - PX, 29, { align: 'right' });
+
+    if (userInfo && userInfo.nome) {
+      doc.setFontSize(8); doc.setTextColor(160,160,200);
+      doc.text(userInfo.nome + ' — ' + userInfo.cargo + ' · ' + userInfo.ies, PX, 34);
+    }
 
     // Main title — with increased gap from meta line
     doc.setFont('helvetica','bold'); doc.setFontSize(16); doc.setTextColor(...white);
@@ -670,6 +722,28 @@
     toast.style.display = 'block';
     setTimeout(() => toast.style.display = 'none', 4000);
   }
+
+  // ── USER INFO: load from localStorage, redirect to login if missing ──
+  let userInfo = null;
+  (function () {
+    try {
+      userInfo = JSON.parse(localStorage.getItem('edunext_user_info') || 'null');
+    } catch (e) { userInfo = null; }
+
+    if (!userInfo || !userInfo.nome || !userInfo.cargo || !userInfo.ies) {
+      window.location.href = 'edunext-login.html';
+      return;
+    }
+
+    const initials = userInfo.nome.trim().split(/\s+/).map(p => p[0]).slice(0, 2).join('').toUpperCase();
+    document.getElementById('ui-avatar').textContent = initials || '?';
+    document.getElementById('ui-nome').textContent = userInfo.nome;
+    document.getElementById('ui-meta').textContent = userInfo.cargo + ' · ' + userInfo.ies;
+  })();
+
+  document.getElementById('ui-edit').addEventListener('click', function () {
+    window.location.href = 'edunext-login.html';
+  });
 
   ['s-receita','s-inad','s-boleto','s-qtd','s-horas'].forEach(id => {
     document.getElementById(id).addEventListener('input', calc);

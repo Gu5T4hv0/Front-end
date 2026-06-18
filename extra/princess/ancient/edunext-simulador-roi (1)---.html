@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simulador de ROI — edunext</title>
+  <link rel="shortcut icon" href="assets/" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -178,9 +179,10 @@
       display: flex; align-items: center; gap: 6px;
     }
     .email-section-label svg { color: var(--edu-teal); flex-shrink: 0; }
-    .email-row { display: flex; gap: 8px; }
+    .email-row { display: flex; gap: 8px; align-items: stretch; }
     .email-input {
       flex: 1;
+      min-width: 0;
       background: rgba(255,255,255,0.09);
       border: 1px solid rgba(255,255,255,0.18);
       border-radius: 8px;
@@ -200,8 +202,9 @@
       font-size: 13px; font-weight: 700;
       cursor: pointer;
       white-space: nowrap;
+      flex-shrink: 0;
       font-family: 'DM Sans', sans-serif;
-      display: flex; align-items: center; gap: 6px;
+      display: flex; align-items: center; justify-content: center; gap: 6px;
       transition: opacity 0.2s;
     }
     .btn-pdf:hover { opacity: 0.88; }
@@ -594,19 +597,36 @@
     doc.setFont('helvetica','bold'); doc.setFontSize(10); doc.setTextColor(...dark);
     doc.text('COMPARATIVO DE CUSTOS MENSAIS', PX, y); y += 5;
     doc.setFillColor(...lgray); doc.rect(PX, y, W - PX * 2, 0.3, 'F'); y += 8;
-    // Reserve 38mm for the value text on the right; bars start after label (PX+38) and stop 40mm from right edge
-    const barX = PX + 38;
-    const barMaxW = W - PX - 40 - barX; // total bar track width
+
+    const barGap = 3; // mm gap between bar end and value text
+    const barLabelW = 38; // mm for the label on the left
+    const barX = PX + barLabelW;
+
+    // Measure value text widths at font size 9 bold
+    doc.setFont('helvetica','bold'); doc.setFontSize(9);
+    const val1W = doc.getTextWidth(fmt(s.custoAtual));
+    const val2W = doc.getTextWidth(fmt(s.custoEdu));
+    const maxValW = Math.max(val1W, val2W);
+
+    // Bar ends at: right margin - maxValW - gap
+    const barEnd = W - PX - maxValW - barGap;
+    const barMaxW = barEnd - barX;
+
+    // Row 1 — situação atual
     doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(...gray);
     doc.text('Situação atual', PX, y);
     doc.setFillColor(220, 80, 80); doc.roundedRect(barX, y - 4, barMaxW, 6, 2, 2, 'F');
-    doc.setFont('helvetica','bold'); doc.setTextColor(...black); doc.text(fmt(s.custoAtual), W - PX, y, { align: 'right' });
+    doc.setFont('helvetica','bold'); doc.setTextColor(...black);
+    doc.text(fmt(s.custoAtual), W - PX, y, { align: 'right' });
     y += 10;
-    doc.setFont('helvetica','normal'); doc.setTextColor(...gray);
+
+    // Row 2 — com edunext
+    doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(...gray);
     doc.text('Com edunext', PX, y);
     const pct = s.custoAtual > 0 ? Math.min(s.custoEdu / s.custoAtual, 1) : 0.5;
     doc.setFillColor(...teal); doc.roundedRect(barX, y - 4, barMaxW * pct, 6, 2, 2, 'F');
-    doc.setFont('helvetica','bold'); doc.setTextColor(...black); doc.text(fmt(s.custoEdu), W - PX, y, { align: 'right' });
+    doc.setFont('helvetica','bold'); doc.setTextColor(...black);
+    doc.text(fmt(s.custoEdu), W - PX, y, { align: 'right' });
     y += 14;
 
     // Distribuição

@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
   <title>Confirmar Pedido – 203 Snack</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="produtos.js"></script>
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -145,11 +147,12 @@
       background: linear-gradient(135deg, #f5820a 0%, #e8660a 100%);
       color: #fff;
       font-family: 'Poppins', sans-serif;
-      font-size: 16px;
-      font-weight: 700;
+      font-size: 17px;
+      font-weight: 600;
       text-align: center;
       padding: 17px 16px;
       border-radius: 14px;
+      text-decoration: none;
       border: none;
       cursor: pointer;
       box-shadow: 0 4px 16px rgba(232,102,10,0.38);
@@ -177,6 +180,42 @@
       cursor: pointer;
       margin-top: 16px;
       -webkit-tap-highlight-color: transparent;
+    }
+
+    /* ── QUANTITY ── */
+    .qty-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 14px;
+      width: 100%;
+      margin-bottom: 16px;
+    }
+
+    .qty-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1.5px solid #ddd;
+      background: #fff;
+      color: #555;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .qty-btn:active { background: #f0f0f0; }
+
+    .qty-value {
+      font-size: 16px;
+      font-weight: 600;
+      color: #222;
+      min-width: 20px;
+      text-align: center;
     }
 
     /* ── TOAST ── */
@@ -218,23 +257,25 @@
         <polyline points="15 18 9 12 15 6"/>
       </svg>
     </a>
-    <img
+    <a href="index.html">
+      <img
       class="logo"
       src="assets/logo.svg"
       alt="203 Snack"
       onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='block';"
     />
+    </a>
     <span class="logo-fallback" style="display:none; color:#fff; font-weight:800; font-size:22px; letter-spacing:1px;">203 Snack</span>
   </header>
 
   <main class="page">
-    <h1 class="product-name">Doritos</h1>
+    <h1 class="product-name"></h1>
 
     <div class="product-img-wrap">
-      <img src="assets/doritos.svg" alt="Doritos" />
+      <img src="" alt=""/>
     </div>
 
-    <p class="product-price">R$ 5,99</p>
+    <p class="product-price"></p>
 
     <div class="form-group">
       <label for="quarto">Digite o número do seu quarto:</label>
@@ -246,69 +287,61 @@
       <input type="text" id="nome" placeholder="Ex.: João" />
     </div>
 
-    <button class="btn-primary" onclick="enviarPedido('Pagar e Finalizar')">
-      Pagar e Finalizar
-    </button>
+    <div class="qty-wrap">
+      <button class="qty-btn" onclick="alterarQty(-1)">−</button>
+      <span class="qty-value" id="qty">1</span>
+      <button class="qty-btn" onclick="alterarQty(1)">+</button>
+    </div>
 
-    <button class="btn-secondary" onclick="enviarPedido('Prefiro pagar ao receber')">
+    <button class="btn-primary" onclick="pagar()">Pagar e Finalizar</button>
+
+    <a class="btn-secondary" href="carrinho.html">
       Prefiro pagar ao receber o produto
-    </button>
+    </a>
   </main>
 
   <div class="toast" id="toast"></div>
 
   <script>
-    // Dados do produto (no futuro pode vir via URL ou localStorage)
-    const produto = {
-      nome: 'Doritos 20g',
-      preco: 'R$ 5,99'
-    };
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    const produto = produtos[id];
 
-    function mostrarToast(mensagem) {
-      const toast = document.getElementById('toast');
-      toast.textContent = mensagem;
-      toast.classList.remove('show');
-      void toast.offsetWidth; // reinicia animação
-      toast.classList.add('show');
+    document.querySelector('.product-name').textContent = produto.nome;
+    document.querySelector('.product-price').textContent = produto.preco;
+    document.querySelector('.product-img-wrap img').src = 'assets/' + produto.imagem;
+    document.querySelector('.product-img-wrap img').alt = produto.nome;
+
+    function alterarQty(delta) {
+      const el = document.getElementById('qty');
+      const atual = parseInt(el.textContent);
+      const novo = Math.max(1, atual + delta);
+      el.textContent = novo;
+      atualizarLinks();
     }
 
-    async function enviarPedido(tipoPagamento) {
-      const quarto = document.getElementById('quarto').value.trim();
-      const nome = document.getElementById('nome').value.trim();
-
-      if (!quarto || !nome) {
-        mostrarToast('Preencha todos os campos!');
-        return;
-      }
-
-      const pedido = {
-        produto: produto.nome,
-        preco: produto.preco,
-        quarto: quarto,
-        nome: nome,
-        pagamento: tipoPagamento
-      };
-
-      try {
-        const resposta = await fetch('/salvar-pedido', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(pedido)
-        });
-
-        const resultado = await resposta.json();
-
-        if (resultado.sucesso) {
-          mostrarToast('Pedido enviado com sucesso!');
-          setTimeout(() => {
-            window.location.href = 'index.html';
-          }, 2000);
-        }
-      } catch (erro) {
-        mostrarToast('Erro ao enviar pedido. Tente novamente.');
-        console.error(erro);
-      }
+    function atualizarLinks() {
+      const qty = document.getElementById('qty').textContent;
+      document.querySelector('.btn-secondary').href = `carrinho.html?id=${id}&qty=${qty}`;
     }
+
+    // inicializa os links com qty=1
+    atualizarLinks();
+
+    async function pagar() {
+    const quarto = document.getElementById('quarto').value;
+    const nome = document.getElementById('nome').value;
+    const qty = document.getElementById('qty').textContent;
+
+    const resposta = await fetch('/criar-pagamento', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id, qty, nome, quarto })
+    });
+
+    const dados = await resposta.json();
+    window.location.href = dados.link;
+  }
   </script>
 
 </body>

@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
   <title>203 Snack</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="produtos.js"></script>
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -134,43 +136,6 @@
       transform: scale(0.95);
       box-shadow: 0 2px 8px rgba(255,82,82,0.35);
     }
-
-    /* Cart button */
-    .fab-cart {
-      background: #fff;
-      border-radius: 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 4px;
-      padding: 10px 14px;
-      width: 76px;
-      text-decoration: none;
-      color: #111;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.14);
-      transition: transform 0.15s, box-shadow 0.15s;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .fab-cart:active {
-      transform: scale(0.95);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .fab-cart svg {
-      width: 28px;
-      height: 28px;
-      stroke: #111;
-    }
-
-    .fab-cart__label {
-      font-size: 10px;
-      font-weight: 600;
-      line-height: 1.2;
-      text-align: center;
-      color: #111;
-    }
   </style>
 </head>
 <body>
@@ -186,67 +151,7 @@
   </header>
 
   <main class="grid">
-
-    <a href="cheetos.html" class="card">
-      <div class="card__img-wrap">
-        <img src="assets/cheetos.svg" alt="Cheetos Assado" />
-      </div>
-      <div class="card__info">
-        <p class="card__name">Cheetos 20g</p>
-        <p class="card__price">R$ 4,99</p>
-      </div>
-    </a>
-
-    <a href="doritos.html" class="card">
-      <div class="card__img-wrap">
-        <img src="assets/doritos.svg" alt="Doritos Queijo Nacho" />
-      </div>
-      <div class="card__info">
-        <p class="card__name">Doritos 20g</p>
-        <p class="card__price">R$ 5,99</p>
-      </div>
-    </a>
-
-    <a href="ruffles.html" class="card">
-      <div class="card__img-wrap">
-        <img src="assets/ruffles.svg" alt="Ruffles Original" />
-      </div>
-      <div class="card__info">
-        <p class="card__name">Ruffles 20g</p>
-        <p class="card__price">R$ 5,99</p>
-      </div>
-    </a>
-
-    <a href="fini_bananas.html" class="card">
-      <div class="card__img-wrap">
-        <img src="assets/fini_bananas.svg" alt="Fini Bananas" />
-      </div>
-      <div class="card__info">
-        <p class="card__name">Fini Bananas 15g</p>
-        <p class="card__price">R$ 5,99</p>
-      </div>
-    </a>
-
-    <a href="fini_amoras.html" class="card">
-      <div class="card__img-wrap">
-        <img src="assets/fini_amoras.svg" alt="Fini Amoras" />
-      </div>
-      <div class="card__info">
-        <p class="card__name">Fini Amoras 15g</p>
-        <p class="card__price">R$ 5,99</p>
-      </div>
-    </a>
-
-    <a href="fini_dentaduras.html" class="card">
-      <div class="card__img-wrap">
-        <img src="assets/fini_dentaduras.svg" alt="Fini Dentaduras" />
-      </div>
-      <div class="card__info">
-        <p class="card__name">Fini Dentaduras 15g</p>
-        <p class="card__price">R$ 5,99</p>
-      </div>
-    </a>
-
+    <!-- magic! -->
   </main>
 
   <!-- Floating action buttons -->
@@ -263,5 +168,23 @@
     </a>
   </div>
 
+  <script>
+    const grid = document.querySelector('.grid');
+
+    // percorre cada produto do objeto e cria um card
+    Object.entries(produtos).forEach(([id, produto]) => {
+      grid.innerHTML += `
+        <a href="produto.html?id=${id}" class="card">
+          <div class="card__img-wrap">
+            <img src="assets/${produto.imagem}" alt="${produto.nome}" />
+          </div>
+          <div class="card__info">
+            <p class="card__name">${produto.nome}</p>
+            <p class="card__price">${produto.preco}</p>
+          </div>
+        </a>
+      `;
+    });
+  </script>
 </body>
 </html>

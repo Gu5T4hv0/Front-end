@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <title>Doritos 20g – 203 Snack</title>
+  <title>Entrega – 203 Snack</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
@@ -29,9 +30,9 @@
       align-items: center;
       justify-content: center;
       box-shadow: 0 3px 12px rgba(232,102,10,0.35);
-      position: sticky;
-      top: 0;
       z-index: 100;
+      position: sticky; 
+      top: 0;
     }
 
     header img.logo {
@@ -66,98 +67,109 @@
     }
 
     /* ── CONTENT ── */
-    .product-page {
-      padding: 28px 20px 40px;
+    .options-page {
+      padding: 0 20px;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
+      gap: 14px;
+      min-height: calc(100vh - 80px);
     }
 
-    .product-name {
-      font-size: 18px;
-      font-weight: 600;
-      color: #222;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .product-img-wrap {
+    .form-group {
       width: 100%;
-      max-width: 340px;
-      aspect-ratio: 1 / 1;
+      margin-bottom: 16px;
+    }
+
+    .pixcode {
+        width: 100%;
+      padding: 10px 12px;
+      border: 1.5px solid #ddd;
+      border-radius: 10px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      color: #222;
+      outline: none;
+      transition: border-color 0.15s;
+      overflow: hidden;
+    }
+
+    .pixcode p{
+        color: #bbb;
+    }
+
+    .reembolso {
+        text-align: center;
+        width: 200px;
+        font-size: 14px;
+    }
+
+    #advice {
       display: flex;
       align-items: center;
-      justify-content: center;
-      margin-bottom: 28px;
     }
 
-    .product-img-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    .product-price {
-      font-size: 32px;
-      font-weight: 800;
-      color: #111;
-      margin-bottom: 28px;
-    }
-
-    .btn-buy {
+    #acesse {
       display: block;
       width: 100%;
-      max-width: 340px;
-      background: linear-gradient(135deg, #f5820a 0%, #e8660a 100%);
-      color: #fff;
-      font-family: 'Poppins', sans-serif;
-      font-size: 17px;
-      font-weight: 600;
       text-align: center;
-      text-decoration: none;
-      padding: 16px;
-      border-radius: 14px;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 4px 16px rgba(232,102,10,0.38);
-      transition: transform 0.15s, box-shadow 0.15s;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #f5820a;
       -webkit-tap-highlight-color: transparent;
     }
 
-    .btn-buy:active {
-      transform: scale(0.97);
-      box-shadow: 0 2px 8px rgba(232,102,10,0.28);
+    #advice-cart {
+      transform: scale(0.7);
     }
   </style>
 </head>
 <body>
 
   <header>
-    <a href="index.html" class="header-back" aria-label="Voltar">
+    <a href="#" onclick="history.back(); return false;" class="header-back" aria-label="Voltar">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="15 18 9 12 15 6"/>
       </svg>
     </a>
-    <img
+    <a href="index.html">
+      <img
       class="logo"
       src="assets/logo.svg"
       alt="203 Snack"
       onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='block';"
     />
+    </a>
     <span class="logo-fallback" style="display:none; color:#fff; font-weight:800; font-size:22px; letter-spacing:1px;">203 Snack</span>
   </header>
 
-  <main class="product-page">
-    <h1 class="product-name">Fini Bananas 20g</h1>
+  <main class="options-page">
+    <div class="badge" style="margin-bottom: 15px;"><p>Pagamento via pix</p></div>
 
-    <div class="product-img-wrap">
-      <img src="assets/fini_bananas.svg" alt="Fini Bananas 20g" />
+    <div class="form-group">
+      <!-- <input type="number" id="quarto" placeholder="Ex.: 203" /> -->
+      <div class="pixcode"><p>ndjfnjebnfjebnfjrbnvjrnfvjddddddddddjd...</p></div>
     </div>
 
-    <p class="product-price">R$ 5,99</p>
+    <a href="" class="cta">Copiar código</a>
 
-    <a href="escolha.html" class="btn-buy">Comprar agora</a>
+    <p class="reembolso">Haverá reembolso caso o produto não for entregue</p>
+
+    <div id="advice">
+      <p id="acesse">Após o pagamento acesse &rarr;</p>
+      <a href="carrinho.html" class="fab-cart" id="advice-cart">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+          <circle cx="176" cy="416" r="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+          <circle cx="400" cy="416" r="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M48 80h64l48 272h256"/>
+          <path d="M160 288h249.44a8 8 0 007.85-6.43l28.8-144a8 8 0 00-7.85-9.57H128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+        </svg>
+        <span class="fab-cart__label">Minhas Compras</span>
+      </a>
+    </div>
   </main>
 
 </body>
