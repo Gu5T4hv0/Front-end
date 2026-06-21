@@ -42,6 +42,32 @@
       object-fit: contain;
     }
 
+    .header-back {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #fff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      transition: background 0.15s;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .header-back:active {
+      background: rgba(255,255,255,0.2);
+    }
+
+    .header-back img {
+      width: 22px;
+      height: 22px;
+    }
+
     /* ── GRID ── */
     .grid {
       display: grid;
@@ -141,6 +167,9 @@
 <body>
 
   <header>
+    <a href="https://wa.me/5531975742635" class="header-back" aria-label="Voltar">
+      <img src="assets/support.svg" alt="Support">
+    </a>
     <img
       class="logo"
       src="assets/logo.svg"
@@ -156,7 +185,7 @@
 
   <!-- Floating action buttons -->
   <div class="fab-group">
-    <a href="feedback.html" class="fab-feedback">Feedback</a>
+    <a href="mailto:gustavoarthur073@gmail.com" class="fab-feedback">Feedback</a>
     <a href="carrinho.html" class="fab-cart">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
         <circle cx="176" cy="416" r="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>

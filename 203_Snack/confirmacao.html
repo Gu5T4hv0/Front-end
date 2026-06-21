@@ -340,6 +340,8 @@
     });
 
     const dados = await resposta.json();
+    const preferenceId = dados.preferenceId;
+    console.log(dados.preferenceId);
     window.location.href = dados.link;
   }
   </script>
