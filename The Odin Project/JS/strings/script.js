@@ -68,3 +68,11 @@ console.log(`Discount: $${discountAmount}`)
 
 let finalPrice = Number(price) + taxAmount - discountAmount;
 console.log(`Final Price: $${finalPrice}`)
+
+const abacate_azul = 33;
+
+console.log(`I love the number ${abacate_azul}`);
+
+const data = 2.44;
+
+console.log(`typeof ${data}`);
